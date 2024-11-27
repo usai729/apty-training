@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Apty Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            padding: 0;
+        }
+        form {
+            background-color: aliceblue;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        label {
+            font-size: 1.1rem; 
+            margin-top: 10px;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 5px;
+            width: 250px;
+        }
+        button {
+            background-color: darkcyan;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkslategray;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form 
+            method="post" 
+            action="/submit" 
+            enctype="multipart/form-data" 
+            name="registrationForm" 
+            id="registrationForm" 
+            novalidate
+        >
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        required 
+                        maxlength="20" 
+                        minlength="5" 
+                        pattern="[A-Za-z0-9]{5,20}" 
+                        aria-label="Username" 
+                        autocomplete="username"
+                        aria-describedby="username-help"
+                    >
+                    <br>
+                    <small id="username-help" class="form-text" style="text-align: right;">
+                        Username must be 5-20 characters long, containing only letters and numbers.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                        title="Example: user@example.com" 
+                        autocomplete="email" 
+                        aria-required="true"
+                        aria-describedby="email-help"
+                    >
+                    <br>
+                    <small id="email-help" class="form-text" style="text-align: right;">
+                        Please enter a valid email address.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password"
+                        required 
+                        minlength="8" 
+                        aria-label="Password" 
+                        autocomplete="new-password"
+                        aria-describedby="password-help"
+                    >
+                    <br>
+                    <small id="password-help" class="form-text" style="text-align: right";>
+                        Password must be at least 8 characters long.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        pattern="[0-9]{10}" 
+                        title="Please enter a 10-digit phone number." 
+                        required 
+                        placeholder="Enter your phone number" 
+                        aria-describedby="phone-help"
+                    >
+                    <br>
+                    <small id="phone-help" class="form-text" style="text-align: right;">
+                        Please enter a 10-digit phone number.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input 
+                        type="date" 
+                        id="dob" 
+                        name="dob" 
+                        required 
+                        aria-label="Date of birth"
+                        aria-describedby="dob-help"
+                    >
+                    <br>
+                    <small id="dob-help" class="form-text" style="text-align: right;">
+                        Please select your date of birth.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input 
+                        type="number" 
+                        id="age" 
+                        name="age" 
+                        min="18" 
+                        max="99" 
+                        required 
+                        placeholder="Enter your age" 
+                        aria-required="true"
+                        aria-describedby="age-help"
+                    >
+                    <br>
+                    <small id="age-help" class="form-text" style="text-align: right;">
+                        You must be between 18 and 99 years old.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="file">Upload your file:</label>
+                    <input 
+                        type="file" 
+                        id="file" 
+                        name="file"
+                        accept=".jpg, .jpeg, .png, .pdf" 
+                        aria-label="File upload"
+                        aria-describedby="file-help"
+                    >
+                    <br>
+                    <small id="file-help" class="form-text" style="text-align: right;">
+                        Accepted file types: .jpg, .jpeg, .png, .pdf
+                    </small>
+                </div>
+
+                <button 
+                    type="submit" 
+                    id="submitButton" 
+                    aria-label="Submit Registration Form"
+                >
+                    Register
+                </button>
+            </fieldset>
+        </form>
+    </main>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+           
+            event.preventDefault();
+           
+            const form = event.target;
+            if (form.checkValidity()) {
+                alert("Form submitted successfully!");
+                form.submit();
+            } else {
+                form.reportValidity();
+            }
+        });
+    </script>
+</body>
+</html>
