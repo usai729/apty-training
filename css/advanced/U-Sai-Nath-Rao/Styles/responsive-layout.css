@@ -1,0 +1,31 @@
+body {
+    margin: 0 auto;
+}
+
+header > nav > ul, header > nav > ul > li > ul {
+    list-style: none;
+}
+
+header {
+    border-bottom: 1px solid gray;
+}
+
+.container {
+    width: 100%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > img {
+    width: 30rem;
+    object-fit: contain;
+    margin: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+} 
