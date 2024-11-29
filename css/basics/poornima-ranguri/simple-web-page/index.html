@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sample webpage demonstrating HTML and CSS best practices">
+    <title>Explore Nature: Web Design Best Practices Showcase</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+       
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+       
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+       
+        .main-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .main-header__title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;  
+        }
+
+        .main-header__subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+     
+        .main-content {
+            background-color: white;
+            padding: 2rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-content__image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .main-content__text {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 0.5rem;
+            }
+
+            .main-header__title {
+                font-size: 2rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="main-body-container">
+    <header class="main-header" role="banner">
+        <img src="./images/apty-logo.svg" style="margin-left: 20px;">
+        <div class="container">
+            <h1 class="main-header__title">Cooking Competition at Apty</h1>
+            <h6>SHOWCASE YOUR CULINARY SKILLS</h6>
+            <p class="main-header__subtitle">The much-anticipated cooking competition turned out to be a fantastic event, full of excitement, creativity, and team spirit. The event saw enthusiastic participation from several teams, each bringing their best culinary skills to the table</p>
+        </div>
+    </header>
+
+    <main class="container" role="main">
+        <article class="main-content">
+            <h3><strong>Guests of Honor</strong></h3>
+            <img 
+                src="images/ceo-sir.jpg" 
+                alt="CEO Sir" 
+                class="main-content__image"
+                width="1000"
+                height="400"
+                loading="lazy"
+                decoding="async"
+            >
+            <p class="main-content__text">
+                
+                The event had the honor of being graced by the presence of the CEO, who shared inspiring words and encouraged the participants throughout the event. The CEO's involvement added a special touch to the competition, and the morale of the teams was boosted by their presence
+            <p class="main-content__text">
+                Key principles include using semantic HTML5 tags, implementing responsive design with 
+                media queries, maintaining clean CSS with variable definitions, and ensuring 
+                accessibility through proper attribute usage.
+            </p>
+        </article>
+
+        <section class="challenge-section">
+            <h3>Apty's Team</h3>
+            <p>"Our Apty team recently held an exciting cooking competition that brought everyone together for a fun and engaging experience. Teams, including Rohith's and Nishma's, competed with great enthusiasm, and in the end, both teams emerged as winners! It was an unforgettable event, with the CEO and all the team members coming together to share in the joy and success of the competition. We had an amazing time, enjoying the camaraderie and creativity that everyone brought to the table. It was a great way to bond and celebrate teamwork in a relaxed and enjoyable setting!</p>
+            <img src="./images/apty-team.jpg" alt="apty-team"  width="1000" loading="eager" decoding="async" class="main-content__image">
+        </section>
+
+        <section class="challenge-section">
+            <h4>Challenge</h4>
+            <ul style="list-style-type: circle;"> 
+                <li>The competition was fierce, with multiple teams competing to take home the top honors. The teams were led by some of the most passionate and skilled individuals, including Rohith's team and Nishma's team, both of whom showcased incredible talent in the kitchen</li>
+                <li>Each team was given a set of ingredients and tasked with creating a dish that was not only delicious but also visually appealing. The creativity of the teams was evident in the unique and innovative dishes they prepared, with a blend of traditional flavors and modern twists.</li>
+            </ul>
+            <ul style="list-style-type: none;">
+                <li>
+                    <img src="./images/madhuri-cutting.jpg" class="main-content__image" alt="madhuri teams preparing">
+                </li>
+                
+            </ul>
+            
+        </section>
+
+         
+        <section class="main-content">
+            <h4>Delicious Food is Ready</h4>
+            
+            <ol style="list-style-type: none; display:flex; justify-content:center; align-items:center;">
+                <li>
+                    <img src="./images/panner-tikka.jpg" class="main-content__image" alt="sunreises preparing" style=" width:300px; height:230px; margin-right:6px;">
+                </li>
+
+                <li>
+                    <img src="./images/chicken-pokidi.jpg" class="main-content__image" alt="madhuri team"  style=" width:300px; height:230px; margin-right:6px;">
+                </li>
+
+                <li>
+                    <img src="./images/manchurian.jpg" class="main-content__image" alt="nishma teams"  style=" width:300px; height:230px;">
+                </li>
+
+               
+            </ol>
+        </section>
+
+        
+        <section class="main-content">
+            <h4>Winners</h4>
+            <p>The dishes were judged by a panel of experts, who evaluated based on taste, presentation, and creativity. After much deliberation, the winners were announced</p>
+           
+
+            <ol style="list-style-type: none; text-align:center;">
+                <li>
+                    <p><strong>Rohith's Team</strong></p>
+                    <img src="./images/rohith-team.jpg" class="main-content__image" alt="sunreises preparing" width="1000" height="400">
+                </li>
+
+                <li>
+                    <p>Nishma's Team</p>
+                    <img src="./images/nishma-team.jpg" class="main-content__image" alt="madhuri team" width="1000" height="400">
+                </li>
+                <h6>The event ended with a grand celebration, where everyone gathered to enjoy the delicious food prepared by the teams. Laughter, conversation, and joy filled the atmosphere as everyone shared their experiences, and it was clear that the event was more about the shared experience and team camaraderie than just the competition itself</h6>
+            </ol>
+        </section>
+
+    </main>
+    <footer style="text-align: center; color:#fff; font-weight: bold;">
+        <p>&copy; 2024 Apty. All rights reserved.</p>
+    </footer>
+</body>
+</html>

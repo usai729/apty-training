@@ -1,0 +1,111 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.site-header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container{
+    display: flex;
+   
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .site-title {
+    margin: 0;
+}
+
+.site-header nav {
+    float: right;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.theme-nav {
+    margin-top: 10px;
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(to left, hotpink, green, pink);
+    background-attachment: fixed;
+}
+
+.journal-entry {
+    margin-bottom: 20px;
+    background-color: lightcyan;
+    border-radius: 10px;
+}
+
+.journal-description {
+    font-size: 18px;
+    margin: 10px 0;
+   
+}
+
+.learning-list, .communication-list, .business-comm-list, .projects-list {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+footer {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer .copyright {
+    margin: 0;
+}
+
+
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme .site-header {
+    background-color: #1a1a1a;
+}
+
+.dark-theme .site-footer {
+    background-color: #1a1a1a;
+}
+
+.dark-theme .main-content {
+    background-color: #181818;
+    color: #dcdcdc;
+}
+
+.dark-theme .theme-toggle-btn {
+    color: #f0f0f0;
+}
+
+
+.dark-theme .journal-entry {
+    background-color: #2a2a2a;
+}
+
+.dark-theme .journal-description {
+    color: #bbb;
+}
