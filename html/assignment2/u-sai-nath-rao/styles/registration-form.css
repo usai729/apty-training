@@ -1,0 +1,72 @@
+body {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #4AC29A, #BDFFF3);
+    height: 100vh;
+    width: 100vw;
+    font-family: "Lexend Deca", serif;
+}
+
+.container {
+    padding: 3rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    font-family: "Bonheur Royale", cursive;
+}
+
+.container > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    gap: 0.8rem;
+}
+
+form > input {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.2rem;
+    border: 1px solid lightgray;
+    outline: none;
+    transition: all 0.2s;
+}
+
+form > input:hover, input:focus {
+    border: 1px solid gray;
+}
+
+form > div > button {
+    width: 100%;
+    margin: 0.3rem;
+    padding: 0.5rem;
+    background: none;
+    cursor: pointer
+}
+
+#reset {
+    border: 1px solid red;
+    color: red;
+}
+
+#submit {
+    background-color: #1f8fff;
+    border: 1px solid #1f8fff;
+    color: white;
+    transition: all 0.3s;
+}
+
+#submit:hover {
+    background-color: white;
+    color: #1f8fff;
+}
