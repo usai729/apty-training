@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registration</title>
+      <link rel="icon" type="image/x-icon" href="images/apty.svg">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <img src="images/apty.svg" style="margin-left:1000px">
+      <header>
+         <h1 title="header"><strong><u>Technical Consultant Training</u></strong></h1>
+         <p title="head">Here is a sample <u>Registration Form</u> with validations</p>
+      </header>
+      <nav>
+         <a target="_blank" href="blog.html" style="color: black;">Blog</a>
+         <a target="_blank" href="#" style="color: black;">Registration Form</a>
+         <a target="_blank" href="multimedia.html" style="color: black;">Multimedia Site</a>
+      </nav>
+      <div>
+         <form>
+            <div class="container">
+               <h1 style='color: azure; text-align: center;'>Register</h1>
+               <p style='color: azure; text-align: center;'>Please fill in this form to create an account.</p>
+               <hr>
+               <label for="name"><b>Name:</b></label>
+               <input name="Name" type="text" placeholder="Enter Name" minlength="5" maxlength="20" required pattern="a-z"><br>
+               <br>
+               <label for="phone"><b>Phone Number:</b></label>
+               <input name="number" type="tel" placeholder="Enter Number" minlength="5" maxlength="20" required><br>
+               <br>
+               <label for="idnumber"><b>ID Number:</b></label>
+               <input name="id" type="number" placeholder="Enter ID Number" minlength="5" maxlength="20" required><br>
+               <br>
+               <label for="email"><b>Email:</b></label>
+               <input name="email" type="text" placeholder="Enter Email" minlength="5" maxlength="20" required><br>
+               <br>
+               <label for="birthday"><b>Birthday:</b></label>
+               <input name="birthday" type="date" id="birthday" name="birthday">
+               <br>
+               <br>
+               <label for="psw"><b>Password:</b></label>
+               <input name="psw" type="password" placeholder="Enter Password" minlength="5" maxlength="20" required>
+               <br>
+               <br>
+               <label for="psw-repeat"><b>Confirm Password:</b></label>
+               <input name="cpsw" type="password" placeholder="Confirm Password" required>
+               <hr>
+               <p title="checkbox">By creating an account you agree to our Privacy Policy.</p>
+               <button type="submit">Register</button>
+            </div>
+            <div>
+               <p>Already have an account? <u>Sign in</u>.</p>
+            </div>
+         </form>
+      </div>
+   </body>
+   <footer title="footer" style="text-align: center;">
+      Copyright &#169;	Tarun Sharma 2024
+   </footer>
+</html>

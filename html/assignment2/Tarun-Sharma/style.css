@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(190deg, rgb(165, 213, 44), rgb(71, 179, 241), rgb(111, 19, 154));
+}
+
+header {
+    background-color: rgb(234, 118, 76);
+    color: #000000;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #e7e41f;
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+article {
+    margin-bottom: 2em;
+}
+
+article h2 {
+    color: #333;
+}
+
+footer {
+    bottom: 0; 
+    position: static;
+    width: 100%;
+    background-color: rgb(111, 19, 154);
+}
+
+p{
+    color: #fff;
+}
+
+aside{
+    color: aliceblue;
+}
+
+label{
+    color: white;
+}
+
+.element {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
