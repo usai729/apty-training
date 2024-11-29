@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(380deg, rgb(3, 226, 255), rgb(238, 99, 122), rgb(166, 255, 0));
+  }
+
+  header {
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  main {
+    padding: 130px;
+  }
+
+  footer {
+    background: linear-gradient(380deg, rgb(3, 226, 255), rgb(154, 236, 0) , rgb(238, 99, 122));
+    color: white;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .flex-container {
+      display: flex;
+      justify-content: center;
+      background-color: rgb(219, 127, 255);
+  }
+
+  .flex-container > div {
+      background-color: #f1f1f1;
+      width: 100%;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+  }
