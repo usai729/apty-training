@@ -1,0 +1,133 @@
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+    margin-top: 0px;
+    height: 70px;
+}
+.navigation-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+.logo-image{
+    width: 6%;
+}
+.heading{
+    margin-top: 0px;
+}
+.banner-container{
+    
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: banner 5s infinite;
+}
+.box1{
+    animation: letters 2s;
+}
+.box2{
+    animation: letters 2s 2s;
+}
+.box3{
+    animation: letters 2s 4s;
+}
+.box4{
+    animation: letters 2s 6s;
+}
+.box5{
+    animation: letters 2s 8s;
+}
+.box6{
+    animation: letters 2s 10s;
+}
+.box7{
+    animation: letters 2s 12s;
+}
+.box8{
+    animation: letters 2s 14s;
+}
+.box9{
+    animation: letters 2s 16s;
+}
+@keyframes letters {
+    from{
+        font-size: 70px;
+    }
+    to{
+        font-size: 100px;
+    }
+}
+@keyframes banner {
+    from{
+      background-color: white;
+    }
+    to{
+      background-color: rgb(215, 215, 111);
+    }
+}
+.welcome-tag{
+    background-image: linear-gradient(to right,yellow,rgb(212, 103, 103),green);
+    color: rgb(255, 254, 254);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: cursive;
+}
+.veg-item-image-1{
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 2s;
+}
+.veg-item-image-1:hover{
+    transform: rotate(-20deg);
+}
+.veg-list{
+    list-style-type: none;
+    padding-left: 0px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 150px;
+}
+.veg-fooditem-1{
+    grid-column: 1/ span 1;
+}
+.nonveg-item-image-1{
+    height: 100px;
+    width: 30%;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 2s;
+}
+.nonveg-item-image-1:hover{
+    height: 130px;
+    width: 35%;
+}
+
+@media (max-width: 767px){
+    .navigation{
+        height: 30px;
+    }
+    .navigation-list{
+        width: 20%;
+    }
+    .logo-image{
+        width: 12%;
+    }
+    .welcome-tag{
+        color: black;
+        font-size: 13px;
+        padding: 5px;
+    }
+    .banner-container{
+        height: 400px;
+        font-size: 40px;
+    }
+}
