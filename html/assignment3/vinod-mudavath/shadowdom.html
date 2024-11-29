@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating webpage using shadow dom and template</title>
+    <style>
+        h1 {
+            color: red;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>I belong to Real DOM</h1>
+        <div class="shadow-dom"></div>
+    </main>
+
+    <template id = "template">
+        <div class="card">
+            <h1>MY CARD</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem ipsum dicta rerum esse minus, veniam facere, quis nam harum est id? Aliquam possimus reprehenderit similique veritatis porro id provident ducimus.</p>
+        </div>
+    </template>
+
+    <button type="button" onclick="clickMe()">click me to see magic</button>
+
+    <custome-component></custome-component>
+
+    <script>
+        const container = document.querySelector(".shadow-dom");
+        const shadowDomEle = container.attachShadow({mode:"open"});
+        shadowDomEle.innerHTML = `
+        <style>
+            h1 {
+                color: "blue"
+            }
+        </style>
+        <h1>I am belog to Shadow Dom</h1>`;
+
+        const ele = document.getElementById("template");
+        const temp = document.importNode(ele.content, true);
+        document.body.appendChild(temp);
+
+        
+
+        class ShadowDomComponent extends HTMLElement {
+
+            constructor() {
+                super();
+                const shadowRoot = this.attachShadow({mode:'open'})
+                shadowRoot.innerHTML = "vinod mudavath";
+        }
+    }
+
+    function clickMe() {
+        customElements.define('custome-component', ShadowDomComponent);
+        }
+   
+
+    </script>
+</body>
+</html>
