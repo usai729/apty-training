@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow DOM Example</title>
+</head>
+<body>
+    <template id="customButtonTemplate">
+        <p>Hi, this is an example of Shadow DOM</p>
+        <button>Click Me</button>
+    </template>
+    <div id="home"><p>Thank You</p></div>
+</body>
+      
+<script>
+    const template = document.querySelector("template");
+    const home = document.getElementById("home").attachShadow({mode: "open"})
+    home.appendChild(template.content)
+
+
+</script>
+      
+<style>
+    /* This global style will not affect elements inside the Shadow DOM */
+    button {
+        color: red;
+    }
+</style>
+</html>
