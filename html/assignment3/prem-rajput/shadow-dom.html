@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow-Dom</title>
+</head>
+    <style>
+
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            margin: 0 auto;
+            padding: 100px;
+            font-size: 24pt;  
+            font-weight: 800;
+        }
+
+    </style>
+<body>
+    <template>
+        <span>Prem Rajput</span><br><br>
+        <span>[This page has been created by Shadow DOM]</span>
+    </template>
+    <div id="shadow"></div>
+</body>
+    <script>
+        const template = document.querySelector("template");
+        const shadow = document.getElementById("shadow").attachShadow({mode:"open"});
+        shadow.appendChild(template.content);
+    </script>
+</html>
