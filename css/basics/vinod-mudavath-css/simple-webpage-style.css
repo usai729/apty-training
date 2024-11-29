@@ -1,0 +1,108 @@
+
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: #000;
+}
+.profile-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+}
+
+header {
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#user-name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 500px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.profile-image {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.about-article {
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.intership-article {
+    background-color: violet;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 5px;
+}
+
+#projects > article > ul {
+    background-color: orchid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    line-height: 24px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.sub-heading, strong {
+    color: #fff;
+}
+
+footer {
+    background-color: #222;
+    padding: 10px;
+    color: #fff;
+}
+
+#copy-icon {
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-right: 20px;
+}
+
+.navbar a:hover {
+    background-color: violet;
+    color: #000;
+    border-radius: 5px;
+    transform: scale(1.1);
+
+}
+
+
+.navbar > ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    padding: 4px 4px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
