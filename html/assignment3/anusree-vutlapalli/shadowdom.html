@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1>Custom Component with Shadow DOM and Template</h1>
+
+  <p>The custom component below uses a template to display content:</p>
+
+  <!-- Custom component usage -->
+  <my-element></my-element>
+
+  <!-- Template for the custom component -->
+  <template id="my-template">
+    <h2>Hello from Shadow DOM</h2>
+    <p>This content is inside a custom component.</p>
+  </template>
+
+  <script>
+    // Define a custom component
+    class MyElement extends HTMLElement {
+      constructor() {
+        super();
+
+        // Attach Shadow DOM
+        const shadow = this.attachShadow({ mode: 'close' });
+
+        // Get the template content
+        const template = document.getElementById('my-template');
+        const content = template.content.cloneNode(true);
+
+        // Append the content to Shadow DOM
+        shadow.appendChild(content);
+      }
+    }
+
+    // Register the custom component
+    customElements.define('my-element', MyElement);
+  </script>
+
+</body>
+
+</html>
