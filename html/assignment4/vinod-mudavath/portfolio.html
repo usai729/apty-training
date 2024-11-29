@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #222;
+            color: #fff;
+        }
+        header {
+            margin-top: 30px;
+            box-shadow: 5px 5px 24px #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .profile-photo {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            margin-right: 30px;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 6px;
+            text-align: center;
+        }
+        p{
+            line-height: 1.5em;
+        }
+
+        main {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <table>
+            <tr>
+                <td>
+                    <img src="data:image/jpeg;base64,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"
+                        alt="profile" class="profile-photo"/>
+                </td>
+                <td>
+                    <h1>Vinod Mudavath</h1>
+                    <p>I am Technical consultant at apty</p>
+                    <p>I ❤️ Problem solving and dealing with clients solve their problems using technologies...</p>
+           
+                    <a href="product-landing-page.html" target="_blank" rel="noopener">click here</a>
+                </tr>
+        </table>
+    </header>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Hi, I’m Vinod Mudavath, currently working as a Technical Consultant at Apty.
+                 I’m deeply passionate about problem-solving and enjoy collaborating with clients to address their challenges effectively. 
+                 With a strong enthusiasm for technology, I specialize in designing and implementing solutions that simplify complex issues.
+                  I thrive in dynamic environments, using my expertise to bridge the gap between technical systems and client needs, 
+                  ensuring seamless outcomes and satisfaction. Beyond work,
+                   I’m always eager to explore new tools and innovations to stay ahead in the tech space.
+            </p>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <p>I have good at below skills</p>
+            <ul>
+                <li>Core java</li>
+                <li>Advance java</li>
+                <li>JDBC (Java database connectivity) </li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>ReatcJs</li>
+                <li>MySQL</li>
+                <li>Bootstrap</li>
+                <li>problem solving</li>
+                <li>Analytical thincking</li>
+            </ul>
+        </section>
+
+    </main>
+    <footer>
+        <section>
+            <h3>Contact Me</h3>
+            <p>Name: vinod Mudavath</p>
+            <p>Email: mudavathvinod49@gmail.com</p>
+            <p>Phnon: 75XXXXXX11</p>
+        </section>
+        <div class="foolter">
+            <p>&copy; developed by vinod mudavath</p>
+        </div>
+    </footer>
+</body>
+
+</html>

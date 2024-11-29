@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page </title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #222;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header {
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: aliceblue;
+        }
+
+        .logo {
+            display: flex;
+            color: #fff;
+            background-color: #000;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-list-container {
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-items>a {
+            text-decoration: none;
+            color: #000;
+
+        }
+
+        .product-img {
+            height: 50%;
+            width: 100%;
+        }
+
+        .product-list-item {
+            height: 300px;
+            width: 300px;
+            list-style-type: none;
+            color: #fff;
+            padding: 10px;
+            border: 1px solid #fff;
+        }
+
+        button {
+            height: 36px;
+            width: 100%;
+            border-radius: 5px;
+            background-color: aliceblue;
+            font-size: 16px;
+            border: none;
+        }
+
+        .product-landing {
+            height: 80vh;
+            width: 100%;
+            object-fit: fill;
+            object-position: center;
+        }
+
+        .input-container .full-name-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        form {
+            padding: 20px;
+            width: 400px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        input {
+            width: 100%;
+        }
+
+        .top-label {
+            font-weight: 700;
+        }
+
+        .form-section {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="position: sticky;">
+        <nav>
+            <h2 class="logo">MV</h2>
+            <ul class="nav-list-container">
+                <li class="nav-items">
+                    <a href="#products">Products</a>
+                </li>
+                <li class="nav-items">
+                    <a href="#services">Services</a>
+                </li>
+                <li class="nav-items">
+                    <a href="#aboutus">About us</a>
+                </li>
+                <li class="nav-items">
+                    <a href="#">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img src="products_images/landing page.png" alt="product landing" class="product-landing" />
+        </section>
+        <section id="products">
+            <h2>Products</h2>
+            <ul style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+                <li class="product-list-item">
+                    <img src="products_images/camera.jpg" alt="product" class="product-img" />
+                    <h4>Camera</h4>
+                    <p><strong>Rs.9999 /-</strong></p>
+                    <p></p>
+                    <button type="button">Add to Cart</button>
+                </li>
+                <li class="product-list-item">
+                    <img src="products_images/camera.jpg" alt="product" class="product-img" />
+                    <h4>Camera</h4>
+                    <p><strong>Rs.9999 /-</strong></p>
+                    <p></p>
+                    <button type="button">Add to Cart</button>
+                </li>
+                <li class="product-list-item">
+                    <img src="products_images/camera.jpg" alt="product" class="product-img" />
+                    <h4>Camera</h4>
+                    <p><strong>Rs.9999 /-</strong></p>
+                    <p></p>
+                    <button type="button">Add to Cart</button>
+                </li>
+                <li class="product-list-item">
+                    <img src="products_images/camera.jpg" alt="product" class="product-img" />
+                    <h4>Camera</h4>
+                    <p><strong>Rs.9999 /-</strong></p>
+                    <p></p>
+                    <button type="button">Add to Cart</button>
+                </li>
+                <li class="product-list-item">
+                    <img src="products_images/camera.jpg" alt="product" class="product-img" />
+                    <h4>Camera</h4>
+                    <p><strong>Rs.9999 /-</strong></p>
+                    <p></p>
+                    <button type="button">Add to Cart</button>
+                </li>
+                <li class="product-list-item">
+                    <img src="products_images/camera.jpg" alt="product" class="product-img" />
+                    <h4>Camera</h4>
+                    <p><strong>Rs.9999 /-</strong></p>
+                    <p></p>
+                    <button type="button">Add to Cart</button>
+                </li>
+                <li class="product-list-item">
+                    <img src="products_images/camera.jpg" alt="product" class="product-img" />
+                    <h4>Camera</h4>
+                    <p><strong>Rs.9999 /-</strong></p>
+                    <p></p>
+                    <button type="button">Add to Cart</button>
+                </li>
+                <li class="product-list-item">
+                    <img src="products_images/camera.jpg" alt="product" class="product-img" />
+                    <h4>Camera</h4>
+                    <p><strong>Rs.9999 /-</strong></p>
+                    <p></p>
+                    <button type="button">Add to Cart</button>
+                </li>
+                <li class="product-list-item">
+                    <img src="products_images/camera.jpg" alt="product" class="product-img" />
+                    <h4>Camera</h4>
+                    <p><strong>Rs.9999 /-</strong></p>
+                    <p></p>
+                    <button type="button">Add to Cart</button>
+                </li>
+            </ul>
+        </section>
+        <section id="aboutus">
+            <h2>About Us</h2>
+            <p>
+                At Electo Soltion, we’re passionate about creating solutions that make life easier and more enjoyable.
+                Founded with a vision to revolutionize [industry or niche], we’ve dedicated ourselves to delivering
+                high-quality,
+                innovative products that our customers love. Our journey has been driven by a deep commitment to
+                excellence, sustainability,
+                and customer satisfaction. Join us as we continue to shape the future of [industry/niche] with products
+                designed to exceed expectations.
+                This section is often accompanied by visuals like team photos, product development stories, or brand
+                milestones to make it more engaging.
+            </p>
+        </section>
+        <section id = "services">
+            <div>
+                <h2>Services</h2>
+                <ul>
+                    <h4>Device Repair Services</h4>
+                    <li>Screen replacements</li>
+                    <li>Battery replacements</li>
+                    <li>Water damage repair</li>
+                    <li>Hardware troubleshooting</li>
+                </ul>
+                <ul>
+                    <h4>Device Upgrade Services</h4>
+                    <p>Assistance with upgrading hardware or software for better performance.</p>
+                    <li>Memory (RAM) or storage upgrades</li>
+                    <li>Operating system installation or updates</li>
+                    <li>Graphic card or processor upgrades</li>
+                </ul>
+                <ul>
+                    <h4>Diagnostics and Troubleshooting</h4>
+                    <p>Comprehensive diagnostic checks to identify and fix device issues.</p>
+                    <li> Software debugging</li>
+                    <li>Virus and malware detection</li>
+                    <li>Performance optimization</li>
+
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="form-section" style="color: #000;" id="contactus">
+            <form>
+                <h2 style="text-align: center;">Contact Us</h2>
+                <hr />
+
+                <div class="input-container">
+                    <label for="firstname" class="top-label">Full Name</label>
+                    <div style="display: flex;gap: 20px;">
+                        <div class="full-name-container">
+                            <input type="text" id="firstname" />
+                            <label for="firstname">Fisrt Name</label>
+                        </div>
+                        <div class="full-name-container">
+                            <input type="text" id="lastname" />
+                            <label for="lastname">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="email" class="top-label">Email</label><br />
+                    <input type="email" id="email" /><br />
+                    <label for="email">example@gmail.com</label>
+                </div>
+                <div class="input-container">
+                    <label for="message" class="top-label">Message</label><br />
+                    <textarea name="example" id="message" rows="4" cols="50"
+                        placeholder="please enter something here..."></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+
+        </section>
+    </footer>
+</body>
+
+</html>
