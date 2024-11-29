@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of CSS</title>
+    <link rel="stylesheet" href="style1.css">  <!-- External CSS file -->
+    <!--This is Internal CSS-->
+    <style>
+        body{ background-image: url("https://freedesignfile.com/upload/2017/01/Light-blue-tech-background-vector-04.jpg");background-size: cover; font-family: Arial, Helvetica, sans-serif;}
+        h1{ color:blueviolet} /*element selector*/
+        .logo{ border-width: 10;} /*class selector*/
+        p,h4{ font-size: 10px; color: brown;} /*grouping selector*/
+        nav a{color:red}
+        nav a:hover{color: blue;} /*pseudo class selector*/
+    </style>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between;align-items: center;"> <!--Inline CSS-->
+        <div class="logo">
+        <img src="https://th.bing.com/th/id/OIP.7S3DcyYASTNZ3d2Wygze6wHaHa?rs=1&pid=ImgDetMain" alt="icon" rel="icon" width="50" height="50">
+        </div>
+        <h1>Welcome to Apty</h1>
+        <nav>
+            <li><a href="./home.html">About me</a></li>
+            <li><a href="./contact.html">Contact details</a></li>
+        </nav>
+    </header>
+    <h2 style="font-family: fantasy;">Apty is the Fastest to Implent and Easiest to Use Digital Adoption Platform</h2> <!--inline CSS-->
+    <p>We are a group of tech enthusiasts building software solutions that create measurable business value for companies. Through our AI-driven in-app guidance and real-time workflow optimization, our team ensures unparalleled user engagement and productivity across all enterprise applications</p>
+    <ul class="arrow">
+        <li>Helping you get more out of software applications by making them easier to use and improving your team’s efficiency. ​​</li>
+        <li>AI-driven capabilities identify the adoption challenges at the user level and provide targeted guidance at the time of need.</li>
+        <li>With continuous monitoring and targeted help at the time of need, Apty enhances every software to realize the ROI on your investment</li>
+    </ul>
+    <footer><p>&copy; Apty 2024. All Rights Reserved. </p></footer>
+</body>
+</html>

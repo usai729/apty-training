@@ -1,0 +1,35 @@
+/* Text Styling */
+h1 {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    background-color: rgb(48, 43, 67);
+    padding: 20px;
+  }
+  
+  /* Box Model Example */
+  .box {
+    width: 300px;
+    height: 200px;
+    padding: 10px 10px 10px 60px; /* Space inside the box */
+    border: 5px solid black; 
+    margin: 40px;
+    background-color: lightgray; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    
+   
+  }
+  
+  /* Background Styling */
+body {
+    background-color: lightcoral; /* Simple background color */
+    padding: 20px;
+    text-align: left;
+    display: flex; 
+    flex-direction: column;              
+    justify-content: center;      
+    align-items: center;
+  }
+
+  

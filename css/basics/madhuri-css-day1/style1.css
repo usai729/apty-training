@@ -1,0 +1,19 @@
+.arrow{
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 20px;
+}
+ul li::before { /*pseudo element selector*/
+    content: "→"; /* Unicode arrow */
+    font-size: 20px;
+    margin-right: 10px;
+}
+footer {
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: blue;
+    padding: 5px 0;  /* Reduced padding */
+    text-align: right;
+    font-size: 14px;  /* Smaller font size */
+  }
