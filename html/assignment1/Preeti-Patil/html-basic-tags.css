@@ -1,0 +1,14 @@
+h1,
+h3 {
+  color: rgb(166, 166, 218);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(219, 183, 118);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: orange;
+}
