@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow DOM Example</title>
+    <meta name="description" content="An example of Shadow DOM with the template element.">
+    <link rel = "stylesheet" href="shadow-dom-template.css"/>
+</head>
+<body>
+    <template id="card-template">
+        <h1>Welcome aboard</h1>
+        <p>This is a dynamic template card rendered using Shadow DOM.</p>
+    </template>
+
+    <!-- Shadow DOM host container -->
+    <div id="shadow-host" aria-live="polite" role="region"></div>
+
+    <script>
+        // JavaScript for dynamically rendering template in Shadow DOM
+        const template = document.querySelector("#card-template");
+        const shadowHost = document.getElementById("shadow-host");
+
+        // Attach shadow root with open mode for future manipulation
+        const shadowRoot = shadowHost.attachShadow({ mode: "open" });
+
+        // Append the template content to the shadow root
+        shadowRoot.appendChild(template.content.cloneNode(true));
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Embedding a YouTube video and Google map using iframe with all necessary attributes for security and accessibility.">
+    <title>Embedding Content Using iframe</title>
+    <link rel = "stylesheet" href = "iframe.css" />
+</head>
+<body>
+
+    <main>
+        <!-- YouTube Video Embedding -->
+        <section>
+            <h1 id="videoTitle">Youtube Video Embedding</h1>
+            <iframe 
+                src="https://www.youtube.com/embed/n3V5ZP8RxaY" 
+                title="A YouTube video player displaying Apty video"
+                allow="autoplay; picture-in-picture" 
+                width="500" 
+                height="300" 
+                frameborder="0" 
+                allowfullscreen 
+                loading="lazy"
+                sandbox="allow-scripts allow-same-origin allow-popups" 
+                aria-labelledby="videoTitle"
+                aria-describedby="videoDesc">
+            </iframe>
+            <p>This video demonstrates the digital adoption platform by Apty. You can watch it by interacting with the embedded YouTube player.</p>
+        </section>
+
+        <!-- Google Map Embedding -->
+        <section>
+            <h1 id="mapTitle">Map Embedding</h1>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.572463068016!2d78.38252037369044!3d17.43229360151288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9388a09a79f5%3A0x9ff99841b5ec9e9c!2sITC%20Kohenur%2C%20a%20Luxury%20Collection%20Hotel%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1732182738126!5m2!1sen!2sin" 
+                title="Google Map location of ITC Kohenur Hyderabad"
+                width="500" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                sandbox="allow-scripts allow-same-origin allow-forms"
+                aria-labelledby="mapTitle"
+                aria-describedby="mapDesc">
+            </iframe>
+            <p>This embedded map shows the location of ITC Kohenur, a luxury collection hotel in Hyderabad, India.</p>
+        </section>
+    </main>
+
+</body>
+</html>
