@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video & Map | iframe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        iframe {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .map-iframe {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .youtube-iframe {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .iframe-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            iframe {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Hitech City, Hyderabad!</h1>
+    <p>Here is the location on Google Maps and a YouTube video:</p>
+
+    <div class="iframe-container">
+        <iframe class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.5022963591736!2d78.37610821435964!3d17.448036389110278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb94a0d5b0cfaf%3A0x3a8724b0ab0c9021!2sHitech%20City!5e0!3m2!1sen!2sin!4v1608474975333!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
+
+        <iframe class="youtube-iframe" width="560" height="315" src="https://www.youtube.com/embed/wce_mQYfwZc?si=saJJRw3P1fpCZA0z"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>
