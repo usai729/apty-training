@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Timetable and form</title>
+  
+</head>
+<body>
+    <table>
+        <caption>Class Timetable</caption>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9:00 AM - 10:00 AM</td>
+                <td>Mathematics</td>
+                <td>Science</td>
+                <td>social studies</td>
+                <td>English</td>
+                <td>Hindi</td>
+            </tr>
+            <tr>
+                <td>10:15 AM - 11:15 AM</td>
+                <td>Science</td>
+                <td>Mathematics</td>
+                <td>Hindi</td>
+                <td>social studies</td>
+                <td>English</td>
+            </tr>
+            <tr>
+                <td>11:30 AM - 12:30 PM</td>
+                <td>English</td>
+                <td>Hindi</td>
+                <td>Science</td>
+                <td>Mathematics</td>
+                <td>Spoken english</td>
+            </tr>
+            <tr>
+                <td>1:30 PM - 2:30 PM</td>
+                <td>social studies</td>
+                <td>English</td>
+                <td>Mathematics</td>
+                <td>Science</td>
+                <td>Sports class</td>
+            </tr>
+            <tr>
+                <td>2:45 PM - 3:45 PM</td>
+                <td>Hindi</td>
+                <td>Physical Education</td>
+                <td>Spoken english</td>
+                <td>social studies</td>
+                <td>Sports class</td>
+            </tr>
+        </tbody>
+    </table>
+<hr>
+    <form>
+        <label for="email">Email:</label>
+        <input id="email" type="text" required/>
+        <br/>
+        <br/>
+        <label for="password">Password:</label>
+        <input id="password" type="password" maxlength="10" min="4" required/>
+        <br/>
+        <br/>
+        <label for="confirmpassword">Confirm Password:</label>
+        <input id="confirmpassword" type="text" type="password" maxlength="10" min="4" required/>
+        <br/>
+        <br/>
+        <label for="Address">Address:</label>
+        <textarea id="Address" type="text" cols="20" rows="5"></textarea>
+        <br/>
+        <br/>
+        <label for="PhoneNumber">PhoneNumber:</label>
+        <input id="PhoneNumber" type="number"/>
+        <br/>
+        <br/>
+        <label for="Date">Date:</label>
+        <input id="date" type="date"/>
+        <br/>
+        <br/>
+        <p>Gender</p>
+       <input id="Male" type="radio"/> Male
+        <br/>
+        <br/>
+       <input id="date" type="radio"/> Female
+        <br/>
+        <br/>
+       <input id="Checkbox" type="checkbox"/> I have read the terms and conditions
+        <br/>
+        <br/>
+       <input type="reset" />
+       <input type="submit"/>
+    </form>
+</body>
+</html>
