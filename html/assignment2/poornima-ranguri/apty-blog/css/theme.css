@@ -1,0 +1,43 @@
+/* theme.css - Visual styling and cosmetic enhancements */
+.site-header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.site-header__menu-item a {
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.site-header__menu-item a:hover {
+    background-color: rgba(0,139,139,0.1);
+}
+
+.blog-content__title {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+}
+
+.about-section__steps dt {
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-top: 0.5rem;
+}
+
+.about-section__steps dd {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.site-footer__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: var(--color-light-gray);
+}
