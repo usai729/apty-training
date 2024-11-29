@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apty Shadow DOM - Digital Adoption Platform Insight</title>
+    <meta name="description" content="Explore Apty's AI-driven Digital Adoption Platform through an interactive Shadow DOM demonstration">
+</head>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+    <main>
+        <template id="text">
+            <p style="color: darkcyan; font-size: 20px;">Apty's AI-driven in-app guidance streamlines and accelerates software
+                adoption, improves onboarding, reduces IT support costs, and boosts
+                ROI with our Digital Adoption Platform</p>
+        </template>
+        
+        <section>
+            <button 
+                id="showText" 
+                style="background-color: aliceblue; cursor: pointer; color:darkgray; border: none; font-size: 27px; border-radius: 10px; padding: 10px;"
+                type="button" 
+                name="actionButton" 
+                value="ShowText" 
+                title="Click to see what Apty is" 
+                aria-label="What is Apty?" 
+                tabindex="0"
+                autofocus
+            >
+                What is Apty ?
+            </button>
+        
+            <div 
+                id="home"
+                style="margin-top: 20px;"
+            >
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const showText = document.getElementById("showText");
+        showText.onclick = function (){
+            const template = document.getElementById("text");
+            const home  = document.getElementById("home").attachShadow({mode:"open"});
+            home.appendChild(template.content);
+        }
+    </script>
+</body>
+</html>

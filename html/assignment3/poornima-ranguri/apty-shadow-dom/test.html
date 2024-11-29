@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template>
+        <div>
+            <h1>Hi</h1>
+            <h2>Poori</h2>
+        </div>
+    </template>
+
+    <div id="home"></div>
+</body>
+
+<script>
+    const template = document.querySelector("template");
+    const home = document.getElementById("home").attachShadow({ mode: "open" })
+
+   home.appendChild(template.content)
+    
+</script>
+
+</html>

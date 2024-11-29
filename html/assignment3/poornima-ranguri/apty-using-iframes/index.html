@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apty Digital Adoption Platform - Video, Location, and Exploration">
+    <title>Apty: Digital Adoption Platform Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        iframe {
+            border: none;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exploring Apty: Digital Adoption Platform</h1>
+    </header>
+
+    <main>
+        <section aria-labelledby="video-section-title">
+            <h2 id="video-section-title">Watch Apty</h2>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/pd03ULkoTdk?si=5B9hvOjXLyMbE_cz&loop=1&autoplay=1" 
+                title="Apty Product Overview Video" 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                sandbox="allow-scripts allow-same-origin allow-presentation"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                id="video-iframe"
+                class="iframe-video"
+                style="border-radius: 8px;">
+            </iframe>
+        </section>
+
+        <section aria-labelledby="details-section-title">
+            <h2 id="details-section-title">Embedded Apty Details</h2>
+            <iframe 
+                title="Apty Company Overview"
+                sandbox="allow-same-origin"
+                srcdoc="
+                    <html>
+                        <head>
+                            <style>
+                                body {
+                                    font-family: Arial, sans-serif;
+                                    text-align: center;
+                                    color: darkcyan;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <h1>What is Apty?</h1>
+                            <p>
+                                Apty's AI-driven in-app guidance streamlines and accelerates software adoption,
+                                improves onboarding, reduces IT support costs, and boosts ROI with our Digital Adoption Platform.
+                            </p>
+                        </body>
+                    </html>"
+                width="600"
+                height="400"
+                style="border: 2px solid #ccc; margin-top: 20px;"
+                loading="lazy"
+                referrerpolicy="no-referrer">
+            </iframe>
+        </section>
+
+        <section aria-labelledby="location-section-title">
+            <h2 id="location-section-title">Apty Location</h2>
+            <iframe 
+                width="600" 
+                height="450" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.240989780491!2d78.3771196749362!3d17.448175983449435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91622133fbc9%3A0x4695b97528d91fe2!2sExcers!5e0!3m2!1sen!2sin!4v1732182623735!5m2!1sen!2sin" 
+                style="border: 0; margin-top: 20px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Apty Company Location Map"
+                id="google-map-iframe"
+                class="iframe-location">
+            </iframe>
+        </section>
+
+        <section aria-labelledby="explore-section-title">
+            <h2 id="explore-section-title">Embedding Apty to Explore</h2>
+            <iframe 
+                name="iframe_a" 
+                width="600" 
+                height="315" 
+                title="Apty Exploration Frame"
+                style="border-radius: 10px;">
+                Eager to know? Click below
+            </iframe>
+            <p>
+                <a href="https://www.apty.io/" 
+                   target="iframe_a" 
+                   rel="noopener noreferrer"
+                   download="apty-overview.pdf" 
+                   title="Click to explore what Apty is" 
+                   id="explore-apty-link"
+                   class="explore-link"
+                   style="text-decoration: none; color: darkblue; font-size: 18px;"
+                   hreflang="en" 
+                   type="application/pdf">
+                    Click Here To See What is Apty!
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; 2024 Apty Digital Adoption Platform</small>
+    </footer>
+</body>
+</html>
