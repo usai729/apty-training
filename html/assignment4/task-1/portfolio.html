@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Nishma Medagoni, Technical Consultant at Apty. Learn more about my skills, experience, and how to contact me.">
+    <title>Portfolio - Nishma Medagoni</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <main>
+        <header>
+            <nav role = "navigation">
+                <ul>
+                    <li><a href="#about" aria-label="Go to About section">About</a></li>
+                    <li><a href="#skills" aria-label="Go to Skills section">Skills</a></li>
+                    <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about" role="section" aria-labelledby="about-heading">
+            <div>
+                <p>Hello,</p>
+                <h1 id="about-heading">I am Nishma Medagoni</h1>
+                <p>Technical Consultant</p>
+                <p>@Apty</p>
+            </div>  
+        </section>
+
+        <section id="skills" role="section" aria-labelledby="skills-heading">
+            <h1 id="skills-heading">Skills</h1>
+            <ul aria-label="List of skills">
+                <li>
+                    <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="HTML Logo" class="image1" />
+                    <p>HTML</p>
+                </li>
+                <li>
+                    <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_640.png" alt="CSS Logo" class="image2" />
+                    <p>CSS</p>
+                </li>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" alt="JavaScript Logo" class="image3" />
+                    <p>JavaScript</p>
+                </li>
+                <li>
+                    <img src="https://www.cdnlogo.com/logos/r/85/react.svg" alt="React Logo" class="image4" />
+                    <p>React</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact" role="form" aria-labelledby="contact-heading">
+            <h1 id="contact-heading">Get in Touch</h1>
+            <form action="/submit" method="POST" aria-labelledby="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required aria-required="true" aria-label="Enter your name" />
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required aria-required="true" aria-label="Enter your email" />
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" columns="50" required aria-required="true" aria-label="Write your message"></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Nishma Medagoni. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beauty products and cosmetics portfolio showcasing various beauty favorites, with an easy shopping experience.">
+    <link rel="stylesheet" href="product-page.css">
+    <title>Beauty Products Portfolio</title>
+</head>
+<body>
+    <main>
+        <header>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/021/187/437/small_2x/flat-icon-modesrn-company-logo-business-logo-red-and-navy-iconic-logo-vector.jpg" class="header-image" alt="Company Logo" />
+            <nav role = "navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#Home" aria-label="Go to Home section">Home</a></li>
+                    <li><a href="#Features" aria-label="Go to Features section">Features</a></li>
+                    <li><a href="#Contact" aria-label="Go to Contact section">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="Home" role="region" aria-labelledby="home-heading">
+            <div>
+                <h1 id="home-heading">BEAUTY</h1>
+                <h1>PRODUCTS</h1>
+                <h1>& COSMETICS</h1>
+                <button class="home-button" aria-label="Shop Beauty Products">SHOP</button>
+            </div>
+        </section>
+
+        <section id="Features" role="region" aria-labelledby="features-heading">
+            <h1 id="features-heading" class="heading">ALL YOUR BEAUTY FAVOURITES</h1>
+            <ul aria-label="List of featured beauty products">
+                <li class="features-items">
+                    <img src="https://m.media-amazon.com/images/I/61zRv6kIJjL.jpg" class="image1" alt="Beauty product 1" />
+                </li>
+                <li>
+                    <img src="https://img.pikbest.com/png-images/qiantu/cute-girl-facial-care-skin-care-applying-mask-hand-drawn-daily-care_2661764.png!sw800" class="image2" alt="Girl applying facial care mask" />
+                </li>
+            </ul>
+        </section>
+
+        <section id="Contact" role="form" aria-labelledby="contact-heading">
+            <h1 id="contact-heading">Get in Touch</h1>
+            <form action="/submit" method="POST" aria-labelledby="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required aria-required="true" aria-label="Enter your name" />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required aria-required="true" aria-label="Enter your email" />
+
+                <label for="message">Message</label>
+                <textarea rows="5" columns="50" id="message" name="message" required aria-required="true" aria-label="Write your message"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <footer class="footer" aria-labelledby="footer-text">
+            <p id="footer-text">&copy; 2024 ProductName. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>

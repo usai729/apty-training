@@ -1,0 +1,120 @@
+body {
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+header {
+    background-color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+}
+.header-image {
+    width: 160px;
+    height: 40px;
+}
+nav {
+    padding: 30px;
+}
+a {
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+a:hover {
+   color: brown; 
+}
+#Home {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(./Free\ \ Makeup\,\ Makeups\,\ Eye\ Background\ Images\,\ Makeup\ Background\ Photo\ Background\ PNG\ and\ Vectors.jpg);
+    background-size: cover;
+}
+.home-button {
+    width: 30%;
+}
+h1 {
+    color: white;
+}
+div {
+    width: 100vh;
+    padding-left: 140px;
+}
+p {
+    align-self: flex-start;
+}
+
+#Features {
+    height: 100vh;
+    display: flex;
+    margin-top: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    width: 90%;
+    height: 70%;
+    align-items: center;
+}
+
+.heading {
+    color: black;
+    text-align: center;
+}
+.image1 {
+    width: 40%;
+}
+.image2 {
+    width: 60%;
+}
+#Contact {
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: olive;
+}
+form  {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 50%;
+}
+label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+button {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: brown;
+}
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+  
+.footer p {
+    margin: 0;
+}
