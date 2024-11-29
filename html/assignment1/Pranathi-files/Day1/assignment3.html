@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time table and Login page</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVAQfqmunzZeNTZqMgs6KD5_1slidpuK5P0xsFIaj0c5IPesBNs2QmJq_9Lg0p_Y7KS0U&usqp=CAU"
+    />
+    <style>
+      input {
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      button {
+        padding: 8px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      h2 {
+        color: aquamarine;
+      }
+      table {
+        background-color: #abf7b1;
+        border-spacing: 10px;
+        border: 1px solid black;
+      }
+      th,
+      tr,
+      td {
+        border: 2px solid black;
+      }
+      body {
+        max-width: fit-content;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Class Timetable</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th abbr="Time">Time</th>
+          <th abbr="Monday">Monday</th>
+          <th abbr="Tues">Tuesday</th>
+          <th abbr="wed">Wednesday</th>
+          <th abbr="thurs">Thursday</th>
+          <th abbr="friday">Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>9:00 - 10:00</td>
+          <td>Maths</td>
+          <td>Physics</td>
+          <td>Chemistry</td>
+          <td>Biology</td>
+          <td>Computer Science</td>
+        </tr>
+        <tr>
+          <td>10:00 - 11:00</td>
+          <td>English</td>
+          <td>Maths</td>
+          <td>Physics</td>
+          <td>Chemistry</td>
+          <td>Biology</td>
+        </tr>
+        <tr>
+          <td>11:00 - 12:00</td>
+          <td>Computer Science</td>
+          <td>English</td>
+          <td>Math</td>
+          <td>Physics</td>
+          <td>Chemistry</td>
+        </tr>
+        <tr>
+          <td>01:00 - 02:00</td>
+          <td>English</td>
+          <td>Maths</td>
+          <td colspan="2">Physics</td>
+          <td>Biology</td>
+        </tr>
+        <tr scope="col">
+          <td>03:00 - 04:00</td>
+          <td>Maths</td>
+          <td>Physics</td>
+          <td>Chemistry</td>
+          <td>Biology</td>
+          <td>Computer Science</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="form-container">
+      <div>
+        <h2>Login</h2>
+        <form action="/sample.com" name="sample form">
+          <fieldset>
+            <input
+              type="text"
+              placeholder="Username"
+              required
+              autofocus
+            /><br />
+            <input type="password" placeholder="Password" required /><br />
+            <button type="submit">Login</button>
+            <button type="reset">Reset</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
