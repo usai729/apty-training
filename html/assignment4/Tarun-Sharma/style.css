@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(190deg, rgb(43, 144, 13), rgb(158, 84, 15), rgb(202, 94, 253));
+}
+
+main {
+    padding: 2em;
+}
+
+article {
+    margin-bottom: 2em;
+}
+
+article h2 {
+    color: #333;
+}
+
+footer {
+    bottom: 0; 
+    position: static;
+    width: 100%;
+    background-color: rgb(111, 19, 154);
+}
+
+p{
+    color: #fff;
+}
+
+aside{
+    color: aliceblue;
+}
+
+.main{
+    background: linear-gradient(190deg, rgb(87, 113, 218), rgb(113, 231, 105), rgb(202, 131, 73));
+    color: #000000;
+    text-align: center;
+    border: white 5px solid;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 45%;
+}
+
+.skills{
+    background-color: rgb(71, 192, 236);
+    color: #000000;
+    text-align: center;
+    border: rgb(223, 27, 27) 3px solid;
+    width: 30%;
+    margin-left: 1%;
+}
+
+.pskills{
+    background-color: rgb(70, 223, 93);
+    color: #000000;
+    text-align: center;
+    border: rgb(223, 27, 27) 3px solid;
+    width: 30%;
+    margin-left: 65%;
+}
+
+.contact{
+    background-color: rgb(160, 36, 141);
+    color: #000000;
+    text-align: center;
+    border: rgb(224, 110, 178) 3px solid;
+    width: 100%;
+}
+
+.element {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .mainn{
+    background: linear-gradient(190deg, rgb(111, 135, 231), rgb(178, 104, 35), rgb(225, 46, 213));
+    color: #000000;
+    text-align: center;
+    border: rgb(229, 122, 22) 5px solid;
+    width: 20%;
+    margin-left: 40%;
+}
+
+.skillss{
+    width: 100%;
+    font-size: 44pt;
+}
+
+.skillsss{
+    width: 100%;
+    font-size: 20pt;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+nav {
+    background-color: #e7e41f;
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    text-align: center;
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #3bb900;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+
