@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model styling</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        color: black;
+        padding: 20px;
+      }
+
+      header {
+        background-color: skyblue;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .content {
+        background-color: white;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid gray;
+        border-radius: 10px;
+      }
+
+      .content p {
+        color: #555;
+        text-align: justify;
+        margin-bottom: 20px;
+        font-family: Arial, sans-serif;
+        font-size: large;
+      }
+
+      .content img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Styled Webpage</h1>
+    </header>
+    <main>
+      <section class="content">
+        <p>
+          A beach is a landform along the shoreline of an ocean, sea, lake, or
+          river, typically consisting of sand, pebbles, or rocks. Beaches are
+          dynamic environments, constantly shaped by natural forces like tides,
+          waves, and weather.
+        </p>
+        <img src="beach.jpg" alt="A scenic beach view" />
+      </section>
+    </main>
+  </body>
+</html>
