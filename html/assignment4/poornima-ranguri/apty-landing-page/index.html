@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Apty Inc.">
+    <meta name="description" content="Apty's Digital Adoption Platform: Streamline Software Adoption and Improve Onboarding">
+    <meta name="keywords" content="Digital Adoption, In-App Guidance, Software Adoption, ROI, Onboarding, Enterprise Software">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Apty: Digital Adoption Platform</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="all">
+    <link rel="icon" href="https://www.apty.io/wp-content/uploads/2024/06/logo.svg" type="image/svg+xml">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aliceblue;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #0056b3;
+        }
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+        .hero-content, .hero-media {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        .cta-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-link:hover {
+            background-color: #003d82;
+        }
+        #features, #contact {
+            padding: 50px 20px;
+        }
+        .feature {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-align: left;
+        }
+        #contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #contact-form input, 
+        #contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        #contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #contact-form button:hover {
+            background-color: #003d82;
+        }
+    </style>
+</head>
+<body class="landing-page" id="home" data-theme="light">
+    <nav role="navigation" aria-label="Main Navigation">
+        <div class="logo" id="logo">
+            <img src="https://www.apty.io/wp-content/uploads/2024/06/logo.svg" alt="Apty Logo" width="120" height="40">
+        </div>
+        <ul aria-label="Navigation Links">
+            <li><a href="#about" title="About Apty" aria-label="About Apty">About</a></li>
+            <li><a href="#features" title="Explore Features" aria-label="Explore Features">Features</a></li>
+            <li><a href="#contact" title="Contact Apty" aria-label="Contact Apty">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section" role="banner" aria-label="Apty Introduction">
+        <div class="hero-content">
+            <h1>Welcome to Apty</h1>
+            <p>Apty's AI-driven in-app guidance streamlines and accelerates software adoption, improves onboarding, reduces IT support costs, and boosts ROI with our Digital Adoption Platform.</p>
+            <a href="#features" class="cta-link" title="Learn more about Apty's features" aria-label="Learn More">Learn More</a>
+        </div>
+        <div class="hero-media">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/g2s34r4Gw0E?si=tFexIn0_gdBrn9WN" 
+                title="Apty Digital Adoption Platform Overview" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" role="region" aria-labelledby="features-heading">
+            <h2 id="features-heading">Features</h2>
+            <div class="feature">
+                <h3>Everything You Need to Make Your Digital Adoption a Success</h3>
+                <p>Transform software utilization across your enterprise with guided intelligent recommendations, pre-built resources, automation, insights, and more. Experience all features within Apty's award-winning digital adoption platform.</p>
+            </div>
+            <div class="feature">
+                <h3>Centralized Knowledge Base</h3>
+                <p>A continuously evolving knowledge base providing users access to important information that supports adoption – easily available on the same dashboard without disrupting the current workflow of users.</p>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Apty</h2>
+            <form 
+                id="contact-form" 
+                action="/submit-form" 
+                method="POST" 
+                enctype="multipart/form-data" 
+                target="_blank" 
+                role="form" 
+                aria-labelledby="contact-heading">
+                
+                <label for="name">Name:</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    placeholder="Enter your name" 
+                    aria-required="true">
+                
+                <label for="email">Email:</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    placeholder="Enter your email" 
+                    aria-required="true">
+                
+                <label for="message">Message:</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="4" 
+                    required 
+                    placeholder="Enter your message" 
+                    aria-required="true"></textarea>
+                
+                <button 
+                    type="submit" 
+                    title="Submit your message" 
+                    aria-label="Submit">
+                    Submit
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Apty Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
