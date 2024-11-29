@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Apty Form</title>
+    <style>
+        body {
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #eb4f33;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ef5126;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Apty Form</h1>
+    <form action="#" method="POST">
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required pattern="[a-zA-Z\s]+" title="Only alphabets and spaces are allowed" placeholder="Enter your full name">
+
+  
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="8" placeholder="Enter a strong password">
+
+        
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter your password">
+
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required pattern="^\d{10}$" title="Phone number must be 10 digits" placeholder="Enter your phone number">
+
+       
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required min="1900-01-01" max="2024-12-31">
+
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="18" max="100" placeholder="Enter your age">
+
+        
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required placeholder="Enter your address"></textarea>
+
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option value="USA">United States</option>
+            <option value="India">India</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+        </select>
+
+      
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
