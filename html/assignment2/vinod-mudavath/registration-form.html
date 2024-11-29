@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        form {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+           gap: 10px;
+           padding: 10px;
+           border:1px solid ;
+           border-radius: 5px;
+
+        }
+
+        input {
+            height: 24px;
+            outline: none;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>User Registration</h2>
+    <form action="">
+        <div class="input-container">
+            <label for="firstname">FIRSTNAME </label>
+            <input type="text" name="firstName" id="firstname"
+             placeholder="enter your firstname" required pattern="\w{5,}"
+             title="your name atleast five characters"
+             />
+        </div>
+        <div class="input-container">
+            <label for="lastname">LASTNAME </label>
+            <input type="text" name="lastName" id="lastname"
+             placeholder="enter your lastname" required pattern="\w{5,}"
+             title="your name atleast five characters"
+             />
+        </div>
+        <div class="input-container">
+            <label for="email">EAMIL </label>
+            <input type="email" name="email" id="email" 
+            placeholder="enter your email" required 
+            />
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <label>GENDER </label>
+            <div >
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="gender" value="male" required />
+            </div>
+            <div >
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="gender" value="female" required />
+            </div>
+            <div >
+                <label for="other">Others</label>
+                <input type="radio" name="gender" id="gender" value="other" required />
+            </div>
+        </div>
+        <div class="input-container">
+            <label for = "age">Age</label>
+            <input type="number" id="phone" name="phone" 
+            placeholder="enter your age" required pattern="[0-9]{2}"
+            min="1" max = "80"
+            />
+        </div>
+        <div class="input-container">
+            <label for = "dateofbirth">DATE OF BIRTH</label>
+            <input type="date" id="dateofbirth" name="dateofbirth" 
+            required 
+            />
+        </div>
+        <div class="input-container">
+            <label for = "phone">PHONENUMBER</label>
+            <input type="tel" id="phone" name="phone" 
+            placeholder="enter your phone number" required pattern="[0-9]{10}"
+            title="your number should be 10 digits"
+            />
+        </div>
+        <div class="input-container">
+            <label for="password">PASSWORD </label>
+            <input type="password" name="password" id="password"
+             placeholder="enter your password" required pattern="[a-zA-Z0-9]{8,}" 
+             title="your password should contain charcters and numbers "
+             />
+        </div>
+        <div class="input-container">
+            <label for="re-password">RE-PASSWORD </label>
+            <input type="password" name="re-password" id="re-password" 
+            placeholder="Re enter your password" required  pattern="[a-zA-Z0-9]{8,}"
+            title="your password matched above"
+            />
+        </div>
+        <button type="submit">
+           Register
+        </button>
+    </form>
+</body>
+
+</html>
