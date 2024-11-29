@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Component with Shadow DOM</title>
+    <style>
+        user-card {
+            display: block;
+            margin: 20px auto;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Custom Web Component: User Card</h1>
+
+    <user-card></user-card>
+
+    <script>
+      
+        const template = document.createElement('template');
+        template.innerHTML = `
+            <style>
+                :host {
+                    font-family: Arial, sans-serif;
+                    display: block;
+                    border: 1px solid #ddd;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    overflow: hidden;
+                    text-align: center;
+                }
+                .user-card {
+                    padding: 20px;
+                }
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    border: 2px solid #007bff;
+                }
+                h2 {
+                    margin: 10px 0 5px;
+                    color: #333;
+                }
+                p {
+                    color: #555;
+                    font-size: 14px;
+                }
+            </style>
+            <div class="user-card">
+                <img src="https://via.placeholder.com/100" alt="User Image">
+                <h2>John Doe</h2>
+                <p>Web Developer & Designer</p>
+            </div>
+        `;
+
+       
+        class UserCard extends HTMLElement {
+            constructor() {
+                super();
+
+                
+                const shadowRoot = this.attachShadow({ mode: 'open' });
+                shadowRoot.appendChild(template.content.cloneNode(true));
+
+              
+            }
+        }
+
+      
+        customElements.define('user-card', UserCard);
+    </script>
+</body>
+</html>
