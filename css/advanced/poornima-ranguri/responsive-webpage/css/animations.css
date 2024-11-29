@@ -1,0 +1,100 @@
+.header:hover {
+    background-color: #0a9396;
+  }
+  
+  
+.nav-link:hover {
+    color: #94d2bd;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #94d2bd;
+    transition: width 0.4s ease;
+  }
+
+
+.nav-link:hover::after {
+    width: 100%;
+  }
+
+  .grid-item {
+    background-color: #e9d8a6;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid #94a89b;
+    animation: bounceIn 1.5s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover{
+    transform: translateY(-10px) scale(1.05);
+  background-color: #ee9b00;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.grid-item:nth-child(odd) {
+    animation-delay: 0.2s;
+  }
+  
+  .grid-item:nth-child(even) {
+    animation-delay: 0.4s;
+  }
+
+  
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+  @keyframes fadeInText {
+    from {
+      color: #ffffff;
+    }
+    to {
+      color: #94d2bd;
+    }
+  }
+  
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
