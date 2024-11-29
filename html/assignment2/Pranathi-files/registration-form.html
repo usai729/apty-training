@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="semantic-tags.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="registration-form.html">Contact</a></li>
+          <li><a href="media.html">Media</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form class="registration-form">
+        <label for="name">Full Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email Ex: example@xxxx.com"
+          required
+        />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number Ex: 900-0991-xxxx"
+          pattern="[0-9]{10}"
+          required
+        />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required />
+
+        <label for="age">Age:</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="18"
+          max="60"
+          placeholder="Enter your age"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+        <label for="Gender">Gender</label>
+        <select id="Gender">
+          <option value="select">Select</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Others">Other</option>
+        </select>
+        <input type="submit" value="Register" />
+      </form>
+    </main>
+    <footer class="footer_class2">
+      <p>Author: Pranathi Akula</p>
+      <p>
+        <a href="mailto:apblogger@gmail.com" style="color: white"
+          >apblogger@gmail.com</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
