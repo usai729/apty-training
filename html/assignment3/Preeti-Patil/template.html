@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Tag</title>
+  </head>
+
+  <body>
+    <button id="button">Click here for Template Tag Content</button>
+
+    <template id="template">
+      <h2>Hello, Welcome To Apty😊!</h2>
+    </template>
+
+    <div id="templatemsg"></div>
+
+    <script>
+      // Get all the tag contents
+      const template = document.getElementById("template");
+      const button = document.getElementById("button");
+      const templatemsg = document.getElementById("templatemsg");
+
+      // on clicking the button, the template code will be shown
+      button.onclick = function () {
+        templatemsg.innerHTML = template.innerHTML;
+      };
+    </script>
+  </body>
+</html>

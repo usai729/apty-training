@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow DOM</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="shadowDOM">Shadow DOM</div>
+
+    <script>
+      // Creating Shadow DOM
+      const shadowHost = document.getElementById("shadowDOM");
+      const shadowRoot = shadowHost.attachShadow({ mode: "open" });
+
+      // Adding content and styles to the shadow DOM
+      shadowRoot.innerHTML = `
+      <style>
+        p {
+          color: seagreen;
+          font-size: 20px;
+        }
+      </style>
+      <p>Hello, I am a Shadow DOM Element 😁!</p>
+    `;
+    </script>
+  </body>
+</html>
