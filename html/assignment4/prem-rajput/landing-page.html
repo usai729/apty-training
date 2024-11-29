@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assassin's Creed: Shadows - Product Landing Page</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg,red, rgb(133, 0, 0), rgb(31, 0, 0));;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: red;
+            text-decoration: underline;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #50b3a2;
+        }
+
+        section#hero {
+            background-image: url('https://w0.peakpx.com/wallpaper/922/59/HD-wallpaper-assassins-creed-shadows-2024-mobile-game-poster.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0;
+            text-align: center;
+            box-shadow: 2px 5px 6px black;
+        }
+
+        section#hero h2 {
+            text-shadow: 3px 3px 3px black;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        section#hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        section#hero a {
+            background-color: #50b3a2;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+
+        section#hero a:hover {
+            background-color: #3d9a7f;
+        }
+
+        section#features {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        section#features div {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(55, 55, 55);
+            border-radius: 10px;
+            color: red;
+            padding: 15px 10px;
+            margin: 20px;
+        }
+
+        section#features h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        section#features p {
+            font-size: 1.1em;
+            color: #ffffff;
+        }
+
+        section#video {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section#video iframe {
+            width: 80%;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 2px 6px 8px black;
+        }
+
+        section#contact {
+            padding: 50px 20px;
+            background-color: #222;
+            color: white;
+            text-align: center;
+        }
+
+        section#contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        section#contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section#contact form input,
+        section#contact form textarea {
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        section#contact form button {
+            background-color: #50b3a2;
+            color: white;
+            padding: 15px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        section#contact form button:hover {
+            background-color: #3d9a7f;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Assassin's Creed: Shadows</h1><hr><br>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#video">Trailer</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Experience the Ultimate Stealth Adventure</h2>
+        <p>Step into the shadows with Assassin's Creed: Shadows. A new chapter in the iconic Assassin's Creed franchise awaits you!</p><br>
+        <a href="#contact">Get Started</a>
+    </section>
+
+    <section id="features">
+        <div>
+            <h3>Master Stealth</h3>
+            <p>Navigate the shadows, eliminate targets without being detected, and uncover the hidden secrets of the city.</p>
+        </div>
+        <div>
+            <h3>Epic Combat</h3>
+            <p>Engage in thrilling close combat with advanced techniques and weaponry.</p>
+        </div>
+        <div>
+            <h3>Immersive Open World</h3>
+            <p>Explore a vast, beautiful world filled with secrets, side quests, and hidden challenges.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="video">
+        <h2>Watch the Trailer</h2><br>
+        <iframe src="https://www.youtube.com/embed/vovkzbtYBC8?si=CQKfo9zoRd5cbNDy" title="Assassin's Creed: Shadows Trailer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Assassin's Creed: Shadows. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
