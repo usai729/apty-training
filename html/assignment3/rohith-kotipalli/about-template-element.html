@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template element</title>
+</head>
+<body>
+    <button onclick="narRow()">click</button>
+    <template>
+        <h1>what if?</h1>
+        <p>rocket is too hard to learn</p>
+    </template>
+    <script>
+       function narRow(){
+          const tem = document.getElementsByTagName("template")[0]
+          const theatre = tem.content
+          document.body.appendChild(theatre)
+       }
+    </script>
+</body>
+</html>

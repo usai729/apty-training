@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow dom</title>
+</head>
+<body>
+    <div id="one">
+          <h1>rohith</h1>
+    </div>
+    <script>
+        const Ele = document.getElementById("one").attachShadow({mode:"close"})
+        const para = document.createElement("p")
+        para.textContent = "tarzan"
+        Ele.appendChild(para)
+    </script>
+</body>
+</html>
