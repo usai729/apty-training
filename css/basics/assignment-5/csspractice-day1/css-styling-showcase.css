@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding:0;
+    background-color: antiquewhite;
+}
+.basic_row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.garden_quote_box{
+    background-color:rgb(205, 92, 92) ;
+    height:250px;
+    width: 250px;
+    border: 2px solid wheat;
+    margin: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+   
+}
+.what_is_css{
+    background-color:#F08080 ;
+    height: 250px;
+    width: 250px;
+    border:20px;
+    margin: 20px;
+    padding: 20px;
+}
+.what_is_html{
+    background-color:rgba(205, 92, 92) ;
+    height:250px;
+    width: 250px;
+    border: 2px solid wheat;
+    margin: 20px;
+    padding: 20px;  
+}
+.garden_scene{
+    background-color: inherit;/* inherits color from background*/
+    color:aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bold;
+    font-size: larger;
+    text-align: center;
+    line-height: 1;
+    text-transform: capitalize;
+    letter-spacing: 3;
+    text-shadow: 2px 2px 5px red;
+    word-spacing: 10px;  
+}
+.css_description{
+    color:white;
+    background-color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: larger;
+    font-weight: 300;
+    word-spacing: 3px;
+    letter-spacing: normal;
+    text-transform: lowercase;
+}
+.html_description{
+    background-color: initial;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style:calc();
+    color:aliceblue;
+
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: rgba(148, 241, 241, 0.982);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header, footer {
+            background-color: brown;
+            font-size: xx-large;
+            font-weight: 400;
+            color: aliceblue;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            margin: 50px 25px;
+        }
+
+        .img-desc-container{
+            background-color: #F67280;
+            height: 350px;
+            width: 350px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+        }
+
+        p {
+            color: aliceblue;
+            text-align: justify;
+            margin: 7px;
+            font-size: medium;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+            word-spacing: normal;
+            letter-spacing: normal;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        welcome to my webpage
+    </header>
+
+    <main>
+        <div class="img-desc-container">
+            <img src="./csss download.png" alt="css"><br>
+            <p>CSS (Cascading Style Sheets) is a style sheet language used to describe the presentation (look and feel) of a document written in HTML or XML. </p>
+        </div>
+        <div class="img-desc-container">
+            <img src="./download.png" alt="html"><br>
+            <p>HTML (HyperText Markup Language) is the foundation of web pages, used to structure and organize content. </p>
+        </div>
+        <div class="img-desc-container">
+            <img src="./java.webp" alt="java"><br>
+            <p>Java is a versatile, high-level programming language used to build applications ranging from web and mobile apps to enterprise systems. </p>
+        </div>
+    </main>
+
+    <footer>
+        @all rights are reserved
+    </footer>
+</body>
+</html>
