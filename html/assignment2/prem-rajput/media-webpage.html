@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media with Captions and Descriptions</title>
+    <style>
+
+        body{
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(190deg, purple, pink, violet);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.244);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1{
+            text-align: center;
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        .media-description{
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #383838;
+        }
+
+        iframe{
+            box-shadow: 1px 1px 18px 9px rgba(0, 0, 0, 0.418);
+        }
+
+        video, audio{
+            display: block;
+            width: 100%;
+            box-shadow: 1px 1px 18px 9px rgba(0, 0, 0, 0.418);
+            margin: 20px 0;
+        }
+
+        audio{
+            border-radius: 30px;
+        }
+
+        .caption{
+            font-size: 0.9em;
+            color: #565656;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment 4: Video and Audio Page</h1>
+
+        <div class="media-section">
+            <h2>Watch the GTA 6 Trailer from</h2>
+            <div class="media-description">
+                YouTube:
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QdBZY2fkU-0?si=MWqwDRlOTSr02a12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <br>
+            <div class="caption">Caption: Rockstar Games Presents - Grand Theft Auto 6</div>
+        </div>
+        <br>
+
+        <hr>
+        <div class="container">Random Video:
+            <video controls class="elementor-background-video-hosted elementor-html5-video" src="https://d1bltcifwhkdae.cloudfront.net/uploads/Herovideo-V2-rf33.mp4" style="width: 737.778px; height: 415px;"></video>
+        </div>
+        <div class="media-section">
+            <h2>Here's some random audio.</h2>
+            <audio src="http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3" controls="controls"></audio>
+            <div class="caption">Caption: Random audio for the assignment : D</div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sample blog webpage using semantic HTML">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <style>
+
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Arial', sans-serif;
+            line-height: 2;
+            background: linear-gradient(190deg, purple, pink, violet);
+            color: #333;
+        }
+
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header{
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1{
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        nav{
+            background-color: #444;
+            padding: 10px 0;
+            box-shadow: 2px 2px 6px black;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li{
+            margin: 0 40px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: rgb(168, 168, 168);
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover{
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        main{
+            padding: 20px 20px;
+        }
+
+        .blog-posts{
+            display: flex;
+            border-radius: 5px;
+            padding: 40px 0;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .blog-posts .post:hover{
+            transform: scale(1.02);
+        }
+
+        .blog-posts .post{
+            background-color: #fafafa;
+            width: 700px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.507);
+        }
+
+        .blog-posts .post header h2{
+            text-transform: uppercase;
+            border-radius: 5px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-decoration: underline;
+        }
+
+        .blog-posts .post header h2:hover{
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .blog-posts .post p{
+            font-size: 12pt;
+            padding: 20px;
+            color: #3b3b3b;
+        }
+
+        .blog-posts .post footer{
+            margin-top: 10px;
+        }
+
+        .blog-posts .post footer a{
+            text-decoration: underline;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+
+        .blog-posts .post footer a:hover{
+            color: #ff4d00;
+        }
+
+        footer{
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover{
+            color: #dcdcdc;
+        }
+
+    </style>
+
+    <header>
+        <div class="container">
+            <h1>Prem's Blog - Anticipated Video Games</h1>
+            <p>Welcome to my personal blog about upcoming most anticipated video games.</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="./Assignment2.html">Register</a></li>
+            <li><a href="./Assignment4.html">Media</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="blog-posts">
+            <article class="post">
+                <header>
+                    <h2 style="color: rgb(255, 0, 132);">Grand Theft Auto 6</h2>
+                </header>
+                <img src="https://cdn.mos.cms.futurecdn.net/hBWx3UpU2Je2zJqrHLyUQW-970-80.jpg.webp" height="380px" width="100%" alt="GTA 6 cover">
+                <p>Grand Theft Auto VI heads to the state of Leonida, home to the neon-soaked streets of Vice City and beyond in the biggest, most immersive evolution of the Grand Theft Auto series yet. Coming 2025 to PlayStation 5 and Xbox Series X|S. </p>
+                <footer>
+                    <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI">Read More</a>
+                </footer>
+            </article>
+
+            <hr>
+
+            <article class="post">
+                <header>
+                    <h2 style="color: red;">Assassin's Creed Shadows</h2>
+                </header>
+                <img src="https://w0.peakpx.com/wallpaper/922/59/HD-wallpaper-assassins-creed-shadows-2024-mobile-game-poster.jpg" height="480px" width="100%" alt="AC Shadows Cover">
+                <p>Live the intertwined stories of Naoe, an adept shinobi Assassin from Iga Province, and Yasuke, the powerful African samurai of historical legend. Against the backdrop of the turbulent late Sengoku period, this remarkable duo will discover their common destiny as they usher in a new era for Japan.</p>
+                <footer>
+                    <a href="https://www.ubisoft.com/en-gb/game/assassins-creed/shadows">Read More</a>
+                </footer>
+            </article>
+            <hr>
+            <article class="post">
+                <header>
+                    <h2 style="color: orange;">Monster Hunter Wilds</h2>
+                </header>
+                <img src="https://www.gematsu.com/wp-content/uploads/2024/09/Monster-Hunter-Wilds-Release-Date_09-24-24.jpg" height="380px" width="100%" alt="MHWilds Cover">
+                <p>Fulfill your duty as a Hunter by tracking and defeating powerful monsters and forging strong new weapons and armor from the materials you harvest from your hunt as you uncover the connection between the people of the Forbidden Lands and the locales they inhabit. The ultimate hunting experience awaits you in Monster Hunter Wilds.</p>
+                <footer>
+                    <a href="https://www.monsterhunter.com/wilds/en-us/">Read More</a>
+                </footer>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Prem's Blog. All Rights Reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
