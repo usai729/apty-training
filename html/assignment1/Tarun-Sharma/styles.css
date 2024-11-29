@@ -1,0 +1,31 @@
+.movies {
+	background-color: rgb(137, 222, 239);
+}
+
+footer {
+	bottom: 0;
+	position: static;
+	width: 100%;
+	background-color: rgb(234, 118, 76);
+}
+
+td,
+th {
+	border: 1px solid #dddddd;
+	text-align: center;
+	padding: 8px;
+}
+
+table {
+	width: 100%;
+}
+
+.login-form {
+	max-width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+  
+ 
+
+
