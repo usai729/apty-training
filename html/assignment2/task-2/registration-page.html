@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration-page.css"/>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Registration Form</h1>
+            <form action="/submit-form" method="POST" id="registration-form" aria-labelledby="form-title">
+                <fieldset>
+                    <legend id="form-title">Please fill out the form below to register</legend>
+                    
+                    <label for="name">Full Name:</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        pattern="[A-Za-z\s]+" 
+                        title="Only letters and spaces are allowed"
+                        placeholder="Enter Your Name"
+                        aria-describedby="name-help"
+                    />
+                    <small id="name-help">Full name, e.g., John Doe</small>
+
+                    <label for="mobile">Mobile No:</label>
+                    <input 
+                        type="tel" 
+                        id="mobile" 
+                        name="mobile" 
+                        required 
+                        pattern="^\d{10}$" 
+                        title="Phone number should be 10 digits" 
+                        placeholder="Enter Your Number"
+                        aria-describedby="mobile-help"
+                    />
+                    <small id="mobile-help">Please enter a valid 10-digit phone number</small>
+
+                    <label for="email">Email:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        title="Please enter a valid email (example@email.com)" 
+                        placeholder="Enter Your Email"
+                        aria-describedby="email-help"
+                    />
+                    <small id="email-help">Example: example@email.com</small>
+
+                    <label for="DOB">Date of Birth:</label>
+                    <input 
+                        type="date" 
+                        id="DOB" 
+                        name="DOB" 
+                        required 
+                        min="1990-01-01" 
+                        max="2004-01-01"
+                        aria-describedby="dob-help"
+                    />
+                    <small id="dob-help">Select a date between 1990-01-01 and 2004-01-01</small>
+
+                    <label for="gender">Gender:</label>
+                    <select 
+                        id="gender" 
+                        name="gender" 
+                        required 
+                        aria-labelledby="gender-label"
+                    >
+                        <option value="">Select your gender</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="age">Age:</label>
+                    <input 
+                        type="number" 
+                        id="age" 
+                        name="age" 
+                        required 
+                        min="18" 
+                        max="100" 
+                        placeholder="Enter your age"
+                        aria-describedby="age-help"
+                    />
+                    <small id="age-help">Age must be between 18 and 100</small>
+
+                    <label for="password">Password:</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required 
+                        maxlength="8" 
+                        placeholder="Enter your password"
+                        aria-describedby="password-help"
+                    />
+                    <small id="password-help">Password should be 8 characters long</small>
+
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input 
+                        type="password" 
+                        id="confirm-password" 
+                        name="confirm-password" 
+                        required 
+                        maxlength="8" 
+                        placeholder="Confirm your password"
+                        aria-describedby="confirm-password-help"
+                    />
+                    <small id="confirm-password-help">Please re-enter the same password</small>
+
+                    <button type="submit">Register</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
