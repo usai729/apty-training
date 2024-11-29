@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Movies</title>
+    <style>
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header{
+            background-color: orange;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .content{
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        h2:hover{
+            text-decoration: underline;
+        }
+
+        .movie-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .movie-item{
+            width: 320px;
+            margin: 20px;
+            border: 9px double black;
+            text-align: center;
+            background: linear-gradient(320deg, rgba(84, 84, 84, 0.607), rgb(255, 255, 255), rgba(0, 0, 0, 0));
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.717);
+            transition: transform 0.3s;
+        }
+
+        .movie-item:hover{
+            cursor: pointer;
+            background: linear-gradient(320deg, rgba(251, 251, 251, 0.607), rgb(123, 123, 123), rgba(0, 0, 0, 0));
+            transform: scale(1.04);
+        }
+
+        .movie-item img{
+            width: 100%;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .movie-item h3{
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        .movie-item h3:hover{
+            text-decoration: underline;
+        }
+
+        .movie-item p{
+            font-size: 16px;
+            color: #343434;
+            padding: 0 10px;
+        }
+
+        footer{
+            background-color: orange;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            /* height: 40px; */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Prem's Favorite Movies (Assignment 2)</h1>
+    </header>
+
+    <div class="content">
+        <h2>Here are some of Prem's favorite movies!</h2>
+
+        <hr>
+
+        <div class="movie-list">
+
+            <div class="movie-item">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS8LkDkq7h_jk4MyezLiu3x1LJT6zhNMXKCs-zRbeN1nxLbJL7c" alt="A Quiet Place Poster">
+                <h3>A Quiet Place</h3>
+                <p>A family lives in a world inhabited by blind but sound sensitive creatures who are out to kill people. In order to survive, they are forced to use the sign language to communicate with each other.</p>    
+            </div>
+
+            <div class="movie-item">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRipfEoI8fb4qxidki3e_kp3fr_Kopvoi2yCKcpJGf2ngnKweMR" alt="The Shawshank Redemption Poster">
+                <h3>The Shawshank Redemption</h3>
+                <p>Andy Dufresne, a successful banker, is arrested for the murders of his wife and her lover, and is sentenced to life imprisonment at the Shawshank prison.</p>
+            </div>
+
+            <div class="movie-item">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS7B7k16-aURVpYLv2slk1xEEOHSs7areHmlxtJmueV6QHlkVcc" alt="2F2F Poster">
+                <h3>2 Fast 2 Furious</h3>
+                <p>Brian O'Conner, a former police officer, partners with Roman Pierce, his friend and a criminal, to bring a drug lord to justice in order to erase their criminal record..</p>
+            </div>
+
+            <div class="movie-item">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRDbkP4KcnomAKR1o-DITshAbTGBcols9apSQif-wqgNmO-Mn5D" alt="POC:AWE Poster">
+                <h3>Pirates of the Caribbean: At World's End</h3>
+                <p>Will Turner and Elizabeth Swann team up with Barbossa to rescue Jack Sparrow from the clutches of Davy Jones. The Flying Dutchman's ghost ship is all set to create trouble on the Seven Seas.</p>
+            </div>
+
+            <div class="movie-item">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcScf5su68o8oOp0D89ESlb3_8RW2ge3ZWIPFv_OBVSObb680o3H" alt="Forrest Gump Poster">
+                <h3>Forrest Gump</h3>
+                <p>Forrest, a man with low IQ, recounts the early years of his life when he found himself in the middle of key historical events.</p>
+            </div>
+
+        </div>
+        <hr>
+    </div>
+
+</body>
+</html>
