@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:'Times New Roman', Times, serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Container Layout */
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  /* Header and Footer */
+  .header, .footer {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    animation: opacity 1.5s ease-in-out;
+  }
+  
+  .footer {
+    background: #333;
+  }
+  
+  /* Content Boxes */
+  .content {
+    background-color: #f4f4f4;
+    
+  }
+
+.list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+} 
+
+
+
+  #slide{ align-items:flex-start; height: 10vh; animation: slideRight 2s linear 0s;}
+  #transform{height: 10vh; align-self: center; animation: transform 2s linear 2s;}
+  #rotate{ height: 10vh; align-self:flex-end; animation: rotate 2s linear 4s;}
+  #opacity{height: 10vh; animation: opacity 2s linear 6s;}
+  #scale{height: 10vh; align-self:center; animation: scale 2s linear 8s;}
+  #skew{height: 10vh; align-self: flex-end; animation: skew 2s linear 10s;}
+  
+  /* Keyframes */
+  @keyframes opacity {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes transform {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slideRight {
+    from { margin-left: 0% }
+    to { margin-left: 100% }
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg); 
+    }
+  }
+  
+
+  @keyframes scale {
+    100%{transform: scale(0.5,0.5)}
+  }
+
+  @keyframes skew {
+    100%{transform: skew(45deg,45deg)}
+  }
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .header, .footer {
+      padding: 20px;
+    }
+      .content {
+        font-size: 16px ;
+        width: 100%;
+      }
+  }
+  @media (max-width: 768px) {
+    .header, .footer {
+        padding: 15px;
+      }
+    .content {
+      font-size: 14px ;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header, .footer {
+      padding: 10px;
+    }
+      .content {
+        font-size: 12px ;
+        width: 100%;
+    }
+  }
+  

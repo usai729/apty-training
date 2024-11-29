@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+
+.container {
+    display: grid;
+    grid-template-areas:   /*Creates three rows using named grid areas*/
+      "header"
+      "content"
+      "footer";
+    grid-template-rows: auto 1fr auto; /*head auto 1 fractional unit for contant and auto for footer*/
+    min-height: 100vh; /*Full height*/
+}
+  
+  /* Header with flex box style */
+.header {
+    display: flex;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    justify-content: center;
+}
+  
+/* Content area with grid box layout*/
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*two rows with equal size 1fr means occupies all remaining area*/
+    gap: 20px;
+    padding: 20px;
+}
+  
+.box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+  
+.footer {
+
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+  
+/* Responsive design for tablets and smaller devices */
+@media (max-width: 768px) {
+    .content {
+      grid-template-columns: 1fr;
+    }
+    .header, .footer {
+      padding: 15px;
+      font-size: 12px;
+    }
+}
+  
