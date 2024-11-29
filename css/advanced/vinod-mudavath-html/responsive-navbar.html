@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d009819ae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./../vinod-mudavath-css/responsive-navbar-style.css" />
+    <title>Responsive Navbar using media queries</title>
+</head>
+
+<body>
+    <header>
+        <img src="https://assets.ccbp.in/frontend/intermediate-rwd/landing-page-logo.png" alt="logo" class="logo" />
+        <nav class="navbar">
+            <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
+            <ul class="navbar-list-container">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li class="signup-btn"><a href="#" >Sign Up</a></li>
+            </ul>
+        </nav>
+        <button class="menu-icon" onclick="hideMenubar()"><i class="fa-solid fa-bars"></i></button>
+    </header>
+    <nav class="mobile-device-navbar">
+
+        <ul class="navbar-list-container" id = "showMenu">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li class="signup-btn"><a href="#" >Sign Up</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="content-section">
+            <h1 class="typing">A Student Startup Acceleraion Program</h1>
+        </section>
+        <section class="car-section">
+            <img src="car-img.png" alt="car profile" class="car-img" />
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        function hideMenubar() {
+            document.getElementById("showMenu").classList.toggle("showmenu")
+        }
+    </script>
+</body>
+
+</html>

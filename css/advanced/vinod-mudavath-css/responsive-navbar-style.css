@@ -1,0 +1,176 @@
+
+body {
+    margin: 0;
+    font-family: "Roboto";
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e7e5ea;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-list-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.navbar-list-container a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.signup-btn {
+    background-color: #ffdda9;
+    padding: 10px 20px;
+    border-radius: 20px;
+   width: 80px;
+   text-align: center;
+}
+
+main {
+   min-height: 90vh;
+    background: url("https://assets.ccbp.in/frontend/intermediate-rwd/landing-page-lg-bg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-section {
+    /* max-width: 500px; */
+    text-align: left;
+    color: #fff;
+    font-size: 40px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.mobile-device-navbar {
+    display: none;
+}
+
+.typing {
+    font-size: 40px;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%; 
+    border-right: 2px solid black;
+    animation: typing 4s steps(100, end) infinite, blink 0.5s step-end infinite;
+
+}
+
+.car-section {
+    position: relative;
+    top: 140px;
+    align-self: end;
+}
+
+.car-img {
+    position: relative;
+    height: 100px;
+    animation: carmove 5s infinite ;
+}
+
+@keyframes carmove {
+    0% {
+        right: 0%;
+    }
+    100% {
+        right: 600%;
+    }
+    
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+@media (max-width:768px){
+
+    .logo {
+        height: 36px;
+    }
+    .menu-icon {
+        display: block;
+        font-size: 36px;
+    }
+    .navbar-list-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        list-style-type: none;
+        padding-left: 0px;
+    }
+
+    .mobile-device-navbar {
+        display: block;
+    }
+
+    .navbar {
+        display: none
+    }
+    .showmenu {
+        display: none;
+    }
+
+    #content-section {
+        max-width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 24px;
+    }
+
+    li {
+        line-height: 8px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    li:hover {
+    display: block;
+    background: #ffdda9; 
+    }
+
+    .typing {
+        font-size: 24px;
+        font-family: monospace;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0%; 
+        border-right: 2px solid black;
+        animation: typing 4s steps(200, end) infinite, blink 0.5s step-end infinite;
+    
+    }
+    
+}
