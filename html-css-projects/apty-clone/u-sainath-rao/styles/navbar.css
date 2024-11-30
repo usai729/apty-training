@@ -1,0 +1,53 @@
+header {
+    padding: 0.1rem;
+    padding-right: 6rem;
+    background-color: #221333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_text-mask-gradient {
+    color: white;
+}
+
+button {
+    border-radius: 10rem;
+    border: none;
+    background-color: #ff5b19;
+    color: white;
+    padding: 1rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+ul button:hover {
+    background: linear-gradient(100deg, #ff7433, #fc56a4);
+}
+
+ul ul {
+    gap: 2rem;
+}
+
+ul ul li {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.header_logo {
+    width: 5rem;
+}
+
+.header_text-mask-gradient:hover {
+    background: -webkit-linear-gradient(100deg, #ff7433, #fc56a4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
