@@ -22,9 +22,19 @@ function showContent(topicId) {
     const topics = document.querySelectorAll('.topic');
     topics.forEach(topic => {
         topic.style.display = 'none';
+        const iframe = topic.children[0];
+        iframe.src = '';
     });
     const selectedTopic = document.getElementById(topicId);
     if (selectedTopic) {
         selectedTopic.style.display = 'block';
+        const iframe = selectedTopic.children[0];
+        iframe.src = iframe.dataset.src;
     }
 }
+
+window.onload = function() {
+    setTimeout(() => {
+        showContent(window.location.hash.replace('#',''));
+    }, 500);
+};

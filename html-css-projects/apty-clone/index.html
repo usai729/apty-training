@@ -162,70 +162,80 @@
         <div>
             <h2>Projects</h2>
             <details>
-                <summary>Likhith Reddy Gade</summary>
-                <iframe src="./likhith-reddy-gade.html"></iframe>
+                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+                <iframe data-src="./likhith-reddy-gade.html"></iframe>
             </details>
             <details>
-                <summary>U Sainath Rao</summary>
-                <iframe src="./u-sainath-rao.html"></iframe>
+                <summary onclick="showContent(event)">U Sainath Rao</summary>
+                <iframe data-src="./u-sainath-rao.html"></iframe>
             </details>
             <details>
-                <summary>Prem Rajput</summary>
-                <iframe src="./prem-rajput.html"></iframe>
+                <summary onclick="showContent(event)">Prem Rajput</summary>
+                <iframe data-src="./prem-rajput.html"></iframe>
             </details>
             <details>
-                <summary>Tarun Sharma</summary>
-                <iframe src="./tarun-sharma.html"></iframe>
+                <summary onclick="showContent(event)">Tarun Sharma</summary>
+                <iframe data-src="./tarun-sharma.html"></iframe>
             </details>
             <details>
-                <summary>Rohith Kotipalli</summary>
-                <iframe src="./rohith-kotipalli.html"></iframe>
+                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+                <iframe data-src="./rohith-kotipalli.html"></iframe>
             </details>
             <details>
-                <summary>Poornima Ranguri</summary>
-                <iframe src="./poornima-ranguri.html"></iframe>
+                <summary onclick="showContent(event)">Poornima Ranguri</summary>
+                <iframe data-src="./poornima-ranguri.html"></iframe>
             </details>
             <details>
-                <summary>Anusree Vutlapalli</summary>
-                <iframe src="./anusree-vutlapalli.html"></iframe>
+                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+                <iframe data-src="./anusree-vutlapalli.html"></iframe>
             </details>
             <details>
-                <summary>Madhuri Udathu</summary>
-                <iframe src="./madhuri-udathu.html"></iframe>
+                <summary onclick="showContent(event)">Madhuri Udathu</summary>
+                <iframe data-src="./madhuri-udathu.html"></iframe>
             </details>
             <details>
-                <summary>Pranathi Akula</summary>
-                <iframe src="./pranathi-akula.html"></iframe>
+                <summary onclick="showContent(event)">Pranathi Akula</summary>
+                <iframe data-src="./pranathi-akula.html"></iframe>
             </details>
             <details>
-                <summary>Preeti Patil SN</summary>
-                <iframe src="./preeti-patil-sn.html"></iframe>
+                <summary onclick="showContent(event)">Preeti Patil SN</summary>
+                <iframe data-src="./preeti-patil-sn.html"></iframe>
             </details>
             <details>
-                <summary>Rakshita R</summary>
-                <iframe src="./rakshita-r.html"></iframe>
+                <summary onclick="showContent(event)">Rakshita R</summary>
+                <iframe data-src="./rakshita-r.html"></iframe>
             </details>
             <details>
-                <summary>Vinod Mudavath</summary>
-                <iframe src="./vinod-mudavath.html"></iframe>
+                <summary onclick="showContent(event)">Vinod Mudavath</summary>
+                <iframe data-src="./vinod-mudavath.html"></iframe>
             </details>
             <details>
-                <summary>Ram Karthik</summary>
-                <iframe src="./ram-karthik.html"></iframe>
+                <summary onclick="showContent(event)">Ram Karthik</summary>
+                <iframe data-src="./ram-karthik.html"></iframe>
             </details>
             <details>
-                <summary>Nishma Medagoni</summary>
-                <iframe src="./nishma-medagoni.html"></iframe>
+                <summary onclick="showContent(event)">Nishma Medagoni</summary>
+                <iframe data-src="./nishma-medagoni.html"></iframe>
             </details>
             <details>
-                <summary>Mohammed Abdul Awaiz</summary>
-                <iframe src="./mohammed-abdul-awaiz.html"></iframe>
+                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+                <iframe data-src="./mohammed-abdul-awaiz.html"></iframe>
             </details>
         </div>
     </div>
     <footer>
         <p>&copy; 2024 CSS Training Program</p>
     </footer>
+    <script type="text/javascript">
+        // Function to display the selected content
+        function showContent(event) {
+            const iframes = document.getElementsByTagName('iframe');
+            Array.from(iframes).forEach(iframe => {
+                iframe.src = '';
+            });
+            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
+        }
+    </script>
 </body>
 
 </html>
