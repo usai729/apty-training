@@ -1,0 +1,123 @@
+Control Structures
+
+if, else, else if, switch
+Ternary operator
+Loops
+
+for, while, do...while
+for...in, for...of
+Loop control: break, continue
+Functions
+
+Function declaration, expression, and arrow functions
+Parameters, arguments, and default values
+Closures and lexical scoping
+Intermediate Topics
+Arrays
+
+Creating and manipulating arrays
+Common methods: push, pop, shift, unshift, slice, splice
+Higher-order methods: map, filter, reduce, find, some, every
+Objects
+
+Creating objects
+Accessing properties: dot vs. bracket notation
+Methods: Object.keys, Object.values, Object.entries
+Error Handling
+
+try...catch...finally
+Custom errors with throw
+Strings
+
+Common string methods: substring, replace, trim, split, join
+Template literals
+DOM Manipulation
+
+Accessing elements: getElementById, querySelector, querySelectorAll
+Modifying elements: text, attributes, styles
+Creating, appending, and removing elements dynamically
+Events
+
+Event listeners: addEventListener, removeEventListener
+Event delegation and bubbling
+Common events: click, keyup, scroll
+Browser-Specific Topics
+Window Object
+
+window.onload and DOMContentLoaded
+Methods: alert, confirm, prompt, setTimeout, setInterval
+Properties: innerWidth, innerHeight, navigator
+Location and Navigation
+
+window.location methods: href, reload, assign, replace
+Navigating history: history.back, history.forward
+Local Storage and Session Storage
+
+Storing, retrieving, and removing data
+Differences between localStorage and sessionStorage
+Cookies
+
+Setting, reading, and deleting cookies
+Cookie attributes: path, domain, secure, HttpOnly
+Working with iframes
+
+Accessing iframe content using contentWindow and contentDocument
+Cross-origin limitations and handling
+Shadow DOM
+
+Understanding Shadow DOM and Web Components
+Accessing Shadow DOM elements using shadowRoot
+Browser Storage APIs
+
+Cache API for Progressive Web Apps (PWAs)
+IndexedDB for complex data storage
+Performance Optimization
+
+Lazy loading for images, videos, and iframes
+Optimizing script loading with async and defer
+Reducing reflows and repaints
+Advanced Topics
+ES6 and Modern JavaScript Features
+
+let, const, destructuring, spread/rest operators
+Classes and inheritance
+Promises and async/await
+Web APIs
+
+Fetch API for AJAX requests
+Working with JSON
+FormData and Blob APIs
+Canvas and SVG
+
+Drawing on the Canvas
+Manipulating SVG elements
+WebSockets
+
+Real-time communication with WebSocket API
+Example: chat application
+Service Workers and PWAs
+
+Caching strategies
+Offline functionality
+Testing and Debugging
+
+Console API: console.log, warn, error, table
+Debugging tools in Chrome/Firefox
+Writing unit tests using frameworks like Jest or Mocha
+JavaScript Security
+
+Understanding and preventing XSS
+Content Security Policy (CSP)
+Preventing CSRF
+Functional Programming in JavaScript
+
+Pure functions, immutability
+Currying and partial application
+Reactive Programming
+
+Observables with RxJS
+Event streams and reactive patterns
+TypeScript (Optional)
+
+Adding types to JavaScript
+Interfaces and type checking

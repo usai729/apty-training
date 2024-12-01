@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Training Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .container .header {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .topics,
+        .assignments {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Variables and Data Types</h1>
+    </header>
+    <div class="container">
+        <div class="header">
+            <div class="topics">
+                <h2>Topics</h2>
+                <p>In JavaScript, variables are used to store data that can be referenced and manipulated throughout the
+                    program. Here’s an overview of how to declare variables and the available data types:</p>
+
+                <details>
+                    <summary><strong>1. Declaring Variables</strong></summary>
+                    <div>
+                        <p>Variables can be declared using the following keywords:</p>
+                        <ul>
+                            <li><strong>var</strong>: Declares a variable, can be re-declared and updated.</li>
+                            <li><strong>let</strong>: Declares a variable, can be updated but not re-declared within the
+                                same scope.</li>
+                            <li><strong>const</strong>: Declares a constant, which cannot be updated or re-declared.
+                            </li>
+                        </ul>
+
+                        <h3>Example of Declaring Variables:</h3>
+                        <pre>
+                <code>
+                    var name = "John"; // Can be reassigned
+                    let age = 30;      // Can be reassigned but not redeclared
+                    const country = "USA"; // Cannot be reassigned
+                </code>
+            </pre>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><strong>2. JavaScript Data Types</strong></summary>
+                    <div>
+                        <p>JavaScript has 7 primitive data types:</p>
+                        <ul>
+                            <li><strong>String</strong>: A sequence of characters (text).</li>
+                            <li><strong>Number</strong>: Numeric values (integers or floating-point).</li>
+                            <li><strong>Boolean</strong>: A true or false value.</li>
+                            <li><strong>Undefined</strong>: A variable that has been declared but not assigned a value.
+                            </li>
+                            <li><strong>Null</strong>: A variable explicitly set to have no value.</li>
+                            <li><strong>Symbol</strong>: A unique identifier, introduced in ES6.</li>
+                            <li><strong>BigInt</strong>: Represents large integers, introduced in ES11.</li>
+                        </ul>
+
+                        <h3>Example of Variables with Different Data Types:</h3>
+                        <pre>
+                <code>
+                    let message = "Hello, world!"; // String
+                    let count = 100;               // Number
+                    let isActive = true;           // Boolean
+                    let unknown = undefined;       // Undefined
+                    let emptyValue = null;         // Null
+                    let uniqueID = Symbol("id");   // Symbol
+                    let largeNumber = BigInt(123456789012345678901234567890); // BigInt
+                </code>
+            </pre>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><strong>3. Example: Working with Variables and Data Types</strong></summary>
+                    <div>
+                        <p>Let's run some JavaScript code to see how these variables and data types work:</p>
+
+                        <button onclick="showDataTypes()">Click to Show Data Types</button>
+
+                        <script>
+                            function showDataTypes() {
+                                var message = "Hello, world!";
+                                let count = 100;
+                                let isActive = true;
+                                let unknown = undefined;
+                                let emptyValue = null;
+
+                                alert("String: " + message + "\n" +
+                                    "Number: " + count + "\n" +
+                                    "Boolean: " + isActive + "\n" +
+                                    "Undefined: " + unknown + "\n" +
+                                    "Null: " + emptyValue);
+                            }
+                        </script>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="header">
+            <div class="assignments">
+                <h2>Assignments</h2>
+                <ol>
+                    <li>
+                        Write same logic in <strong>Inline, Internal and External</strong> javascript and print results
+                        in html page to see which one renders first.
+                    </li>
+                    <li>
+                        <strong>Declare Variables:</strong> Declare a variable using var, let, and const.
+                        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Try to re-declare each of above declared variables and print results/errors in html page.
+                        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Try to change the value of each of above declared variables and print results/errors in html
+                        page.
+                    </li>
+                    <li>
+                        <strong>Data Types:</strong>Create a variable of each of the data types(String, 
+                        Number,
+                        Boolean,
+                        Undefined,
+                        Null,
+                        Symbol,
+                        Object)
+                        <br />Print the data type of each variable in html page using typeof.
+                    </li>
+                    <li>
+                        <strong>Type Conversion:</strong>Convert each of the data types (String, 
+                        Number,
+                        Boolean,
+                        Undefined,
+                        Null,
+                        Symbol,
+                        Object) to all the possible types
+                        and print results in html page (Using Number(), String(), etc)
+                    </li>
+                    <li>
+                        <strong>Type Coercion:</strong>Do addition for each of the data types (String, 
+                        Number,
+                        Boolean,
+                        Undefined,
+                        Null,
+                        Symbol,
+                        Object) to all the possible
+                        type
+                        and print results in html page (ex: 5 + "10" → "510")
+                    </li>
+                    <li>
+                        <strong>Template Literals and Data Types:</strong>Declares variables of all data types (String, 
+                        Number,
+                        Boolean,
+                        Undefined,
+                        Null,
+                        Symbol,
+                        Object), Use template literals to combine variables into a string,
+                        and print results in html page:
+                        <br />ex: <br /><code>let age = 25;
+<br/>let name = "John";
+<br/>let greeting = Hello, my name is ${name} and I am ${age} years old.;</code>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div>
+            <h2>Assignment Submissions</h2>
+            <details>
+                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+                <iframe data-src="./likhith-reddy-gade/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">U Sainath Rao</summary>
+                <iframe data-src="./u-sainath-rao/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Prem Rajput</summary>
+                <iframe data-src="./prem-rajput/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Tarun Sharma</summary>
+                <iframe data-src="./tarun-sharma/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+                <iframe data-src="./rohith-kotipalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Poornima Ranguri</summary>
+                <iframe data-src="./poornima-ranguri/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+                <iframe data-src="./anusree-vutlapalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Madhuri Udathu</summary>
+                <iframe data-src="./madhuri-udathu/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Pranathi Akula</summary>
+                <iframe data-src="./pranathi-akula/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Preeti Patil SN</summary>
+                <iframe data-src="./preeti-patil-sn/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rakshita R</summary>
+                <iframe data-src="./rakshita-r/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Vinod Mudavath</summary>
+                <iframe data-src="./vinod-mudavath/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Ram Karthik</summary>
+                <iframe data-src="./ram-karthik/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Nishma Medagoni</summary>
+                <iframe data-src="./nishma-medagoni/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+                <iframe data-src="./mohammed-abdul-awaiz/index.html"></iframe>
+            </details>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Javascript Training Program</p>
+    </footer>
+    <script type="text/javascript">
+        // Function to display the selected content
+        function showContent(event) {
+            const iframes = document.getElementsByTagName('iframe');
+            Array.from(iframes).forEach(iframe => {
+                iframe.src = '';
+            });
+            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
+        }
+    </script>
+</body>
+
+</html>

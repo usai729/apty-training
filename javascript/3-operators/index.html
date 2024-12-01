@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Training Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .container .header {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .topics,
+        .assignments {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Javascript Operators</h1>
+    </header>
+    <div class="container">
+        <div class="header">
+            <div class="topics">
+                <h2>Topics</h2>
+                <p>Operators are used to perform operations on variables and values in JavaScript. They can be
+                    classified into several types.</p>
+
+                <details>
+                    <summary><strong>1. Arithmetic Operators</strong></summary>
+                    <div>
+                        <p>Arithmetic operators are used to perform mathematical operations like addition, subtraction,
+                            multiplication, etc.</p>
+                        <ul>
+                            <li><code>+</code>: Addition. Adds two values.</li>
+                            <li><code>-</code>: Subtraction. Subtracts one value from another.</li>
+                            <li><code>*</code>: Multiplication. Multiplies two values.</li>
+                            <li><code>/</code>: Division. Divides one value by another.</li>
+                            <li><code>%</code>: Modulus. Returns the remainder of a division operation.</li>
+                            <li><code>++</code>: Increment. Increases a variable's value by 1.</li>
+                            <li><code>--</code>: Decrement. Decreases a variable's value by 1.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><strong>2. Assignment Operators</strong></summary>
+                    <div>
+                        <p>Assignment operators are used to assign values to variables.</p>
+                        <ul>
+                            <li><code>=</code>: Assignment. Assigns the right-hand value to the left-hand variable.</li>
+                            <li><code>+=</code>: Addition Assignment. Adds the right-hand value to the left-hand
+                                variable.</li>
+                            <li><code>-=</code>: Subtraction Assignment. Subtracts the right-hand value from the
+                                left-hand variable.</li>
+                            <li><code>*=</code>: Multiplication Assignment. Multiplies the left-hand variable by the
+                                right-hand value.</li>
+                            <li><code>/=</code>: Division Assignment. Divides the left-hand variable by the right-hand
+                                value.</li>
+                            <li><code>%=</code>: Modulus Assignment. Takes the modulus of the left-hand variable by the
+                                right-hand value.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><strong>3. Comparison Operators</strong></summary>
+                    <div>
+                        <p>Comparison operators are used to compare two values and return a boolean result (true or
+                            false).</p>
+                        <ul>
+                            <li><code>==</code>: Equal to. Checks if two values are equal.</li>
+                            <li><code>===</code>: Strict Equal to. Checks if two values are equal and of the same type.
+                            </li>
+                            <li><code>!=</code>: Not equal to. Checks if two values are not equal.</li>
+                            <li><code>!==</code>: Strict Not equal to. Checks if two values are not equal or not of the
+                                same type.</li>
+                            <li><code>></code>: Greater than. Checks if the left value is greater than the right value.
+                            </li>
+                            <li><code><</code>: Less than. Checks if the left value is less than the right value.</li>
+                            <li><code>>=</code>: Greater than or equal to. Checks if the left value is greater than or
+                                equal to the right value.</li>
+                            <li><code><=</code>: Less than or equal to. Checks if the left value is less than or equal
+                                to the right value.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><strong>4. Logical Operators</strong></summary>
+                    <div>
+                        <p>Logical operators are used to combine multiple conditions in control flow statements.</p>
+                        <ul>
+                            <li><code>&&</code>: Logical AND. Returns true if both conditions are true.</li>
+                            <li><code>||</code>: Logical OR. Returns true if at least one of the conditions is true.
+                            </li>
+                            <li><code>!</code>: Logical NOT. Reverses the boolean value of a condition (true becomes
+                                false, and false becomes true).</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><strong>5. Ternary Operator</strong></summary>
+                    <div>
+                        <p>The ternary operator is a shorthand for an if-else statement. It takes three operands.</p>
+                        <p>Syntax: <code>condition ? expr1 : expr2</code></p>
+                        <p>If the condition is true, <code>expr1</code> is executed, otherwise, <code>expr2</code> is
+                            executed.</p>
+                        <p>Example: <code>let result = (age >= 18) ? "Adult" : "Minor";</code></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><strong>6. Type Operators</strong></summary>
+                    <div>
+                        <p>Type operators are used to check or convert the type of a variable or value.</p>
+                        <ul>
+                            <li><code>typeof</code>: Returns the type of a variable.</li>
+                            <li><code>instanceof</code>: Checks if an object is an instance of a specified class or
+                                constructor function.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><strong>7. Bitwise Operators</strong></summary>
+                    <div>
+                        <p>Bitwise operators perform operations on the binary representations of integers.</p>
+                        <ul>
+                            <li><code>&</code>: AND. Performs a bitwise AND operation.</li>
+                            <li><code>|</code>: OR. Performs a bitwise OR operation.</li>
+                            <li><code>^</code>: XOR. Performs a bitwise XOR operation.</li>
+                            <li><code>~</code>: NOT. Performs a bitwise NOT operation (flips bits).</li>
+                            <li><code><<</code>: Left shift. Shifts the bits to the left.</li>
+                            <li><code>>></code>: Right shift. Shifts the bits to the right.</li>
+                            <li><code>>>></code>: Unsigned right shift. Shifts the bits to the right without preserving
+                                the sign.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><strong>8. Unary Operators</strong></summary>
+                    <div>
+                        <p>Unary operators operate on a single operand to return a result.</p>
+                        <ul>
+                            <li><code>++</code>: Unary increment. Increases a variable’s value by 1.</li>
+                            <li><code>--</code>: Unary decrement. Decreases a variable’s value by 1.</li>
+                            <li><code>typeof</code>: Returns the type of a variable.</li>
+                            <li><code>delete</code>: Deletes an object property or array element.</li>
+                            <li><code>void</code>: Evaluates an expression and returns undefined.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><strong>9. Spread and Rest Operator</strong></summary>
+                    <div>
+                        <p>Both the spread and rest operators use the <code>...</code> syntax but are used in different
+                            contexts.</p>
+                        <ul>
+                            <li><code>...</code>: Spread operator. Used to expand elements into individual items (arrays
+                                or objects).</li>
+                            <li><code>...</code>: Rest operator. Collects multiple elements into an array when used in
+                                function arguments or destructuring.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>Operator Precedence in JavaScript</strong></summary>
+                    <div>
+                        <p><strong>Operator precedence</strong> determines the order in which operators are evaluated in
+                            an expression. When there are multiple operators in an expression, JavaScript follows
+                            certain rules to evaluate them, starting with the operators that have higher precedence.
+                            Understanding operator precedence helps avoid unexpected results in calculations and ensures
+                            the desired order of operations.</p>
+
+                        <h3>1. Parentheses ()</h3>
+                        <p><strong>Highest Precedence:</strong> Expressions inside parentheses are evaluated first,
+                            regardless of the operators outside.</p>
+                        <pre><code>let result = (2 + 3) * 4;  // (2 + 3) is evaluated first, then multiplied by 4.
+console.log(result); // 20</code></pre>
+
+                        <h3>2. Unary Operators</h3>
+                        <p><strong>Increment (++) and Decrement (--) Operators:</strong> These operators have a higher
+                            precedence than binary operators. They can be applied as <strong>prefix</strong> or
+                            <strong>postfix</strong>.
+                        </p>
+                        <pre><code>let a = 5;
+let result = ++a + 3;  // Pre-increment: a is incremented first, then added to 3.
+console.log(result); // 9</code></pre>
+
+                        <p><strong>Unary + and - Operators:</strong> These operators are used to convert a value into a
+                            number (positive or negative).</p>
+                        <pre><code>let a = '10';
+console.log(+a); // 10 (string '10' is converted to number)</code></pre>
+
+                        <p><strong>Logical NOT (!):</strong> Negates the truthiness of a value.</p>
+                        <pre><code>let isTrue = false;
+console.log(!isTrue); // true</code></pre>
+
+                        <h3>3. Multiplication, Division, Modulus *</h3>
+                        <p><strong>Next in Precedence:</strong> These operators are evaluated after parentheses and
+                            unary operators.</p>
+                        <pre><code>let result = 3 + 5 * 2;  // Multiplication happens first, then addition
+console.log(result); // 13</code></pre>
+
+                        <h3>4. Addition and Subtraction + -</h3>
+                        <p><strong>Evaluated After Multiplication/Division:</strong> These operators have lower
+                            precedence than multiplication and division.</p>
+                        <pre><code>let result = 5 + 3 - 2;  // Addition and subtraction from left to right
+console.log(result); // 6</code></pre>
+
+                        <h3>5. Relational and Comparison Operators (&lt;, &gt;, &lt;=, &gt;=, ==, ===, !=, !==)</h3>
+                        <p><strong>Used for Comparison:</strong> These operators are used to compare two values,
+                            returning <strong>true</strong> or <strong>false</strong>.</p>
+                        <pre><code>let a = 5;
+let b = 10;
+console.log(a &lt; b);  // true
+console.log(a === b); // false</code></pre>
+
+                        <h3>6. Logical Operators (&&, ||)</h3>
+                        <p><strong>Logical AND (&&):</strong> Evaluated before logical OR (||).</p>
+                        <pre><code>let a = true;
+let b = false;
+console.log(a && b); // false
+console.log(a || b); // true</code></pre>
+
+                        <h3>7. Assignment Operators (=, +=, -=, *=, /=, etc.)</h3>
+                        <p><strong>Lower Precedence:</strong> These operators are evaluated after all the operators
+                            listed above.</p>
+                        <pre><code>let a = 5;
+a += 3;  // a = a + 3;  // Assignment happens after the addition
+console.log(a); // 8</code></pre>
+
+                        <h3>8. Conditional (Ternary) Operator ? :</h3>
+                        <p><strong>Evaluated After Logical Operators:</strong> The ternary operator (condition ? expr1 :
+                            expr2) has a higher precedence than assignment but lower than most arithmetic and relational
+                            operators.</p>
+                        <pre><code>let a = 5, b = 10;
+let result = (a &lt; b) ? 'a is less than b' : 'a is not less than b';
+console.log(result); // 'a is less than b'</code></pre>
+
+                        <h3>9. Comma Operator ,</h3>
+                        <p><strong>Lowest Precedence:</strong> The comma operator allows you to evaluate multiple
+                            expressions in a single statement, returning the result of the last expression.</p>
+                        <pre><code>let result = (2 + 3, 4 + 5);
+console.log(result); // 9 (last expression is evaluated)</code></pre>
+
+                        <h3>Operator Precedence Table (from highest to lowest)</h3>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Operator Category</th>
+                                    <th>Operators</th>
+                                    <th>Precedence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Grouping</strong></td>
+                                    <td>()</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Unary</strong></td>
+                                    <td>++, --, + (unary plus), - (unary minus), ~ (bitwise NOT), ! (logical NOT)</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Multiplicative</strong></td>
+                                    <td>*, /, %</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Additive</strong></td>
+                                    <td>+, -</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Relational</strong></td>
+                                    <td>&lt;, &lt;=, &gt;, &gt;=, instanceof, in</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Equality</strong></td>
+                                    <td>==, ===, !=, !==</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Logical AND</strong></td>
+                                    <td>&amp;&amp;</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Logical OR</strong></td>
+                                    <td>||</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ternary</strong></td>
+                                    <td>? :</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Assignment</strong></td>
+                                    <td>=, +=, -=, *=, /=, %=, etc.</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Comma</strong></td>
+                                    <td>,</td>
+                                    <td>11</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>How to Manage Precedence in Complex Expressions</h3>
+                        <p><strong>Use Parentheses:</strong> Parentheses should be used to clearly indicate the desired
+                            evaluation order in complex expressions.</p>
+                        <pre><code>let result = (3 + 5) * (2 - 1); // Without parentheses, the addition would happen first, then multiplication.
+console.log(result); // 8</code></pre>
+
+                        <p><strong>Know the Precedence:</strong> Always be aware of operator precedence when writing
+                            expressions to avoid unintended results.</p>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="header">
+            <div class="assignments">
+                <h2>Assignments</h2>
+                <ol>
+                    <li>
+                        <strong>Arithmetic Operators:</strong> Build HTML calculator app with 2 inputs value1(number), value2(number) and buttons for each of the operator (+, -, *, /, %, ++, --). Calculate and print results in html page for each of the operator button click.
+                        <br/>Write separate function for all the Arithmetic operators
+                    </li>
+                    <li>
+                        <strong>Assignment Operators:</strong> Duplicate above calculator app and write all arithmetic functions with Assignment Operators (+=, -=, *=, /=, %=, ++, --).
+                    </li>
+                    <li>
+                        <strong>Comparison Operators:</strong> Build HTML data comparison app with 4 inputs value1(text), type1(select), value2(text), type2(select), and buttons for each of the operator(==, ===, !=, !==, >, <, >=, <=)
+                        On each operator button click convert value1 and value2 to respective types and compare with the clicked button operator and print results in html page.
+                        <br/>Write separate function for all the Comparison operators
+                        <br/>Understanding all operators with all types of data is must to pass assessment
+                    </li>
+                    <li>
+                        <strong>Logical Operators:</strong> Build HTML logical operators app with 4 inputs value1(text), type1(select), value2(text), type2(select), and buttons for each of the operator(&&, ||, !)
+                        On each operator button click convert value1 and value2 to respective types and execute the clicked button operator and print results in html page.
+                        <br/>Write separate function for all the Logical operators
+                        <br/>Understanding all operators with all types of data is must to pass assessment
+                    </li>
+                    <li>
+                        <strong>Logical Assignment Operators:</strong> Build HTML logical operators app with 4 inputs value1(text), type1(select), value2(text), type2(select), and buttons for each of the operator(&&=, ||=, ??= - Nullish Coalescing Operator)
+                        On each operator button click convert value1 and value2 to respective types and execute the clicked button operator and print results in html page.
+                        <br/>Write separate function for all the Logical Assignment operators
+                        <br/>Understanding all operators with all types of data is must to pass assessment
+                    </li>
+                    <li>
+                        <strong>Ternary Operator:</strong> Build HTML page 3 inputs firstname, lastname and age. Check if the age is >= 18 with ternary operator and print "Hello ${name} welcome to apty" else print "Hello ${name} comeback after (18-number) years"
+                    </li>
+                    <li>
+                        <strong>Bitwise Operators:</strong> Build HTML bitwise operators app with 2 inputs value1(number), value2(number), and buttons for each of the operator(& - AND,| - OR,^ - XOR,~ - NOT,<< - Left Shift,>> - Right Shift)
+                        On each operator button click execute the clicked button operator and print results in html page.
+                        <br/>Write separate function for all the Bitwise operators
+                        <br/>Understanding all operators with all types of data is must to pass assessment
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div>
+            <h2>Assignment Submissions</h2>
+            <details>
+                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+                <iframe data-src="./likhith-reddy-gade/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">U Sainath Rao</summary>
+                <iframe data-src="./u-sainath-rao/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Prem Rajput</summary>
+                <iframe data-src="./prem-rajput/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Tarun Sharma</summary>
+                <iframe data-src="./tarun-sharma/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+                <iframe data-src="./rohith-kotipalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Poornima Ranguri</summary>
+                <iframe data-src="./poornima-ranguri/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+                <iframe data-src="./anusree-vutlapalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Madhuri Udathu</summary>
+                <iframe data-src="./madhuri-udathu/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Pranathi Akula</summary>
+                <iframe data-src="./pranathi-akula/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Preeti Patil SN</summary>
+                <iframe data-src="./preeti-patil-sn/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rakshita R</summary>
+                <iframe data-src="./rakshita-r/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Vinod Mudavath</summary>
+                <iframe data-src="./vinod-mudavath/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Ram Karthik</summary>
+                <iframe data-src="./ram-karthik/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Nishma Medagoni</summary>
+                <iframe data-src="./nishma-medagoni/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+                <iframe data-src="./mohammed-abdul-awaiz/index.html"></iframe>
+            </details>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Javascript Training Program</p>
+    </footer>
+    <script type="text/javascript">
+        // Function to display the selected content
+        function showContent(event) {
+            const iframes = document.getElementsByTagName('iframe');
+            Array.from(iframes).forEach(iframe => {
+                iframe.src = '';
+            });
+            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
+        }
+    </script>
+</body>
+
+</html>

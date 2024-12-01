@@ -35,6 +35,14 @@ function showContent(topicId) {
 
 window.onload = function() {
     setTimeout(() => {
-        showContent(window.location.hash.replace('#',''));
+        var page = window.location.hash.replace('#','') || 'html-assignment1';
+        var sidebarHeader = document.querySelector('[href="#'+page.split('-')[0]+'"]');
+        if (sidebarHeader) {
+            sidebarHeader.click();
+        }
+        var subSidebarHeader = document.querySelector('[href="#'+page+'"]');
+        if (subSidebarHeader) {
+            subSidebarHeader.click();
+        }
     }, 500);
 };
