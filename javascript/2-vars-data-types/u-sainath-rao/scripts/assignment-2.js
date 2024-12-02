@@ -18,7 +18,7 @@ try {
 	let myLet = "Redeclared value for let";
 } catch (e) {
 	document.getElementById("let-result").innerHTML +=
-		"Error while redeclaring let: " + e.message + "<br>";
+		"Let exists, error: " + e.message + "<br>";
 }
 
 myLet = "Changed value for let";

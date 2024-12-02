@@ -1,10 +1,10 @@
-const stringExample = "Hello, world!";
+const stringExample = "Hello";
 const numberExample = 42;
 const booleanExample = true;
 let undefinedExample;
 const nullExample = null;
 const symbolExample = Symbol("symbol");
-const objectExample = { name: "John", age: 30 };
+const objectExample = { name: "Sai", age: 21 };
 
 document.getElementById(
 	"string-type"
