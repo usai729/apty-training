@@ -15,7 +15,7 @@ document.getElementById("let-result").innerHTML +=
 	"<b>let</b>: " + myLet + "<br>";
 
 try {
-	let myLet = "Redeclared value for let";
+	let myLet = "Redeclared value for let in another block";
 } catch (e) {
 	document.getElementById("let-result").innerHTML +=
 		"Let exists, error: " + e.message + "<br>";
@@ -30,7 +30,7 @@ document.getElementById("const-result").innerHTML +=
 	"<b>const</b>: " + myConst + "<br>";
 
 try {
-	const myConst = "Redeclared value for const";
+	const myConst = "Redeclared value for const, in  a block";
 } catch (e) {
 	document.getElementById("const-result").innerHTML +=
 		"Error while redeclaring const: " + e.message + "<br>";
