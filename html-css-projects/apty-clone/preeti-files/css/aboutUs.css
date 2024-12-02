@@ -1,0 +1,227 @@
+/*This style gets applied to all the elements unless overriden*/
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+}
+
+.fas {
+  color: grey;
+}
+
+/*Header Styles*/
+.header {
+  /* background-color: rgb(48, 25, 52); */
+  background-color: #241434;
+  padding: 10px;
+}
+
+.navigation_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.navigation_left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navigation_left img {
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.navigation_right {
+  margin-right: 50px;
+}
+
+.navigation_container a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.navigation_container a:hover {
+  color: rgb(255, 119, 37);
+}
+
+/*Book a demo button styling*/
+.navigation_container button {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: rgb(251, 109, 12);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 100px;
+}
+
+.navigation_container button:hover {
+  /* -- Here the webkit is used to support older safari or chrome versions, we can omit it for newer versions
+     -- 328 degress starts the gradient from top right corner and ends at bottom left corner (diagonal)
+ */
+
+  background-image: -webkit-linear-gradient(
+    328deg,
+    rgb(255, 119, 37),
+    rgb(252, 82, 179)
+  ) !important;
+}
+
+/*Main Content Styles*/
+.main_content {
+  min-height: 100vh;
+  background-image: url(https://www.apty.io/wp-content/uploads/2024/08/bg-hero-2.svg);
+  color: white;
+  padding: 20px; /*When i give margin-top to the section, the background colour becomes white so give padding same as the margin in section-1 fixed this issue*/
+}
+
+.section-1 {
+  margin-top: 50px;
+  margin-left: 30px;
+  font-size: 77px;
+}
+
+.gradient-color {
+  background: -webkit-linear-gradient(
+    328deg,
+    #ff7725,
+    #fc52b3
+  ); /* For Webkit browsers */
+  background-clip: text; /* For Webkit browsers */
+  color: transparent; /* Make the text transparent to show gradient */
+}
+
+.section-2 p {
+  z-index: 10px;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.section-3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  margin-left: -250px;
+}
+
+.left .img-1 {
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 30px;
+}
+
+.left .img-2 {
+  margin-right: 40px;
+}
+
+.left .img-4 {
+  margin-left: 100px;
+  margin-right: 30px;
+}
+
+.right {
+  margin-top: -250px;
+}
+
+/*Form - Styling*/
+
+.form-container {
+  margin-top: -100px;
+  background-color: #2f263e;
+  padding: 50px;
+  border-radius: 20px;
+  line-height: 1;
+  width: 100%;
+  /* box-shadow: 0 0 10px rgba(36, 20, 52, 1);*/
+}
+
+.form-container input,
+.form-container textarea {
+  width: 90%;
+  background-color: #2f263e13 !important;
+  border: 2px solid grey;
+  outline: none;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.form-container textarea {
+  width: 90% !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: grey;
+}
+
+.form-container button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #ff7725;
+  border: 2px solid #ff7725;
+  outline: none;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/*Images Styling*/
+.clients {
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+}
+
+/*Footer Styling*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1c1c1c;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #d3d3d3;
+  font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+  color: orange;
+}
+
+.footer-section:last-child {
+  margin-right: 0;
+}
