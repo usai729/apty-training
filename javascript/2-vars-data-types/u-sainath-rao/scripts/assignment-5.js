@@ -1,0 +1,11 @@
+console.log("'5' + '10' = " + ("5" + "10"));
+console.log("5 + '10' = " + (5 + "10"));
+console.log("5 + 5 + '10' = " + (5 + 5 + "10"));
+console.log("'5' + 10 = " + ("5" + 10));
+console.log("true + 10 = " + (true + 10));
+console.log("false + 10 = " + (false + 10));
+console.log("5 + null = " + (5 + null));
+console.log("5 + undefined = " + (5 + undefined));
+console.log("'5' + null = " + ("5" + null));
+console.log("{} + '10' = " + ({} + "10"));
+console.log("Symbol('A') + '10' = Error! (Can't add a Symbol to a string)");
