@@ -1,0 +1,17 @@
+body {
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+span.color {
+    background: -webkit-linear-gradient(0deg, #ff7433, #fc56a4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+button {
+    cursor: pointer;
+    background-color: #ff7433;
+    border-radius: 10rem;
+}
