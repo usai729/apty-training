@@ -1,0 +1,519 @@
+body{
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
+}
+
+header{
+    position: sticky;
+    padding: 1px;
+    top: 0;
+    padding-right: 3rem;
+    z-index: 8;
+    background-color: #221333;
+    color: white;
+}
+
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.list-item:hover{
+    cursor: pointer;
+    color: rgb(255, 85, 0);
+}
+
+.fa:hover{
+    color: white;
+}
+
+ul ul{
+    gap: 2rem;
+}
+
+.apty-button{
+    border: none;
+    background-color: orangered;
+    padding: 15px 30px;
+    margin-right: 40px;
+    margin: 10px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    display: inline-flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.apty-button:hover{
+    background: linear-gradient(100deg, orangered ,#fc56a1);
+}
+
+.main-content{
+    background-image: url(https://www.apty.io/wp-content/uploads/2024/08/bg-mobile-4.svg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.main-content {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main-content{
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.main-content_content{
+    margin: 4rem;
+}
+
+.main-content h1{
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 80px;
+}
+
+.main-content-description{
+    max-width: 40rem;
+}
+
+.color{
+    color: orangered;
+}
+
+.clients{
+    display: flex;
+    margin: 20px;
+    
+}
+
+.aug-intel{
+    background-color: #1f1132;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+}
+
+.aug-intel_content{
+    color: white;
+    padding-right: 8rem;
+    padding-left: 8rem;
+    line-height: 4rem;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background: linear-gradient(90deg, #8030ff, #500bbf);
+    /* background: #500bbf; */
+    width: 55rem;
+    border-radius: 10px;
+}
+
+.aug-intel_heading , .aug-intel_partners{
+    font-weight: 500;
+}
+
+.aug-intel_content h3{
+    width: 100%;
+    word-spacing: 2rem;
+}
+
+.aug-intel p{
+    color: white;
+    line-height: 1.5rem;
+}
+
+.aug-intel_partners{
+    color: rgb(212, 212, 212);
+}
+
+.partner-main{
+    border: 2px solid white;
+    padding-left: 2.5rem;
+    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 2.5rem;
+    border-radius: 8px;
+}
+
+.oracle-img{
+    margin-top: -40px;
+}
+
+.description-2 p{
+    margin: 10px;
+    padding-left: 14rem;
+    padding-right: 14rem;
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 60px;
+}
+
+.button-set-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.apty-button-2{
+    border: none;
+    margin: 15px;
+    margin-bottom: 50px;
+    background: linear-gradient(100deg, orangered ,#fc56a1);
+    padding: 15px 25px;
+    font-weight: 600;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.description-3{
+    margin: 20px;
+}
+
+.description-3 h1{
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.friction{
+    background-color: #1f1132;
+    padding-left: 8rem;
+}
+
+.friction_heading-1, .friction_desc-1{
+    color: white;
+    padding-left: 13rem;
+    padding-right: 13rem;
+    margin-left: -150px;
+}
+
+.friction_heading-1{
+    margin-top: -140px;
+    font-size: 2rem;
+}
+
+.friction_desc-1{
+    font-size: 1rem;
+}
+
+.background-video-2{
+    float: right;
+    position: absolute;
+    margin-top: -350px;
+    margin-left: 450px;
+}
+
+.friction-1{
+    background-color: #1f1132;
+    padding-left: 8rem;
+}
+
+.friction_heading-2, .friction_desc-2{
+    color: white;
+    padding-left: 13rem;
+    padding-right: 13rem;
+    margin-left: -150px;
+}
+
+.friction_heading-2{
+    margin-top: 0px;
+    font-size: 2rem;
+}
+
+.friction_desc-2{
+    font-size: 1rem;
+}
+
+.background-video-3{
+    float: right;
+    position: absolute;
+    margin-top: -280px;
+    margin-left: 450px;
+}
+
+.friction_heading-3, .friction_desc-3{
+    color: white;
+    padding-left: 13rem;
+    padding-right: 13rem;
+    margin-left: -150px;
+}
+
+.friction_heading-3{
+    margin-top: 0px;
+    font-size: 2rem;
+}
+
+.friction_desc-3{
+    font-size: 1rem;
+}
+
+.background-video-4{
+    float: right;
+    position: absolute;
+    margin-top: -280px;
+    margin-left: 450px;
+}
+
+.apty-button-3{
+    border: none;
+    margin: 15px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    background: linear-gradient(100deg, orangered ,#fc56a1);
+    padding: 15px 25px;
+    font-weight: 600;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.advantages h1{
+    background-color: white;
+    margin: 10;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-left: 60px;
+}
+
+.benefits{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.benefits li{
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 60%;
+    border-bottom: 2.4px solid rgb(255, 94, 0);
+}
+
+.focused{
+    background: linear-gradient(90deg, orangered ,#fc56a1);
+    color: white;
+    border-radius: 20px;
+}
+
+.benefits li:hover{
+    background: linear-gradient(100deg, orangered ,#fc56a1);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.benefits-main{
+    display: flex;
+}
+
+.benefits img{
+    padding-left: 20px;
+}
+
+.section-5_sub-1 {
+    border-radius: 1rem;
+    background: linear-gradient(60deg, #8030ff, #4e09bd);
+    padding: 5rem;
+    margin: 3.5rem;
+}
+
+.sub-1_desc {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 1rem;
+    color: white;
+}
+
+.section-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+    margin-top: 1rem;
+}
+
+.section-6_left {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+}
+
+.section-6_right {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100%;
+    
+}
+
+.section-6_right img {
+    margin-top: 300px;
+}
+
+.section-6_sub-2,
+.section-6_sub-3,
+.section-6_row_sub {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.section-6_sub-2{
+    background-color: #6c008d;
+}
+
+.section-6_sub-3{
+    background-color: #4e09bd;
+}
+
+.section-6_row_sub img{
+    margin-top: 70px;
+    margin-left: 80px;
+}
+
+.section-6_row_sub{
+    background-color: orangered;
+}
+
+.sub-2_desc,
+.sub-3_desc {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+}
+
+.sub-1_desc h1, .sub-2_desc h1, .sub-2_desc h1, .sub-3_desc h1{
+    background-color: transparent;
+}
+
+.section-6_row_sub {
+    flex-grow: 1;  
+}
+
+.reviews_main h1{
+    top: 20;
+    font-size: 5rem;
+    padding-left: 102px;
+}
+
+
+.case_study {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.case_study_content {
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: pink;
+    align-items: center;
+    width: 1000px;
+}
+
+.case_study_content img{
+    border-radius: 20px;
+}
+
+.resources_main{
+    margin-top: 50px;
+    font-size: 3rem;
+    font-weight: 400;
+    padding-left: 8rem;
+}
+
+.resources_card{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    
+}
+
+.card img{
+    border-radius: 20px;
+}
+
+.demo{
+    color: white;
+    padding-top: 10rem;
+    background-color: rgb(24, 24, 24);
+    padding-left: 8rem;
+    display: flex;
+    padding-bottom: 3rem;
+}
+
+.demo img{
+    margin-top: -200px;
+}
+
+footer{
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 2.5rem;
+    background-color: rgb(24, 24, 24);
+}
+
+.list-heading{
+    font-weight: 600;
+    color: white;
+}
+
+footer ul{
+    display: flex;
+    gap: 1rem;
+    color: gray;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.list-heading:hover{
+    color: white;
+    cursor: default;
+}
+
+footer li:hover{
+    cursor: pointer;
+    color: orangered;
+}
