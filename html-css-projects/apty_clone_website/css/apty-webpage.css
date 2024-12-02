@@ -1,0 +1,618 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styles starts*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(35, 19, 52, 100);
+}
+
+.logo_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 4rem;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: large;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  color: #FF5722;
+}
+
+.demo-btn {
+  background-color: #FF5722;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 3rem;
+  font-size: medium;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Full viewport height */
+  overflow: hidden;
+  /* Ensures no scrollbars appear */
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Centers the video */
+  width: 100%;
+  /* Ensure video fills width */
+  min-height: 90%;
+  /* Ensure video fills height */
+  z-index: -1;
+  /* Send the video to the back */
+  object-fit: cover;
+  /* Ensure video covers the area */
+}
+
+/* Title Styling */
+.container {
+  margin-left: 4rem;
+  margin-top: 4rem;
+  max-width: 50%;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 64px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  line-height: 72px;
+  margin: 0;
+  /* To avoid extra space */
+}
+
+/* Enhanced Pink Gradient Text */
+.pink-gradient {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 64px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #FF7725, #FC52B3);
+  /* Gradient from orange to pink */
+  background-clip: text;
+  /* Clipping background to text */
+  color: transparent;
+  /* Make the text color transparent to show gradient */
+  line-height: 72px;
+  margin: 0;
+  /* To avoid extra space */
+}
+
+/* Description Styling */
+.description {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  line-height: 26px;
+  margin-top: 20px;
+  /* Add spacing after the title */
+}
+
+/* Get Started Button */
+.get-started {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  /* Add spacing from the description */
+  padding: 12px 24px;
+  /* Proper padding for better button size */
+  background: linear-gradient(90deg, #FF6A3A, #FF4CF8);
+  /* Gradient background */
+  border: none;
+  /* Remove any border */
+  border-radius: 30px;
+  /* Rounded button shape */
+  cursor: pointer;
+  /* Pointer cursor for interactivity */
+  transition: all 0.3s ease-in-out;
+  /* Smooth hover animation */
+  text-transform: uppercase;
+  /* Makes text uppercase for better emphasis */
+}
+
+.get-started:hover {
+  transform: scale(1.08);
+  /* Slight enlargement on hover */
+  box-shadow: 0px 8px 20px rgba(255, 76, 248, 0.6);
+  /* Enhance shadow on hover */
+}
+
+.svgs {
+  display: flex;
+  margin-top: 2rem;
+}
+
+/* Slidebar */
+
+.slide_bar_background {
+  background: linear-gradient(180deg, rgb(45, 26, 69) 0%, rgb(50, 23, 90) 42%, rgb(50, 23, 90) 60%);
+  margin: 0;
+  padding: 0%;
+  width: 100%;
+  height: 160vh;
+}
+
+.slide_bar {
+  margin-left: 6rem;
+  margin-right: 6rem;
+  border-radius: 20px;
+  background-color: #4e09bc;
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: -60px;
+  width: 84%;
+  /* top: 200px; */
+}
+
+.Heading {
+  text-align: center;
+  font-family: "poppins";
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  color: rgb(255, 255, 255);
+  word-spacing: normal;
+  margin-top: 2rem;
+  margin-bottom: 43px;
+
+}
+
+.for_text_change {
+  font-size: 33px;
+  font-weight: 400;
+}
+
+.content_scroll {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.content_scroll_data {
+  padding: 1rem;
+  margin-right: 3rem;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+.text_bar {
+  text-align: center;
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 33px;
+  padding-bottom: 50px;
+  margin-top: 30px;
+}
+
+/* Start of Slides using bootstrap */
+.scroll {
+  margin-top: -676px;
+}
+
+/* card */
+.work_container {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+
+.card {
+  background-color: #5d2c94;
+  padding: 20px;
+}
+
+.work_btn {
+  margin-top: 30px;
+}
+
+.work_para {
+  color: white;
+  font-size: 36px;
+  line-height: 50px;
+}
+
+.work_btn_platform {
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  margin-right: 30px;
+  color: #ffffff;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #FF7725, #FC52B3);
+  border: none;
+}
+
+.work_btn_explore {
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #FF7725, #FC52B3);
+  border: none;
+  border-radius: 25px;
+}
+
+/* End of Slides using bootstrap */
+
+
+/* software_experience */
+.software_experience {
+  background-color: #260f3e;
+  width: 100%;
+  height: 280vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-top: -20px;
+}
+
+.text_software {
+  text-align: center;
+  font-family: "poppins";
+  font-size: 47px;
+  font-style: normal;
+  line-height: 52px;
+  color: white;
+  margin-top: 2rem;
+}
+
+.for_change_color {
+  background: linear-gradient(90deg, #FF7725, #FC52B3);
+  color: transparent;
+  /* Makes the text fill transparent to show the gradient */
+  background-clip: text;
+  /* Standard property */
+}
+
+.dap_1 {
+  width: 90%;
+  height: auto;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  display: flex;
+
+
+}
+
+.heading_dap h1 {
+  font-family: "poppins";
+  font-size: 33px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 42px;
+  color: white;
+}
+
+.right_dap1,
+.left_dap_video {
+  margin-top: 5rem;
+}
+
+.description_dap {
+  font-family: "poppins";
+  font-size: 17px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 26px;
+  color: white;
+
+}
+
+.learn-more {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #FF7725, #FC52B3);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.learn-more:hover {
+  background: linear-gradient(to right, #ff774c, #e0397c);
+  transform: scale(1.05);
+}
+
+/* End software_experience */
+
+/* AI companion */
+
+.ai_component_bar {
+  margin-left: 6rem;
+  margin-right: 6rem;
+  border-radius: 20px;
+  background-color: #6b20e2;
+  color: #FFFFFF;
+  width: 84%;
+  margin-top: 3rem;
+ 
+}
+
+.ai_component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img_ai_com {
+  height: 440px;
+  width: 693px;
+  margin-left: -87px;
+}
+
+.ai_content {
+  margin-left: 70px;
+}
+
+.ai_para1 {
+  font-size: 17px !important;
+  line-height: 26px !important;
+  font-weight: 300;
+}
+
+.ai_head {
+  font-size: 33px;
+  line-height: 42px;
+  font-weight: 600;
+}
+
+.ai_para2 {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 300;
+
+}
+
+/* End of AI companion */
+
+/* Workflows  */
+.custom-card {
+  border-radius: 15px;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.purple-card {
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+}
+
+.orange-card {
+  background: linear-gradient(135deg, #ff7043, #ff8a65);
+}
+
+.light-purple-card {
+  background: linear-gradient(135deg, #7b1fa2, #ba68c8);
+}
+
+.custom-card h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.custom-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.first-half {
+  height: 50%;
+  /* Half height of the full column */
+}
+
+.full-height {
+  height: 100%;
+  /* Full height for the right-side column */
+}
+
+.mt-half {
+  margin-top: 1.5rem;
+}
+
+/* End of Workflows */
+
+
+/* Customer reviews */
+
+
+.customer_content {
+  font-size: 47px;
+  line-height: 52px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.customer_pink-gradient {
+  background: -webkit-linear-gradient(358deg, #FF7725, #FC52B3);
+  color: transparent;
+  background-clip: text;
+  padding-left: 14px;
+}
+
+.customer_image_review {
+  width: 100%;
+  height: 550px;
+}
+
+/* End of Customer reviews */
+
+/* Demo Scheduling */
+.footer_container1 {
+  background-color: #252525;
+  height: 80vh;
+  width: 100%;
+  margin-top: 6rem;
+  margin-bottom: -61px;
+}
+
+.lap_img {
+  height: 514px;
+  width: 613px;
+  margin-top: -126px;
+  margin-left: 32px;
+}
+
+.inner_container {
+  display: flex;
+  margin-left: 3rem;
+  color: white;
+}
+
+.cta_text h1 {
+  font-family: "poppins";
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 72px;
+  font-style: normal;
+  margin-top: 4rem;
+  margin-left: 4rem;
+}
+
+.highlight {
+  background: linear-gradient(358deg, #FF7725, #FC52B3);
+  color: transparent;
+  background-clip: text;
+}
+
+.cta_button {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #FF7725, #FC52B3);
+  color: #fff;
+  font-weight: 600;
+  margin-left: 4rem;
+
+}
+
+/* End of Demo Scheduling */
+
+/* Footerr sec */
+.footer {
+  background-color: #252525;
+  color: #ccc;
+}
+
+.footer_content {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_content_head {
+  font-style: 15px;
+  line-height: 22px;
+  font-weight: 600;
+  color: white;
+}
+
+.footer_content_sub {
+  font-style: 15px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #888888;
+}
+
+.footer_content_sub:hover {
+  background: linear-gradient(358deg, #FF7725, #FC52B3);
+  color: transparent;
+  background-clip: text;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  border-top: 1px solid white;
+}
+
+.copyright_data {
+  font-style: 15px;
+  line-height: 26px;
+  font-weight: 300;
+  color: rgb(119, 119, 119);
+}
+
+.copyright_links:hover {
+  background: linear-gradient(358deg, #FF7725, #FC52B3);
+  color: transparent;
+  /* Make the background visible as text color */
+  background-clip: text;
+  /* Fallback for non-webkit browsers */
+}
+
+.footer_images {
+  margin-right: 10px;
+}
+
+.footer_images:hover {
+  color: white;
+  font-size: 20px;
+}
+
+/* End of Footerr sec */
