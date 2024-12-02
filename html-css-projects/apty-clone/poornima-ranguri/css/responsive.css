@@ -1,0 +1,166 @@
+@media only screen and (max-width: 768px) {
+    /* Global Responsive Adjustments */
+    * {
+      box-sizing: border-box;
+    }
+  
+    /* Header */
+    header.top {
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 10px;
+      text-align: center;
+      width: 100vw;
+    }
+  
+    .container-nav-bar {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .nav-bar {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      display: none;
+    }
+  
+    .book-demo-btn {
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      font-size: clamp(0.7rem, 3vw, 0.8rem);
+    }
+  
+    /* Hero Section */
+
+    .hero-mobile-container{
+        display: flex;
+        background-image: url("../assets/bg-mobile-4.svg");
+
+    }
+
+    .content {
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -45%);
+      text-align: center;
+      width: 90%;
+    }
+  
+    .paragraph-hero-section {
+      font-size: clamp(14px, 3.5vw, 16px);
+      padding: 0 10px;
+    }
+  
+    .link_wrap {
+      width: 90%;
+      margin: 20px auto;
+      text-align: center;
+    }
+  
+    /* Augmented Section */
+    .augmented-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .augmented-title {
+      font-size: clamp(1.5rem, 5vw, 1.8rem);
+      text-align: center;
+    }
+  
+    .augmented-subtitle {
+      font-size: clamp(1rem, 4vw, 1.2rem);
+      text-align: center;
+    }
+  
+    .text-carousel {
+      width: 100%;
+      margin: 0 auto 10px auto;
+      text-align: center;
+    }
+  
+    /* Elimination Friction Section */
+    .elimination-friction-container {
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .elimination-friction-container .text-container h1 {
+      font-size: clamp(1.5rem, 5vw, 1.8rem);
+    }
+  
+    .remove-barriers-container-2 .text-container {
+      text-align: center;
+    }
+  
+    .remove-barriers-container-2 .text-container h4 {
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
+    }
+  
+    .remove-barriers-container-2 .text-container p {
+      font-size: clamp(14px, 3.5vw, 16px);
+    }
+  
+    /* Enhance Section */
+    .enhance-section-container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .enhance-text-container {
+      font-size: clamp(16px, 4vw, 20px);
+      text-align: center;
+    }
+  
+    .accuracy-list-container .list-item {
+      width: 90%;
+      margin: 10px auto;
+      padding: 15px;
+      font-size: clamp(16px, 4vw, 18px);
+    }
+  
+    /* Companion Section */
+    .companion-container {
+      flex-direction: column;
+      height: auto;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    .companion-container .image-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .companion-container .image-wrapper img {
+      width: 80%;
+      max-width: 400px;
+      height: auto;
+      margin: 0 auto;
+    }
+  
+    .companion-container .text-container {
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Workflow Section */
+    .workflow-and-data-calidation-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    .container-work {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
