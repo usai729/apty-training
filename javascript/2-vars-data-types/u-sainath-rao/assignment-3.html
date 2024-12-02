@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types Example</title>
+</head>
+<body>
+    <h2>Data Types Example</h2>
+    <p id="string-type"></p>
+    <p id="number-type"></p>
+    <p id="boolean-type"></p>
+    <p id="undefined-type"></p>
+    <p id="null-type"></p>
+    <p id="symbol-type"></p>
+    <p id="object-type"></p>
+
+    <script>
+        const stringExample = "Hello, world!";
+        const numberExample = 42;
+        const booleanExample = true;
+        let undefinedExample;
+        const nullExample = null;
+        const symbolExample = Symbol('symbol');
+        const objectExample = { name: "John", age: 30 };
+
+        document.getElementById("string-type").innerHTML = `Data type of stringExample: ${typeof stringExample}`;
+        document.getElementById("number-type").innerHTML = `Data type of numberExample: ${typeof numberExample}`;
+        document.getElementById("boolean-type").innerHTML = `Data type of booleanExample: ${typeof booleanExample}`;
+        document.getElementById("undefined-type").innerHTML = `Data type of undefinedExample: ${typeof undefinedExample}`;
+        document.getElementById("null-type").innerHTML = `Data type of nullExample: ${typeof nullExample}`;
+        document.getElementById("symbol-type").innerHTML = `Data type of symbolExample: ${typeof symbolExample}`;
+        document.getElementById("object-type").innerHTML = `Data type of objectExample: ${typeof objectExample}`;
+    </script>
+</body>
+</html>
