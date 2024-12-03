@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>business website</title>
+  <link rel="stylesheet" href="../css/apty-webpage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Start of header section -->
+  <section>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo_text">
+          <div class="logo">
+            <a href="./apty-webpage.html">
+              <img src="../images-videos/logo.svg" alt="logo">
+            </a>
+          </div>
+          <ul>
+            <li><a href="#">Platform <i class="fa-solid fa-angle-down"></i></a></li>
+            <li><a href="#">Solutions <i class="fa-solid fa-angle-down"></i></a></li>
+            <li><a href="#">Resources <i class="fa-solid fa-angle-down"></i></a></li>
+            <li><a href="#">About Us <i class="fa-solid fa-angle-down"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+      <div>
+        <a  href="./button_demo.html" class="demo-btn">Book a Demo</a>
+      </div>
+    </header>
+  </section>
+  <!-- End of Header Section -->
+
+  <!-- start of video container section -->
+  <section>
+    <main>
+      <div class="video-container">
+        <video autoplay muted loop class="background-video">
+          <source src="../images-videos/main-final-video.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+          <h1 class="title">Your Software, <br><span class="pink-gradient">Enhanced.</span></h1>
+          <p class="description">Apty's AI-driven in-app guidance streamlines and accelerates <br>
+            software adoption, improves onboarding, reduces IT support costs,  <br> and boosts 
+            ROI with our Digital Adoption Platform.</p>
+          <button class="get-started">GET Started</button>
+          <div class="svgs">
+            <img src="../images-videos/hitachi.svg" alt="svg">
+            <img src="../images-videos/wiley.svg" alt="svg">
+            <img src="../images-videos/wyndham.svg" alt="svg">
+            <img src="../images-videos/lockheed martin.svg" alt="svg">
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+  <!-- End of video container -->
+
+  <!-- Start of Argmented intelligence slide bar -->
+  <div>
+    <div class="slide_bar_background">
+      <div class="slide_bar">
+
+        <div class="Heading">
+          <h3>Argmented Intelligence <span class="for_text_change">for</span></h3>
+        </div>
+        <marquee>
+          <div class="content_scroll">
+            <h1 class="content_scroll_data">Salesforce</h1>
+            <h1 class="content_scroll_data">Workday</h1>
+            <h1 class="content_scroll_data">Oracle</h1>
+            <h1 class="content_scroll_data">Infor</h1>
+            <h1 class="content_scroll_data">Coupa</h1>
+            <h1 class="content_scroll_data">ServiceNow</h1>
+            <h1 class="content_scroll_data">MS Dynamics</h1>
+          </div>
+        </marquee>
+        <div class="text_bar">
+          <p>The only GenAI powered Cross Application Co-Pilot <br>
+            that solves your software adoption problem.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Start of Slides using bootstrap -->
+  <div class="scroll">
+    <!-- bootstrapanimation -->
+    <div id="imageChanger" style="position: relative; width: 100%; height: 400px; overflow: hidden;">
+      <img src="../images-videos/slideimg1.svg" id="changingImage"
+        style="position: absolute; width: 100%; height: 100%;" alt="Image 1">
+    </div>
+
+    <script>
+      const images = [
+        "../images-videos/slideimg1.svg",
+        "../images-videos/slideimg2.svg",
+        "../images-videos/slideimg3.svg",
+        "../images-videos/slideimg4.svg",
+        "../images-videos/slideimg5.svg",
+        "../images-videos/slideimg6.svg",
+      ];
+
+      let currentIndex = 0;
+
+      setInterval(() => {
+        // Update the image source to the next image
+        currentIndex = (currentIndex + 1) % images.length; // Cycle through images
+        document.getElementById("changingImage").src = images[currentIndex];
+      }, 1000); // Change every 1000ms (1 second)
+    </script>
+</div>
+
+
+
+<div class="work_container">
+  
+    
+      <div class="work_para">
+        <h4>Apty is the digital adoption platform that <br>makes complex software easy to use.</h4>
+      </div>
+      <div class="work_btn">
+        <button class="button work_btn_platform">
+          <h6>EXPLORE PLATFORM</h6>
+        </button>
+        <button class="button work_btn_explore">
+          <h6>EXPLORE FEATURES</h6>
+        </button>
+      </div>
+   
+  
+  
+</div>
+<!-- End of Argmented intelligence slide bar -->
+
+
+  <!-- eleminating friction box -->
+  <div class="software_experience">
+    <div class="text_software">
+      <h1><span class="for_change_color">Eliminating Friction</span> in <br>
+        Everyone’s Software Experiences</h1>
+    </div>
+    <div class="entire_dap">
+      <div class="dap_1">
+        <div class="right_dap1">
+          <div class="heading_dap">
+            <h1>Remove Barriers and Enhance Every Software Experience with our Digital Adoption Platform</h1>
+          </div>
+          <div class="description_dap">
+            <p>Apty’s user and process level insights lead to customized prescriptions that allow rapid adoption of any
+              software tech stack.</p>
+          </div>
+          <div>
+            <a href="#" class="learn-more">LEARN MORE</a>
+          </div>
+
+        </div>
+        <div class="left_dap_video">
+          <video width="640" height="360" autoplay muted loop>
+            <source src="../images-videos/Element-3-Resize_3.webm" type="video/webm">
+          </video>
+
+        </div>
+      </div>
+      <br>
+      <div class="dap_1">
+        <div class="right_dap1">
+          <div class="heading_dap">
+            <h1>Accelerate Onboarding to Fully Realize the ROI of any Software Investment</h1>
+          </div>
+          <div class="description_dap">
+            <p>With on-screen guidance and task automation, Apty enhances productivity across any
+              application and helps organizations realize business value faster.</p>
+          </div>
+          <div class="button_container_dap">
+            <a href="#" class="learn-more">LEARN MORE</a>
+          </div>
+
+        </div>
+        <div class="left_dap_video">
+          <video width="640" height="360" autoplay muted loop>
+            <source src="../images-videos/Element-1-Resize_2.webm" type="video/webm">
+          </video>
+        </div>
+      </div>
+      <br>
+      <div class="dap_1">
+        <div class="right_dap1">
+          <div class="heading_dap">
+            <h1>Digital Transformation and Change Management that You can Measure and Scale</h1>
+          </div>
+          <div class="description_dap">
+            <p>Accelerate transformation and streamline enterprise-wide change management initiatives with
+              Apty’s next-gen Digital adoption platform.</p>
+          </div>
+          <div class="button_container_dap">
+            <a href="#" class="learn-more">LEARN MORE</a>
+          </div>
+
+        </div>
+        <div class="left_dap_video">
+          <video width="640" height="360" autoplay muted loop>
+            <source src="../images-videos/Element-2-Resize_2.webm" type="video/webm">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of friction box -->
+
+  <!-- Start of AI companion section -->
+  <div>
+    <div class="ai_component_bar">
+      <div class="ai_component">
+        <div>
+          <img class="img_ai_com" src="../images-videos/user-dashboard-img (1) ai.svg" alt="blank_ai_img">
+        </div>
+        <div class="ai_content">
+          <p class="ai_para1">On-screen Guidance</p>
+          <h3 class="ai_head">Your AI <br> Companion</h3>
+          <p class="ai_para2">With prescriptive nudges and workflow automation, Apty intelligently guides end users and
+            reduces software usage friction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of AI companion Section -->
+
+
+  <!-- Start of Flows section -->
+
+  <div class="container">
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-6 d-flex flex-column">
+        <!-- First Card -->
+        <div class="custom-card purple-card first-half">
+          <h5>Workflows</h5>
+          <h2>Prescribed Workflows</h2>
+          <p>Automated cross-application workflows to simplify task completion, content creation, and ensure SOP
+            compliance.</p>
+          <img src="../images-videos/line-frame.svg" alt="Workflow Diagram" class="img-fluid mt-auto">
+        </div>
+        <!-- Third Card -->
+        <div class="custom-card light-purple-card mt-half">
+          <h5>Conversational AI</h5>
+          <h2>Cross-Application Insights</h2>
+          <p>Empower better decision-making through AI-based conversational insights across your applications.</p>
+          <img src="../images-videos/derty.png" alt="Conversational AI" class="img-fluid mt-auto">
+        </div>
+      </div>
+      <!-- Right Column -->
+      <div class="col-md-6">
+        <div class="custom-card orange-card full-height">
+          <h5>Data Validations</h5>
+          <h2>Software Performance Monitoring</h2>
+          <p>Discreetly monitors and analyzes user behavior across applications, providing insights into engagement,
+            challenges, and adoption rates.</p>
+          <img src="../images-videos/lon.png" alt="Performance Monitoring" class="img-fluid mt-auto">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of Workflow section -->
+
+  <!-- Start of Customer Review Section -->
+
+  <div class="container">
+    <div class="customer_reviews">
+      <h2 class="customer_content"><span>What</span><span class="customer_pink-gradient">Our
+          Customers</span><br><span>are Saying About Apty</span></h2>
+      <marquee>
+        <div class="content_scroll">
+          <img class="customer_image_review" src="../images-videos/Group-1.png" alt="group1">
+          <img class="customer_image_review" src="../images-videos/Group-2.png" alt="group2">
+          <img class="customer_image_review" src="../images-videos/Group-3.png" alt="group3">
+          <img class="customer_image_review" src="../images-videos/Group-4.png" alt="group4">
+        </div>
+      </marquee>
+    </div>
+  </div>
+  <!-- End of Customer Review Section -->
+
+  <!-- Start of demo scheduling section -->
+  <div class="footer_container1">
+    <div class="inner_container">
+      <div class="cta_text">
+        <h1>
+          Ready to Enhance <br>
+          <span class="highlight">Your Software and <br>Drive Digital <br> Adoption?</span>
+        </h1>
+        <div class="cta_button">
+          SCHEDULE A DEMO
+        </div>
+      </div>
+      <div>
+        <img class="lap_img" src="../images-videos/laptop.png" alt="lap_img">
+      </div>
+    </div>
+  </div>
+  <!-- End of Demo scheduling Section -->
+
+  <!-- Start of Footer section -->
+  <div class="footer">
+    <div class="container footer_content">
+      <div>
+        <h6 class="footer_content_head">Understand</h6>
+        <h6 class="footer_content_sub">Digital Adoption Platform</h6>
+        <h6 class="footer_content_sub">Apty Features</h6>
+        <h6 class="footer_content_sub">Desired Outcomes</h6>
+        <h6 class="footer_content_sub">Why Apty</h6>
+      </div>
+      <div>
+        <h6 class="footer_content_head">Explore</h6>
+        <h6 class="footer_content_sub">Application Categroies</h6>
+        <h6 class="footer_content_sub">DAP for Applications</h6>
+        <h6 class="footer_content_sub">DAP Usecases</h6>
+        <h6 class="footer_content_sub">DAP Resources</h6>
+      </div>
+      <div>
+        <h6 class="footer_content_head">Compare</h6>
+        <h6 class="footer_content_sub">Apty vs WalkMe</h6>
+        <h6 class="footer_content_sub">Apty vs Whatfix</h6>
+      </div>
+      <div>
+        <h6 class="footer_content_head">Connect</h6>
+        <h6 class="footer_content_sub">Careers</h6>
+        <h6 class="footer_content_sub">Partners</h6>
+        <h6 class="footer_content_sub">Contact Us</h6>
+        <h6 class="footer_content_sub">Partner Portal</h6>
+        <h6 class="footer_content_sub">Customer Support Center</h6>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="copyright_data">
+        <p>Copyright © 2024 apty.io | <span class="copyright_links">Terms & Conditions</span> | <span
+            class="copyright_links">Privacy Policy</span> | <span class="copyright_links">Security</span></p>
+      </div>
+      <div>
+        <i class="fa-brands fa-linkedin footer_images"></i>
+        <i class="fa-brands fa-youtube footer_images"></i>
+        <i class="fa-brands fa-twitter footer_images"></i>
+      </div>
+    </div>
+  </div>
+  <!-- End of Footer section -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
