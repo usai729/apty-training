@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YelpCamp - Product Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* General Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Navbar Styles */
+      .navbar {
+        background: #333;
+        color: #fff;
+        padding: 15px 0;
+      }
+
+      .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      .nav-links li a:hover {
+        color: #f9a825;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+        position: relative;
+      }
+
+      .hero .hero-text {
+        margin-bottom: 20px;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .hero-image {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+      }
+
+      .cta-btn {
+        background: #f9a825;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .cta-btn:hover {
+        background: #e68a00;
+      }
+
+      /* About Section */
+      .about-section {
+        padding: 40px 20px;
+        background: #f4f4f4;
+        text-align: center;
+      }
+
+      .about-section p {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+
+      /* Features Section */
+      .features-section {
+        padding: 40px 20px;
+      }
+
+      .features-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+      }
+
+      .feature-item {
+        flex: 1 1 30%;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .feature-item h3 {
+        margin-bottom: 10px;
+        color: #f9a825;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 40px 20px;
+        background: #f4f4f4;
+      }
+
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .submit-btn {
+        background: #f9a825;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .submit-btn:hover {
+        background: #e68a00;
+      }
+
+      /* Footer */
+      .footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <h1 class="logo">YelpCamp</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-text">
+          <h2>Welcome to YelpCamp</h2>
+          <p>
+            Discover and share amazing camping adventures with fellow outdoor
+            enthusiasts.
+          </p>
+          <button class="cta-btn" onclick="window.location.href='#features'">
+            Explore Campgrounds
+          </button>
+        </div>
+        <img src="images/image.png" alt="YelpCamp Product" class="hero-image" />
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About YelpCamp</h2>
+        <p>
+          YelpCamp is your ultimate platform for exploring breathtaking
+          campgrounds and sharing your adventures with others. Whether you're
+          planning your next outdoor trip or looking to inspire others with your
+          experiences, we've got you covered.
+        </p>
+      </div>
+    </section>
+
+    <section id="features" class="features-section">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="features-list">
+          <div class="feature-item">
+            <h3>Browse Campgrounds</h3>
+            <p>
+              Explore a variety of campgrounds with detailed reviews and
+              stunning photos.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Share Your Experiences</h3>
+            <p>
+              Contribute to the community by sharing your camping experiences
+              and tips.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Plan Your Adventures</h3>
+            <p>Easily find and plan your next outdoor getaway.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 YelpCamp. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
