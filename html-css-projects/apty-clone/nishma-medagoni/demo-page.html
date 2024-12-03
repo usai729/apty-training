@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "demo-page.css" />
+    <title>Book Demo Page - Apty</title>
+</head>
+<body>
+
+    <!--Header Section-->
+
+    <header>
+        <a href = "apty-clone.html" class = "apty-logo-container">
+            <img src = "https://www.apty.io/wp-content/uploads/2024/06/logo.svg" alt = "apty-logo" class = "apty-logo"/>
+        </a>
+
+        <!-- Navigation Section-->
+
+        <nav role = "navigation">
+            <ul>
+                
+                <li class = "nav-item">
+                    <a href = "#" class = "nav__link">Platform</a>
+                    <i class="fa-solid fa-angle-down"></i>
+
+                    <!--Platform Dropdown-->
+
+                    <div class = "platform-dropdown">
+                        <div class = "platform-dropdown-container">
+                            <img src = "assets/bg-office-team2.jpg" class = "platform-image1" alt = "platform "/>
+                            <div class = "overview-container">
+                                <h1>Platform Overview</h1>
+                                <hr>
+                                <div class = "overview-cards">
+                                    <div class = "overview-card-1">
+                                        <h1>Digtal Adoption Platform</h1>
+                                        <p>Enterprise DAP making complex software easy to ue</p>
+                                        <button class = "gradient-button">LEARN MORE</button>
+                                    </div>
+                                    
+                                    <div class = "overview-card-2">
+                                        <h1>Digtal Adoption Platform</h1>
+                                        <p>Enterprise DAP making complex software easy to ue</p>
+                                        <button class = "gradient-button">LEARN MORE</button>
+                                    </div>
+                                    
+                                    <div class = "overview-card-3">
+                                        <h1>Digtal Adoption Platform</h1>
+                                        <p>Enterprise DAP making complex software easy to ue</p>
+                                        <button class = "gradient-button">LEARN MORE</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class = "questions-container">
+                                <h3>> Why Apty</h3>
+                                <p>Why we are the only DAP leading to software Utilization ROI.</p>
+                                <h3>> Apty Process</h3>
+                                <p>Our approach for you to make the most of Apty.</p>
+                                <h3>>Apty Features</h3>
+                                <p>Explore the DAP 2.0 features accelerating user adoption.</p>
+                                <h3>>Digital Adoption Outcomes</h3>
+                                <p>Benefits with Apty in charge of your digital adoption agenda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class = "nav-item">
+                    <a href = "#" class = "nav__link">Solutions</a>
+                    <i class="fa-solid fa-angle-down"></i>
+
+                    <!-- Solutions Dropdown -->
+
+                    <div class = "solution-dropdown">
+                        <h2>By App Categories</h2>
+                        <h2>By Applications</h2>
+                        <h2>By Use Cases</h2>
+                        <h2>By Department</h2>
+                        <h2>By Roles</h2>
+                        <p>With Apty, supercharge software wusage and health environment acros 16 application
+                            categories and their diverse use cases.
+                        </p>
+                    </div>
+                </li>
+
+                <li class = "nav-item">
+                    <a href = "#" class = "nav__link">Resources</a>
+                    <i class="fa-solid fa-angle-down"></i>
+                </li>
+
+                <li>
+                    <a href = "#" class = "nav__link">About Us</a>
+                    <i class="fa-solid fa-angle-down"></i>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Link to demo page -->
+
+        <a href="demo-page.html" class = "header__button-link">
+            <button class="header__button">BOOK A DEMO</button>
+        </a>
+    </header>
+
+    <!-- Main container -->
+
+    <main>
+        <!-- 1st section -->
+
+        <section class = "request-section">
+            <div class = "request-title-section">
+                <h1 class = "request-title-heading">See Why <span class="pink-gradient">12 Million 
+                    </br>Users</span>Trust Apty 
+                    </br>for Digital 
+                    </br>Adoption
+                </h1>
+                <p class = "request-title-paragraph">Experience Apty with a personalized product demonstration that’s<br>
+                    relevant to your business use case and technology stack.
+                </p>
+                <div class = "awards-images">
+                    <img src = "assets/G2-High-Peformer-Americas-2024-269x300.png" alt = "High Performer America Award"/>
+                    <img src = "assets/High-Performer-2024-1.png" alt = "High Performer 2021 Award"/>
+                    <img src = "assets/High-Performer-Asia-Pacific-269x300.png" alt = "High-Performer-Asia-Pacific Award"/>
+                    <img src = "assets/Fastest-Implementation-Enterprise-2024-1.png" alt = "Fastest-Implementation-Enterprise-2024 Award"/>
+                </div>
+            </div>
+            <div class = "booking-section">
+                <h1 class = "booking-section-title">Book Your Personalized Demo</h1>
+                <form action = "/submit" method = "POST">
+                    <div class = "form-inputs">
+                        <input type = "text" 
+                            placeholder="First Name*"
+                            class = "input-first-name"
+                            name="first_name"
+                            required
+                            maxlength="50"
+                            required pattern="[A-Za-z]+"
+                        />
+                        <input type = "text" 
+                            placeholder="Last Name*"
+                            class = "input-first-name"
+                            name="first_name"
+                            required
+                            maxlength="50"
+                            required pattern="[A-Za-z]+"
+                         />
+                    </div>
+                    <input type = "email" 
+                        placeholder="Email*"
+                        class = "input-email"
+                        name="first_name"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                        required
+                    />
+                    <div class = "form-inputs">
+                        <input type = "tel" 
+                            placeholder="Phone*"
+                            class = "input-first-name"
+                            name="first_name"
+                            required
+                            maxlength="15"
+                            pattern="[\d]{3}-[\d]{3}-[\d]{4}" 
+                            required 
+                        />
+                        <input type = "text" 
+                            placeholder="Company Name*"
+                            class = "input-first-name"
+                            name="first_name"
+                            required
+                            maxlength="50"
+                            required pattern="[A-Za-z]+"
+                        />
+                    </div>
+                    <input type = "text" 
+                        placeholder="Job title*"
+                        class = "input-email"
+                        name="first_name"
+                        required
+                    />
+                    <div class = "form-inputs1">
+                        <h1 class = "input-question-heading">How would you describe yourself?</h1>
+                        <p class = "input-question-question">Please select all that apply</p>
+                    </div>
+                    
+                    <label class = "checkbox-input">
+                        <input type="checkbox" name="choice" value="option1" >
+                        Content Creator in DAP
+                    </label>
+
+                    <br>
+                    
+                    <label class = "checkbox-input">
+                        <input type="checkbox" name="choice" value="option2" >
+                        End User of DAP
+                    </label>
+
+                    <br>
+                    
+                    <label class = "checkbox-input">
+                        <input type="checkbox" name="choice" value="option3">
+                        Executive Exploring a DAP
+                    </label>
+
+                    <br>
+
+                    <div class = "form-final-container">
+                        What are you hoping to accomplish with a Digital Adoption Platform?
+                    </div>
+                    <buttom class = "form-button" type = "submit">REQUEST MY DEMO</buttom>
+                </form>
+            </div>
+        </section>
+
+        <!-- 2nd section -->
+
+        <section class = "brands-section">
+            <img src = "assets/mattel-logo (1).svg" alt = "mattel-logo"/>
+            <img src = "assets/hitachi-logo.svg" alt = "hitachi-logo"/>
+            <img src = "assets/philips-logo.svg" alt = "philips-logo"/>
+            <img src = "assets/mary-kay-logo.svg" alt = "mary-kay-logo"/>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+
+    <footer class = "footer-section">
+        <div class = "footer-section-container">
+            <ul class = "footer-list">
+                <li class = "footer-list-item">Understand</li>
+                <li>Digital Adoption Platform</li>
+                <li>Apty Features</li>
+                <li>Desired Outcomes</li>
+                <li>Why Apty</li>
+            </ul>
+
+            <ul class = "footer-list">
+                <li class = "footer-list-item">Explore</li>
+                <li>Application Categories</li>
+                <li>DAP for Applications</li>
+                <li>DAP Use Cases</li>
+                <li>DAP Resources</li>
+            </ul>
+
+            <ul class = "footer-list">
+                <li class = "footer-list-item">Compare</li>
+                <li>Apty vs WalkMe</li>
+                <li>Apty vs Whatfix</li>
+            </ul>
+
+            <ul class = "footer-list">
+                <li class = "footer-list-item">Connect</li>
+                <li>Careers</li>
+                <li>Partners</li>
+                <li>Contact Us</li>
+                <li>Partner Portal</li>
+                <li>Customer Support Center</li>
+            </ul>
+
+        </div>
+        <hr>
+        <div class = "footer-links">
+            <p>Copyright © 2024 apty.io | Terms & Conditions | Privacy Policy | Security</p>
+            <ul>
+                <li>
+                    <img src = "assets/linekdin-icn.svg" alt = "linekdin-icon"/>
+                </li>
+                <li>
+                    <img src = "assets/youtube-icn.svg" alt = "youtube-icon"/>
+                </li>
+                <li>
+                    <img src = "assets/twitter-new-icn.svg" alt = "twitter-new-icon"/>
+                </li>
+            </ul>
+        </div>
+        
+    </footer>
+</body>
+</html>

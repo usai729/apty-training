@@ -1,0 +1,780 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Section */
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: rgba(35, 19, 52, 100);
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 55px;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+.apty-logo-container {
+    width: 7%;
+}
+.apty-logo {
+    width: 90px;
+    cursor: pointer;
+}
+.nav {
+    position: relative;
+}
+ul {
+    display: flex;
+    padding-left: 35px;
+    gap: 20px;
+    position: relative;
+    list-style-type: none;
+}
+
+
+/* Platform dropdown*/
+
+
+.platform-dropdown {
+    position: absolute;
+    margin-left : -120px;
+    margin-top: 680px;
+    width: 1300px;
+    box-sizing: content-box;
+    background: #ffffff;
+    display: none; /* Initially hidden */
+}
+
+.platform-dropdown-container {
+    display: flex;
+    background-color: white;
+    font-family: 'poppins';
+}
+
+.platform-image1 {
+    width: 20%;
+    height: 100vh;
+}
+
+.overview-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.overview-cards {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+
+.overview-card-1 {
+    background-image: url("assets/Frame-3594-1-820x1024.png");
+    margin-top: 20px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    width:150px;
+    padding: 20px 10px;
+}
+.overview-card-1 h1, p {
+    font-size: small;
+}
+.overview-card-1 p {
+    font-size: x-small;
+}
+.gradient-button {
+    width: 150px;
+    margin-top: 8px;
+    padding: 7px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(90deg, #ff591a, #FC589D);
+    color: white;
+    font-weight: bold;
+}
+.overview-card-2 {
+    background-image: url("assets/Frame-3593-820x1024.png");
+    margin-top: 20px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    width:150px;
+    padding: 20px 10px;
+}
+.overview-card-2 h1, p {
+    font-size: small;
+}
+.overview-card-2 p {
+    font-size: x-small;
+}
+.overview-card-3 {
+    background-image: url("assets/Frame-3595-820x1024.png");
+    margin-top: 20px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    width:150px;
+    padding: 20px 10px;
+}
+.overview-card-3 h1, p {
+    font-size: small;
+}
+.overview-card-3 p {
+    font-size: x-small;
+}
+.questions-container {
+    width: 20%;
+    padding: 20px;
+    border-left: 1px solid gray;
+}
+.questions-container p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.questions-container h3:hover {
+    background: linear-gradient(90deg, #ff591a, #FC589D);  /* Your gradient */
+    background-clip: text; 
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+
+
+/* solutions dropdown*/
+
+.solution-dropdown {
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 720px;
+    padding: 20px;
+    width: 300px;
+    height: 100vh;
+    box-sizing: content-box;
+    background-color: #ffffff;
+    display: none;
+    font-family: 'poppins';
+    color: gray;
+}
+.solution-dropdown h2 {
+    padding-bottom: 20px;
+    font-weight: 100;
+}
+.solution-dropdown p {
+    padding-top: 50px;
+    font-size: medium;
+}
+
+/*Navigation through header*/
+
+.nav-item {
+    position: relative; /* Parent element to position the dropdown */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style-type: none;
+}
+.nav-item:hover .platform-dropdown {
+    display: block; /* Show on hover */
+  }
+.nav-item:hover .solution-dropdown {
+    display: block;
+}
+
+.nav__link {
+    font-family: "poppins";
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav__link:hover {
+    color: #ff591a;
+}
+
+i {
+    color: white;
+}
+
+
+/* Styling for the button */
+.header__button-link {
+    margin-left: 30%;
+}
+.header__button {
+    padding: 12px;
+    background-color: #ff591a; /* Initial solid background color */
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-family: "poppins";
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    background-size: 100% 100%;
+}
+
+.header__button:hover {
+    background: linear-gradient(90deg, #ff591a, #FC589D);  /* Your gradient */
+    color: white;
+}
+.hero-companies {
+    display: flex;
+    gap: 5px;
+}
+
+.hero-brands {
+    width: 70%;
+}
+
+
+
+/* main */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.background-video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 35px;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    min-height: 90%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.hero-title-container {
+    display: flex;
+    margin-top: 90px;
+    flex-direction: column;
+    padding: 40px;
+    color: white;
+}
+
+.hero-title {
+    font-family: "poppins";
+    font-size: 60px;
+}
+
+/* Gradient text styling */
+
+.hero-title-gradient {
+    background: linear-gradient(90deg, #ff591a, #FC589D);  
+    background-clip: text; 
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+.hero-paragraph {
+    font-size: 16px;
+    font-family: "poppins";
+    padding-top: 10px;
+}
+
+.hero-button {
+    width: 150px;
+    padding: 15px;
+    margin-top: 40px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(90deg, #ff591a, #FC589D);
+    color: white;
+    font-weight: bold;
+}
+
+.hero-companies {
+    padding-top: 30px;
+    padding-left: 0px;
+}
+
+/*   Augemented Section  */
+
+.Augumented-section-container {
+    background: linear-gradient(180deg, rgb(45, 26, 69) 0%, rgb(50, 23, 90) 42%, rgb(50, 23, 90) 60%);
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+.Augumented-section-container__inner-container {
+    border-radius: 20px;
+    background-color: #8a4af3;
+    position: absolute;
+    top: -50px;
+    height: 100%;
+    width: 80%;
+    transform: translateX(-50%);
+    left: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'poppins';
+    color: #ffff;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.inner-container__heading {
+    font-size: 28px;
+    padding: 24px;
+}
+
+.inner-container__list {
+    padding: 24px;
+    gap: 90px;
+    font-size: 23px;
+}
+
+.inner-container__list-item {
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 28px;
+}
+
+.inner-container__paragraph {
+    font-size: 18px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/* salesforce image section*/
+
+.Salesforce-image-container {
+    background-color:#32175a;
+    width: 100%;
+    height: 150%;
+    margin-top: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'poppins';
+}
+.Salesforce-image {
+    width: 50%;
+}
+.explore-heading  {
+    padding-top: 80px;
+    font-size: 23px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 31px;
+}
+.explore-button-container {
+    display: flex;
+    gap: 50px;
+}
+.explore-button {
+    width: 250px;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 60px;
+    margin-bottom: 120px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(90deg, #ff591a, #FC589D);
+    color: white;
+    font-weight: bold;
+}
+
+/* Feature section */
+
+.feature-section {
+    background-color: #260f3e;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    font-family: 'poppins';
+}
+.feature-section__heading {
+    color: white;
+    font-size: 46px;
+    text-align: center;
+}
+
+.feature-section-curve1 {
+    position: relative;
+    padding-right: 220px;
+    
+}
+.feature-section-image1 {
+    align-self: flex-start;
+}
+.feature-section-item1 {
+    position: absolute;
+    display: flex;
+    color: white;
+    font-family: 'poppins';
+    margin-top: 400px;
+    margin-left: 200px;
+}
+
+.feature-section-item1-heading {
+    font-size: 32px;
+    padding-bottom: 20px;  
+}
+.vertical-line { 
+    margin-right: 88%;
+    height: 300px; 
+    width: 2px; 
+    background: linear-gradient(90deg, #ff591a, #FC589D); /
+}
+
+.feature-section-item2 {
+    position: absolute;
+    display: flex;
+    color: white;
+    font-family: 'poppins';
+    margin-top: 900px;
+    margin-left: 200px;
+}
+
+.feature-section-item3 {
+    position: absolute;
+    display: flex;
+    color: white;
+    font-family: 'poppins';
+    margin-top: 1350px;
+    margin-left: 200px;
+}
+
+/* Enhancement Section */
+
+
+.enhancement-section {
+    margin-top: -250px;
+    background-color: #ebebeb;
+    width: 100%;
+    width:auto;
+    height: auto;
+    background-size: cover;
+    font-family: 'poppins';
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.enhancement-section-heading {
+    padding-top: 200px;
+    font-size: 43px;
+    padding-bottom: 30px;
+}
+.enhancement-section-features {
+    display: flex;
+    gap: 60px;
+}
+.enhancement-section-features-list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    color: black;
+    font-family: 'poppins';
+
+}
+
+.arrow-icon {
+    color: black;
+}
+.enhancement-section-features-list-item {
+    width: 400px;
+    padding: 30px;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    border-bottom: 2px solid #FC589D; /* Make sure the element can handle the background image properly */
+}
+
+.enhancement-section-features-list-item:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff591a, #FC589D);
+    border-radius: 20px;
+    color: white;
+}
+.enhancement-section-image1 {
+    padding-top: 100px;
+    width: 450px;
+    height: 450px;
+}
+
+
+.AI-card {
+    margin-top: 150px;
+    width: 90%;
+    height: 300px;
+    border-radius: 20px;
+    background: linear-gradient(126deg, rgb(129, 49, 255) 0%, rgb(129, 49, 255) 24%, rgb(129, 49, 255) 37%, rgb(78, 9, 188) 94%);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.AI-card-image {
+    position: absolute;
+    margin-left: -600px;
+    width: 53%;
+}
+
+.AI-card-description {
+    display: flex;
+    flex-direction: column;
+    color :white;
+    justify-content: center;
+    font-family: 'poppins';
+    width: 40%;
+    margin: 20px;
+    padding-left: 550px;
+}
+.AI-card-description h1 {
+    font-size: 32px;
+    padding-top: 20px;
+}
+.AI-card-description p {
+    font-size: 18px;
+    padding-top: 20px;
+}
+.more-cards {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+.work-and-conversations-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.workflow-card {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(78deg, rgb(93, 44, 148) 14%, rgb(93, 44, 148) 62%, rgb(49, 25, 74) 100%);
+    padding: 30px;
+    width: 90%;
+    border-radius: 20px;
+    color: white;
+}
+.workflow-card p {
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.workflow-image {
+    width: 100%;
+}
+.conversations-card {
+    background: linear-gradient(173deg, rgb(129, 49, 255) 10%, rgb(78, 9, 188) 90%);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+}
+.conversations-card p {
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.conversations-card img {
+    width: 100%;
+    padding-top: 10px;
+    margin-left: 31px;
+    padding-bottom: 0;
+}
+.data-card {
+    background: linear-gradient(90deg, #ff591a, #FC589D);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 90%;
+    border-radius: 20px;
+    color: white;
+}
+.data-card p {
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.data-card img {
+    width: 110%;
+    padding-top: 45px;
+    align-self: center;
+}
+
+
+/* customers-section */
+
+.customers-section {
+    padding-top: 150px;
+    background-color: #ebebeb;
+    width: 100%;
+    width:auto;
+    height: auto;
+    background-size: cover;
+    font-family: 'poppins';
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+
+.customers-section h1 {
+    font-size: 43px;
+    padding-bottom: 60px;  
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.customer-image {
+    width: 100%;
+    height: 600px;
+}
+.case-study-container {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    background: linear-gradient(98deg, rgb(251, 225, 209) 10%, rgb(230, 211, 226) 70%);
+}
+.case-study-container-description p {
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+}
+.case-study-container-description h1 {
+    font-size: 38px;
+    padding-bottom: 12px;
+}
+.mattel-button {
+    margin-left: 100px;
+}
+.case-study-container img {
+    padding: 50px;
+    width: 40%;
+}
+.resources-list {
+    margin-top: 50px;
+    display: flex;
+    gap: 80px;
+}
+.resources-list-item {
+    display: flex;
+    flex-direction: column;
+}
+.resources-images {
+    width: 100%;
+    border-radius: 20px;
+}
+.resources-heading {
+    color: black;
+    font-weight: bolder;
+}
+.resources-heading span {
+    color: #787878;
+    font-weight: 100;
+}
+.resources-heading:hover {
+    background: linear-gradient(90deg, #ff591a, #FC589D);  /* Your gradient */
+    background-clip: text; 
+    -webkit-background-clip: text;
+    color: transparent; 
+    cursor: pointer;
+}
+
+/* Demo Section */
+
+.demo-section {
+    background-color: #212121;
+    display: flex;
+    color: white;
+    font-family: 'poppins';
+    font-size: 32px; 
+    padding-bottom: 40px;
+}
+.demo-section h1 {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+}
+.demo-section button {
+    margin-left: 80px;
+    width: 200px;
+}
+.demo-section img {
+    width: 50%;
+    margin-top: -150px;
+}
+
+/* footer section*/
+
+.footer-section {
+    background-color: #212121;
+    margin-top: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'poppins';
+}
+.footer-section-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.footer-list {
+    display: flex;
+    flex-direction: column;
+}
+.footer-list li:hover {
+    background: linear-gradient(90deg, #ff591a, #FC589D);  /* Your gradient */
+    background-clip: text; 
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+.footer-list-item {
+    font-weight: bolder;
+}
+.footer-list-item:hover {
+    color: white;
+}
+
+hr {
+    border: none; /* Remove default border */
+    height: 1px; /* Thickness */
+    background: white;
+    margin: 20px 0;
+}
+.footer-links {
+    padding: 30px;
+    display: flex;justify-content: space-between;
+}
+.footer-links p {
+    color:#787878;
+}
+.footer-links li {
+    cursor: pointer;
+}

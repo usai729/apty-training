@@ -1,0 +1,433 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+header {
+    display: flex;
+    width: 100%;
+    background-color: rgba(35, 19, 52, 100);
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 55px;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+.apty-logo-container {
+    width: 7%;
+}
+.apty-logo {
+    width: 90px;
+    cursor: pointer;
+}
+.nav {
+    position: relative;
+}
+ul {
+    display: flex;
+    padding-left: 35px;
+    gap: 20px;
+    position: relative;
+    list-style-type: none;
+}
+
+
+/* Platform dropdown*/
+
+
+.platform-dropdown {
+    position: absolute;
+    margin-left : -120px;
+    margin-top: 680px;
+    width: 1300px;
+    left: -60px;
+    box-sizing: content-box;
+    background: #ffffff;
+    display: none; /* Initially hidden */
+
+}
+.platform-dropdown-container {
+    display: flex;
+    background-color: white;
+    font-family: 'poppins';
+}
+.platform-image1 {
+    width: 20%;
+    height: 100vh;
+}
+.overview-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.overview-cards {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+
+.overview-card-1 {
+    background-image: url("assets/Frame-3594-1-820x1024.png");
+    margin-top: 20px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    width:150px;
+    padding: 20px 10px;
+}
+.overview-card-1 h1, p {
+    font-size: small;
+}
+.overview-card-1 p {
+    font-size: x-small;
+}
+.gradient-button {
+    width: 150px;
+    margin-top: 8px;
+    padding: 7px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(90deg, #ff591a, #FC589D);
+    color: white;
+    font-weight: bold;
+}
+.overview-card-2 {
+    background-image: url("assets/Frame-3593-820x1024.png");
+    margin-top: 20px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    width:150px;
+    padding: 20px 10px;
+}
+.overview-card-2 h1, p {
+    font-size: small;
+}
+.overview-card-2 p {
+    font-size: x-small;
+}
+.overview-card-3 {
+    background-image: url("assets/Frame-3595-820x1024.png");
+    margin-top: 20px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    width:150px;
+    padding: 20px 10px;
+}
+.overview-card-3 h1, p {
+    font-size: small;
+}
+.overview-card-3 p {
+    font-size: x-small;
+}
+.questions-container {
+    width: 20%;
+    padding: 20px;
+    border-left: 1px solid gray;
+}
+.questions-container p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.questions-container h3:hover {
+    background: linear-gradient(90deg, #ff591a, #FC589D);  /* Your gradient */
+    background-clip: text; 
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+
+
+/* solutions dropdown*/
+
+.solution-dropdown {
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 720px;
+    padding: 20px;
+    width: 300px;
+    height: 100vh;
+    box-sizing: content-box;
+    background-color: #ffffff;
+    display: none;
+    font-family: 'poppins';
+    color: gray;
+}
+.solution-dropdown h2 {
+    padding-bottom: 20px;
+    font-weight: 100;
+}
+.solution-dropdown p {
+    padding-top: 50px;
+    font-size: medium;
+}
+
+/* Navigation*/
+
+.nav-item {
+    position: relative; /* Parent element to position the dropdown */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style-type: none;
+}
+.nav-item:hover .platform-dropdown {
+    display: block; /* Show on hover */
+  }
+.nav-item:hover .solution-dropdown {
+    display: block;
+}
+
+
+.nav__link {
+    font-family: "poppins";
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav__link:hover {
+    color: #ff591a;
+}
+
+i {
+    color: white;
+}
+
+
+/* Styling for the button */
+.header__button-link {
+    margin-left: 30%;
+}
+.header__button {
+    padding: 12px;
+    background-color: #ff591a; /* Initial solid background color */
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-family: "poppins";
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    background-size: 100% 100%;
+}
+
+.header__button:hover {
+    background: linear-gradient(90deg, #ff591a, #FC589D);  /* Your gradient */
+    color: white;
+}
+
+/* main */
+
+
+/* request section */
+
+.request-section {
+    background-image: url("assets/bg-hero.svg");
+    width: 100%;
+    padding-top: 70px;
+    height: auto;
+    background-size: cover;
+    display: flex;
+}
+.request-title-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 70px;
+    padding-top: 90px;
+}
+.request-title-heading {
+    color: white;
+    font-family: "poppins";
+    font-size: 44px;
+    font-weight: 500;
+}
+.pink-gradient {
+    background: -webkit-linear-gradient(358deg, #FF7725, #FC52B3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.request-title-paragraph {
+    padding-top: 10px;
+    color: white;
+    font-family: "poppins"; 
+}
+.awards-images {
+    margin-top:  100px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.awards-images img {
+    width: 75px;
+    height: 75px;
+}
+
+
+/* Demo booking box */
+
+.booking-section {
+    width: 30%;
+    background-color: #241932;
+    height: auto;
+    border-radius: 15px;
+    display: flex;
+    margin: 60px;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.booking-section-title {
+    color: white;
+    font-family: "poppins";
+    font-weight: 500;
+}
+form  {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.form-inputs {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.form-inputs1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-left: 80px;
+}
+.input-first-name {
+    padding: 10px;
+    background-color: #3a3046;
+    border: none;
+    color: #8f8996;
+    font-weight: 500;
+    font-family: "poppins";
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.input-email {
+    display: flex; 
+    padding: 10px;
+    background-color: #3a3046;
+    border: none;
+    font-weight: 500;
+    color: #8f8996;
+    font-family: "poppins";
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 95%;
+}
+.input-question-heading {
+    color: #534d5a;
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: 'poppins';
+}
+.input-question-question {
+    color: white;
+    font-family: 'poppins';
+    padding-bottom: 20px;
+}
+.checkbox-input {
+    color: #534d5a;
+    font-family: 'poppins';
+    margin-left: 80px;
+}
+.form-final-container {
+    background-color: #3a3046;
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 40px;
+    font-weight: 500;
+    font-family: 'poppins';
+    color: #8f8996;
+    margin-bottom: 60px;
+}
+.form-button {
+    background-color:#ff591a;
+    padding: 10px;
+    margin-left: 80px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 20px;
+    color:white;
+    font-family: 'poppins';
+    text-align: center;
+}
+
+/* Brands section */
+.brands-section{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.brands-section img  {
+    width: 20%;
+    cursor:grab;
+}
+
+/* footer section */
+
+
+.footer-section {
+    background-color: #212121;
+    margin-top: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'poppins';
+}
+.footer-section-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.footer-list {
+    display: flex;
+    flex-direction: column;
+}
+.footer-list li:hover {
+    background: linear-gradient(90deg, #ff591a, #FC589D);  /* Your gradient */
+    background-clip: text; 
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+.footer-list-item {
+    font-weight: bolder;
+}
+.footer-list-item:hover {
+    color: white;
+}
+
+.footer {
+    border: none; /* Remove default border */
+    height: 1px; /* Thickness */
+    background: white;
+    margin: 20px 0;
+}
+.footer-links {
+    padding: 30px;
+    display: flex;justify-content: space-between;
+}
+.footer-links p {
+    color:#787878;
+}
+.footer-links li {
+    cursor: pointer;
+}
