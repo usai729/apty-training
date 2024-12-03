@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    height: 100vh;
+    /* Full viewport height */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .grid1 {
+    padding: 40px;
+    padding-bottom:20px;
+    background-image: url("https://www.apty.io/wp-content/uploads/2024/08/resources-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+  }
+  
+  .grid2 {
+    padding: 20px;
+    .container {
+        display: flex;
+        align-items: center;
+    }
+    h3:hover{
+        background:linear-gradient(to right, #FF7725, #FC52B3);
+        background-clip: text;
+        color: transparent;
+    }
+    .contents{
+        ul{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-content: space-between;
+            list-style-type: none;
+            font-size: 20px;
+            gap: 30px;
+        }    
+        li{
+            padding: 30px;
+            align-self: left;
+        }
+        li:hover{
+            background:linear-gradient(to right, #FF7725, #FC52B3);
+            background-clip: text;
+            color: transparent;
+        }
+        a{
+            color:black;
+            text-decoration: none;
+        }
+    }
+    
+  }

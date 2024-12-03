@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    height: 100vh;
+    /* Full viewport height */
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    /* Three equal parts */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .grid1 {
+    padding: 40px;
+    background-image: url("https://www.apty.io/wp-content/uploads/2024/08/about-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .grid2 {
+    
+    padding: 20px;
+    padding-top: 50px;
+    .container {
+      display: flex;
+      align-items: center;
+      color:white;
+      .learn{
+        border: 1px;
+        padding:10px;
+        background: linear-gradient(to right,#FF7725,#FC52B3);
+        border-radius: 50px;
+        font-size: 12px;
+      }
+  
+      .box1 {
+        border: 10px;
+        padding: 20px;
+        background-color: orangered;
+        margin: 10px;
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+      }
+  
+      .box2 {
+        padding: 20px;
+        background-color: blue;
+        margin: 10px;
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+      }
+  
+      .box3 {
+        margin:10px;
+        padding: 20px;
+        background-color: pink;
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+      }
+      .box1:hover,.box2:hover,.box3:hover{
+        h4{color:#FF7725;}
+      }
+    }
+    border-right:0.5px solid rgb(186, 186, 186);
+    height: 100vh;
+  }
+  
+  .grid3 {
+    a {
+      color:black !important;
+      text-decoration: none;
+    }
+  
+    .contact{
+        padding:10px;
+        bottom:1px;
+        border:2px solid #FF7725;
+        border-radius: 10px;
+    }
+    h3:hover{
+        text-decoration: underline;
+    }
+    .contact:hover{
+        text-decoration: blue underline;
+    }
+    padding: 40px;
+  }

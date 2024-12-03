@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  height: 100vh;
+  /* Full viewport height */
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header h3{
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.grid1 {
+  padding: 40px;
+  background-image: url("https://www.apty.io/wp-content/uploads/2024/08/bg-office-team2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color:white;
+}
+
+.grid2 {
+  
+  padding: 20px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    color:white;
+    .learn{
+      border: 1px;
+      padding:10px;
+      background: linear-gradient(to right,#FF7725,#FC52B3);
+      border-radius: 50px;
+      font-size: 12px;
+    }
+    .box1 {
+      border: 10px;
+      padding: 10px;
+      background-color: orangered;
+      margin: 10px;
+      height: 300px;
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .box2 {
+      padding: 10px;
+      background-color: blue;
+      margin: 10px;
+      height: 300px;
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .box3 {
+      margin:10px;
+      padding: 10px;
+      background-color: pink;
+      height: 300px;
+      width: 200px;
+      border-radius: 10px;
+    }
+    .box1:hover,.box2:hover,.box3:hover{
+      h3{color:#FF7725;}
+      background:rgba(0,0,0,0.9);
+      transform: scale(1.1);
+    }
+  
+  }
+  border-right:0.5px solid rgb(186, 186, 186);
+  height: 100vh;
+}
+
+.grid3 {
+  a {
+    text-decoration: none;
+  }
+
+  h3 {
+    color: black !important;
+    font-size: 22px;
+  }
+
+  p {
+    color: black !important;
+  }
+
+  padding: 20px;
+}

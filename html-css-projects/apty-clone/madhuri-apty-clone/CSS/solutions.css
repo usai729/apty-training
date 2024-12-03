@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.left-column {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  width: 300px;
+  height: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  ul {
+
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+
+    li {
+      display: flex;
+      flex-direction:column;
+      align-items: flex-start;
+      i {
+        align-self: flex-end;
+        font-size: 16px;
+        color: #4c4c5f;
+      }
+    }
+    p{padding-right:15px;}
+
+  }
+}
+  li:hover,h3:hover{
+    background:linear-gradient(to right, #FF7725, #FC52B3);
+    background-clip: text;
+    color: transparent;
+  }
+.right-column .categories div {
+  margin-bottom: 10px;
+}
+
+.right-column i {
+  margin-right: 10px;
+}
+
+.right-column {
+  .applications{ opacity: 0;}
+  padding: 50px;
+  margin-left: -100px;
+  ul{
+    list-style-type: none;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+    width:800px;
+    li{
+      padding:20px 30px;
+    }
+  }
+}
+h3:hover,h4:hover{
+  border-bottom:2px solid #FF7725;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.by-applications:hover .applications {
+  display: block;
+  background-image: url(https://www.shutterstock.com/image-photo/calm-weather-on-sea-ocean-600nw-2212935531.jpg);
+  background-size: cover;
+  opacity: 1;
+}

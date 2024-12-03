@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://www.apty.io/wp-content/uploads/2024/08/bg-hero-2.svg");
+    color: #fff;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 40%;
+    margin-right: 80px;
+}
+
+.header {
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.highlight {
+    background: linear-gradient(to right, #FF7725, #FC52B3);
+    background-clip: text;
+    color: transparent;
+}
+
+.badges {
+    list-style-type: none;
+    text-wrap: wrap;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    padding: 30px;
+
+}
+
+.badges .badge img {
+    height: 100px;
+    width: 80px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.right-form {
+    right: 0;
+    background-color: #2e2e3f;
+    padding: 40px;
+    border-radius: 8px;
+    width: 40%;
+    margin-top:25px;
+}
+
+form input,
+form button {
+    width: 40%;
+    margin: 10px 5px;
+    padding: 10px;
+
+}
+
+form #email,
+form #job {
+    width: 85%;
+}
+
+form textarea {
+    width: 85%
+}
+
+form label {
+    text-align: left;
+}
+
+form button {
+    background-color: #FF7725;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    width: 85%;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 20px;
+}
+
+.section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.section ul {
+    list-style-type: none;
+}
+
+.section li {
+    margin: 5px 0;
+    margin-left: -40px;
+}
+
+.footer-bottom {
+    text-align: left;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding: 10px;
+}
