@@ -1,0 +1,248 @@
+.navigation_container {
+  background-color: #241434;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: white;
+  background-image: url("https://www.apty.io/wp-content/uploads/2024/08/bg-hero-2.svg");
+}
+.navigation-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navigation-left a {
+  color: white;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+.navigation-left a:hover {
+  color: rgb(251, 109, 12);
+}
+.navigation-left img {
+  width: 85px;
+  margin-left: 40px;
+}
+.navigation-right button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(251, 109, 12);
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 30px;
+}
+.main_demo {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideUp 1s ease-out forwards;
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.million_users {
+  background: -webkit-linear-gradient(328deg, #ff7725, #fc52b3);
+  background-clip: text;
+  color: transparent;
+}
+
+.apty_text1 .first_line {
+  font-size: 66px;
+  justify-content: flex-start;
+  margin-left: 40px;
+  font-weight: 500;
+}
+
+.apty_text1 .second_line {
+  font-size: 20px;
+  justify-content: flex-start;
+  margin-left: 40px;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.main_demo .image,
+.image2 {
+  margin-left: 40px;
+  gap: 100px;
+  display: flex;
+  margin-top: 30px;
+}
+
+.main_demo {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Poppins", sans-serif;
+}
+
+.request_demo_form {
+  background-color: #2f263e;
+  font-family: "Poppins", sans-serif;
+  color: #cac5ce;
+  width: 750px;
+  padding: 25px;
+  margin-top: 40px;
+  justify-content: stretch;
+  border-radius: 7px;
+  margin-left: 10px;
+}
+
+.request_demo_form input,
+textarea {
+  background-color: #7b6d89;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.request_demo_form #email,
+#job-title,
+#accomplish {
+  width: 95%;
+}
+.request_demo_form #first-name,
+#last-name,
+#phone,
+#company-name {
+  width: 47%;
+}
+input::placeholder {
+  color: white;
+}
+textarea::placeholder {
+  color: white;
+}
+.request_demo_form button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 15px 270px;
+  border: none;
+  background-color: rgb(251, 109, 12);
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  width: 95%;
+}
+.request_demo_form h4 {
+  color: white;
+  font-size: 26px;
+}
+.request_demo_form .select_option {
+  color: white;
+}
+
+.client_footer {
+  background-color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+.client_footer img {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+  cursor: pointer;
+}
+
+.client_footer img:hover {
+  filter: grayscale(0%);
+}
+
+/* footer css */
+.footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ff6a5e;
+}
+
+.footer-bottom {
+  text-align: left;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 12px;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #ff6a5e;
+}
+
+.footer-icons {
+  margin-top: 10px;
+  text-align: right;
+  justify-content: baseline;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
