@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Training Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .container .header {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .topics,
+        .assignments {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container details summary {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Control Structures and Loops</h1>
+    </header>
+    <div class="container">
+        <div class="header">
+            <div class="topics">
+                <h2>Topics</h2>
+                <p>Control structures determine the flow of execution in a JavaScript program.
+                    They are essential for decision-making and iteration. Below is an explanation of each control
+                    structure type.</p>
+
+                <details>
+                    <summary>1. Conditional Statements</summary>
+                    <div>
+                        <h3>if Statement</h3>
+                        <p>
+                            The <strong>if</strong> statement allows you to execute a block of code only if a specified
+                            condition is true.
+                        </p>
+                        <pre>
+<code>
+if (condition) {
+    // Code to execute if condition is true
+}
+</code>
+            </pre>
+
+                        <h3>if...else Statement</h3>
+                        <p>
+                            The <strong>if...else</strong> statement provides a way to execute one block of code if the
+                            condition is true and another block if it is false.
+                        </p>
+                        <pre>
+<code>
+if (condition) {
+    // Code if condition is true
+} else {
+    // Code if condition is false
+}
+</code>
+            </pre>
+
+                        <h3>else if Ladder</h3>
+                        <p>
+                            The <strong>else if</strong> statement is used to check multiple conditions one after
+                            another.
+                        </p>
+                        <pre>
+<code>
+if (condition1) {
+    // Code for condition1
+} else if (condition2) {
+    // Code for condition2
+} else {
+    // Code if none of the above conditions are true
+}
+</code>
+            </pre>
+
+                        <h3>switch Statement</h3>
+                        <p>
+                            The <strong>switch</strong> statement allows you to execute different code blocks based on
+                            the value of an expression. It is often used as an alternative to multiple if...else
+                            statements.
+                        </p>
+                        <pre>
+<code>
+switch (expression) {
+    case value1:
+        // Code for value1
+        break;
+    case value2:
+        // Code for value2
+        break;
+    default:
+        // Code if no case matches
+}
+</code>
+            </pre>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>2. Loops</summary>
+                    <div>
+                        <h3>for Loop</h3>
+                        <p>
+                            The <strong>for</strong> loop is used to execute a block of code a specific number of times.
+                        </p>
+                        <pre>
+<code>
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+</code>
+            </pre>
+
+                        <h3>while Loop</h3>
+                        <p>
+                            The <strong>while</strong> loop executes a block of code as long as a specified condition
+                            evaluates to true.
+                        </p>
+                        <pre>
+<code>
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+</code>
+            </pre>
+
+                        <h3>do...while Loop</h3>
+                        <p>
+                            The <strong>do...while</strong> loop executes the code block once before checking the
+                            condition, and then repeats the loop as long as the condition is true.
+                        </p>
+                        <pre>
+<code>
+let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 5);
+</code>
+            </pre>
+
+                        <h3>for...in Loop</h3>
+                        <p>
+                            The <strong>for...in</strong> loop is used to iterate over the enumerable properties of an
+                            object.
+                        </p>
+                        <pre>
+<code>
+const obj = {a: 1, b: 2};
+for (let key in obj) {
+    console.log(key, obj[key]);
+}
+</code>
+            </pre>
+
+                        <h3>for...of Loop</h3>
+                        <p>
+                            The <strong>for...of</strong> loop is used to iterate over iterable objects such as arrays,
+                            strings, maps, and sets.
+                        </p>
+                        <pre>
+<code>
+const arr = [10, 20, 30];
+for (let value of arr) {
+    console.log(value);
+}
+</code>
+            </pre>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>3. Jump Statements</summary>
+                    <div>
+                        <h3>break Statement</h3>
+                        <p>
+                            The <strong>break</strong> statement is used to exit a loop or a switch statement
+                            prematurely.
+                        </p>
+                        <pre>
+<code>
+for (let i = 0; i < 5; i++) {
+    if (i === 3) break;
+    console.log(i);
+}
+</code>
+            </pre>
+
+                        <h3>continue Statement</h3>
+                        <p>
+                            The <strong>continue</strong> statement skips the current iteration of a loop and proceeds
+                            to the next iteration.
+                        </p>
+                        <pre>
+<code>
+for (let i = 0; i < 5; i++) {
+    if (i === 3) continue;
+    console.log(i);
+}
+</code>
+            </pre>
+
+                        <h3>return Statement</h3>
+                        <p>
+                            The <strong>return</strong> statement is used in functions to return a value and terminate
+                            the execution of the function.
+                        </p>
+                        <pre>
+<code>
+function add(a, b) {
+    return a + b;
+}
+</code>
+            </pre>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="header">
+            <div class="assignments">
+                <h2>Assignments</h2>
+                <details>
+                    <summary>Conditions Assignments</summary>
+                    <ol>
+                        <li class="assignment">
+                            <p>
+                                <strong>Grading System:</strong> Create a program to take marks as input from the user
+                                (e.g., using a number input) and print the grade (A, B, C, F) back to the HTML page
+                                based on
+                                conditions:
+                                <br>90+ => Grade A, 75-89 => Grade B, 50-74 => Grade C, Below 50 => Grade F.
+                            </p>
+                        </li>
+                        <li class="assignment">
+                            <p>
+                                <strong>Leap Year Checker:</strong> Create a program that takes a year as input from the
+                                user
+                                and checks if the year is a leap year. Print the result ("Leap Year" or "Not a Leap
+                                Year")
+                                back
+                                to the HTML page.
+                            </p>
+                        </li>
+                        <li class="assignment">
+                            <p>
+                                <strong>Simple Calculator:</strong> Clone the calculator app you had built in previous
+                                assignment and create calculate(operator) function to get the results.
+                                T his function should handle all operations, with the operator passed as a parameter for
+                                each button.
+                            </p>
+                        </li>
+                        <li class="assignment">
+                            <p>
+                                <strong>Find the Largest Number:</strong> Take three numbers as input from the user and
+                                find
+                                the largest
+                                number among them. Print the result back to the HTML page.
+                            </p>
+                        </li>
+                        <li class="assignment">
+                            <p>
+                                <strong>Odd or Even:</strong> Take a number as input from the user and determine whether
+                                it
+                                is odd or even.
+                                Print the result back to the HTML page.
+                            </p>
+                        </li>
+                        <li class="assignment">
+                            <p>
+                                <strong>Simple Interest Calculator:</strong> Take inputs for principal amount, rate of
+                                interest,
+                                and time from the user, and calculate the simple interest. Print the result back to the
+                                HTML
+                                page.
+                            </p>
+                        </li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Loops Assignments</summary>
+                    <h3></h3>
+                    <ol>
+                        <li>
+                            <strong>Generate Multiplication Table:</strong>
+                            <p>Take a number as input from the user and generate its multiplication table using a
+                                <code>for</code> loop. Display the table in an HTML page.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Sum of Numbers:</strong>
+                            <p>Use a <code>while</code> loop to calculate the sum of all numbers from 1 to a
+                                user-specified
+                                number. Display the result in a paragraph below the input.</p>
+                        </li>
+                        <li>
+                            <strong>Factorial Calculation:</strong>
+                            <p>Take a number as input and calculate its factorial using a <code>do-while</code> loop.
+                                Show
+                                the calculation steps as well as the final result.</p>
+                        </li>
+                        <li>
+                            <strong>Array Sum and Average:</strong>
+                            <p>Take an array of numbers as input from the user (comma-separated) and use a
+                                <code>for-of</code> loop to calculate the sum and average. Display both results on the
+                                webpage.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Character Frequency:</strong>
+                            <p>Prompt the user for a string and use a <code>for-in</code> loop to count how many times
+                                each
+                                character appears in the string. Display the results on the webpage.</p>
+                        </li>
+                        <li>
+                            <strong>Prime Numbers:</strong>
+                            <p>Use nested <code>for</code> loops to find and display all prime numbers within a
+                                user-specified range. Show the results on the webpage.</p>
+                        </li>
+                        <li>
+                            <strong>Pyramid Pattern:</strong>
+                            <p>Use a <code>for</code> loop to create a pyramid pattern of stars (*) based on the number
+                                of
+                                rows input by the user. Display the pattern using preformatted text
+                                (<code>&lt;pre&gt;</code>).</p>
+                        </li>
+                        <li>
+                            <strong>Print You Name:</strong>
+                            <p>Create two dimensional array with all required letters. Use nested <code>for-of</code> to read and print values in console and attach results screenshot in html page</p>
+                            <pre>
+    L       U   U   CCCC  K   K  Y   Y
+    L       U   U  C      K  K    Y Y
+    L       U   U  C      KK       Y
+    L       U   U  C      K  K     Y
+    LLLLL    UUU    CCCC  K   K    Y
+    </pre>
+                        </li>
+                    </ol>
+                </details>
+            </div>
+        </div>
+        <div>
+            <h2>Assignment Submissions</h2>
+            <details>
+                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+                <iframe data-src="./likhith-reddy-gade/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">U Sainath Rao</summary>
+                <iframe data-src="./u-sainath-rao/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Prem Rajput</summary>
+                <iframe data-src="./prem-rajput/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Tarun Sharma</summary>
+                <iframe data-src="./tarun-sharma/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+                <iframe data-src="./rohith-kotipalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Poornima Ranguri</summary>
+                <iframe data-src="./poornima-ranguri/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+                <iframe data-src="./anusree-vutlapalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Madhuri Udathu</summary>
+                <iframe data-src="./madhuri-udathu/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Pranathi Akula</summary>
+                <iframe data-src="./pranathi-akula/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Preeti Patil SN</summary>
+                <iframe data-src="./preeti-patil-sn/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rakshita R</summary>
+                <iframe data-src="./rakshita-r/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Vinod Mudavath</summary>
+                <iframe data-src="./vinod-mudavath/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Ram Karthik</summary>
+                <iframe data-src="./ram-karthik/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Nishma Medagoni</summary>
+                <iframe data-src="./nishma-medagoni/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+                <iframe data-src="./mohammed-abdul-awaiz/index.html"></iframe>
+            </details>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Javascript Training Program</p>
+    </footer>
+    <script type="text/javascript">
+        // Function to display the selected content
+        function showContent(event) {
+            const iframes = document.getElementsByTagName('iframe');
+            Array.from(iframes).forEach(iframe => {
+                iframe.src = '';
+            });
+            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
+        }
+    </script>
+</body>
+
+</html>

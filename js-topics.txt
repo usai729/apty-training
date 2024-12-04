@@ -1,23 +1,16 @@
-Control Structures
-
-if, else, else if, switch
-Ternary operator
-Loops
-
-for, while, do...while
-for...in, for...of
-Loop control: break, continue
 Functions
 
 Function declaration, expression, and arrow functions
 Parameters, arguments, and default values
 Closures and lexical scoping
 Intermediate Topics
+
 Arrays
 
 Creating and manipulating arrays
 Common methods: push, pop, shift, unshift, slice, splice
 Higher-order methods: map, filter, reduce, find, some, every
+
 Objects
 
 Creating objects
