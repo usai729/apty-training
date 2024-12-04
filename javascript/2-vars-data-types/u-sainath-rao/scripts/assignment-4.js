@@ -33,3 +33,24 @@ document.getElementById("object-conversion").innerHTML = `
             To Boolean: ${Boolean(objectExample)}<br>
             To String: ${String(objectExample)}<br>
         `;
+
+document.getElementById("undefined-conversion").innerHTML = `
+            <b>Undefined Conversion:</b><br>
+            To Number: ${Number(undefinedExample)}<br>
+            To Boolean: ${Boolean(undefinedExample)}<br>
+            To String: ${String(undefinedExample)}<br>
+        `;
+
+document.getElementById("null-conversion").innerHTML = `
+            <b>Null (${nullExample}) Conversion:</b><br>
+            To Number: ${Number(nullExample)}<br>
+            To Boolean: ${Boolean(nullExample)}<br>
+            To String: ${String(nullExample)}<br>
+        `;
+
+document.getElementById("symbol-conversion").innerHTML = `
+            <b>Symbol (${symbolExample.toString()}) Conversion:</b><br>
+            To Number: ${Number(symbolExample)}<br>
+            To Boolean: ${Boolean(symbolExample)}<br>
+            To String: ${String(symbolExample)}<br>
+        `;
