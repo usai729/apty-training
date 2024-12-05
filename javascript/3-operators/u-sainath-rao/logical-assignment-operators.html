@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Assignment Operators | Sai</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <input type="text" id="value1" value="id1" placeholder="Enter value 1" />
+        <select id="type1">
+          <option value="boolean">Boolean</option>
+          <option value="string">String</option>
+          <option value="number">Number</option>
+          <option value="symbol" selected>Symbol</option>
+        </select>
+        <br />
+        <input type="text" id="value2" value="id2" placeholder="Enter value 2" />
+        <select id="type2">
+          <option value="boolean">Boolean</option>
+          <option value="string">String</option>
+          <option value="number">Number</option>
+          <option value="symbol" selected>Symbol</option>
+        </select>
+      </div>
+      <div>
+        <button onclick="logicalAndAssign()">&&=</button>
+        <button onclick="logicalOrAssign()">||=</button>
+        <button onclick="nullishCoalescingAssign()">??=</button>
+      </div>
+      <h3 id="output"></h3>
+    </div>
+
+    <script src="./scripts/5-logical-assignment-operators.js"></script>
+  </body>
+</html>

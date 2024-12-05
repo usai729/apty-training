@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Comparison Operators | Sai</title>
+	</head>
+	<body>
+		<div>
+			<div>
+				<input type="text" id="value1" placeholder="Enter value 1" />
+				<select id="type1">
+					<option value="number">Number</option>
+					<option value="string">String</option>
+					<option value="boolean">Boolean</option>
+				</select>
+				<br />
+				<input type="text" id="value2" placeholder="Enter value 2" />
+				<select id="type2">
+					<option value="number">Number</option>
+					<option value="string">String</option>
+					<option value="boolean">Boolean</option>
+				</select>
+			</div>
+			<div>
+				<button onclick="compareEqual()">==</button>
+				<button onclick="compareStrictEqual()">===</button>
+				<button onclick="compareNotEqual()">!=</button>
+				<button onclick="compareStrictNotEqual()">!==</button>
+				<button onclick="compareGreaterThan()">></button>
+				<button onclick="compareLessThan()"><</button>
+				<button onclick="compareGreaterThanOrEqual()">>=</button>
+				<button onclick="compareLessThanOrEqual()"><=</button>
+			</div>
+			<h3 id="output"></h3>
+		</div>
+
+		<script src="./scripts/3-comparision-operators.js"></script>
+	</body>
+</html>
