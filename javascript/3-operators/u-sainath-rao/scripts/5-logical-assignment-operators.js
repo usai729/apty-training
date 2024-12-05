@@ -1,52 +1,52 @@
-function logicalAndAssign() {
-	let value1 = document.getElementById("value1").value;
-	let value2 = document.getElementById("value2").value;
+function getValsAndType() {
+	const value1 = document.getElementById("value1").value;
+	const value2 = document.getElementById("value2").value;
 	const type1 = document.getElementById("type1").value;
 	const type2 = document.getElementById("type2").value;
 
-	value1 = convertToType(value1, type1);
-	value2 = convertToType(value2, type2);
+	return { value1, value2, type1, type2 };
+}
+
+function logicalAndAssign() {
+	const { value1, value2, type1, type2 } = getValsAndType();
+
+	let convertedValue1 = convertToType(value1, type1);
+	let convertedValue2 = convertToType(value2, type2);
 
 	if (type1 == "symbol" || type2 == "symbol") {
-		console.log(value1 &&= value2);
+		console.log((convertedValue1 &&= convertedValue2));
 	}
-	
-	value1 &&= value2;
-	document.getElementById("output").textContent = `&&= : ${value1}`;
+
+	convertedValue1 &&= convertedValue2;
+	document.getElementById("output").textContent = `&&= : ${convertedValue1}`;
 }
 
 function logicalOrAssign() {
-	let value1 = document.getElementById("value1").value;
-	let value2 = document.getElementById("value2").value;
-	const type1 = document.getElementById("type1").value;
-	const type2 = document.getElementById("type2").value;
+	const { value1, value2, type1, type2 } = getValsAndType();
 
-	value1 = convertToType(value1, type1);
-	value2 = convertToType(value2, type2);
+	let convertedValue1 = convertToType(value1, type1);
+	let convertedValue2 = convertToType(value2, type2);
 
 	if (type1 == "symbol" || type2 == "symbol") {
-		console.log(value1 ||= value2);
+		console.log((convertedValue1 ||= convertedValue2));
 	}
 
-	value1 ||= value2;
-	document.getElementById("output").textContent = `||= : ${value1}`;
+	convertedValue1 ||= convertedValue2;
+	document.getElementById("output").textContent = `||= : ${convertedValue1}`;
 }
 
 function nullishCoalescingAssign() {
-	let value1 = document.getElementById("value1").value;
-	let value2 = document.getElementById("value2").value;
-	const type1 = document.getElementById("type1").value;
-	const type2 = document.getElementById("type2").value;
+	const { value1, value2, type1, type2 } = getValsAndType();
 
-	value1 = convertToType(value1, type1);
-	value2 = convertToType(value2, type2);
+	let convertedValue1 = convertToType(value1, type1);
+	let convertedValue2 = convertToType(value2, type2);
 
 	if (type1 == "symbol" || type2 == "symbol") {
-		console.log(value1 ??= value2);
+		console.log((convertedValue1 ??= convertedValue2));
 	}
 
-	value1 ??= value2;
-	document.getElementById("output").textContent = `??= : ${value1}`;
+	convertedValue1 ??= convertedValue2;
+	document.getElementById("output").textContent = `??= : ${convertedValue1}`;
 }
 
 function convertToType(value, type) {
