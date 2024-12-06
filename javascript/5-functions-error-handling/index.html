@@ -79,17 +79,12 @@
             bottom: 0;
             width: 100%;
         }
-
-        .container details summary {
-            font-size: 18px;
-            font-weight: 700;
-        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Functions</h1>
+        <h1>Functions and Error Handling</h1>
     </header>
     <div class="container">
         <div class="header">
@@ -290,6 +285,163 @@ var b = function() {
                             not.</p>
                     </div>
                 </details>
+
+
+                <h3>5. Error Handling</h3>
+
+
+
+                <details>
+                    <summary>Syntax Errors</summary>
+                    <div>
+                        <p>Syntax errors occur when the JavaScript code is written incorrectly, violating the
+                            syntax rules of the language.</p>
+                        <h3>Example:</h3>
+                        <code>
+                        var a = 10 ++ 10 // Uncaught SyntaxError: Invalid left-hand side expression in postfix operation
+                    </code>
+                        <p><b>How to Handle:</b> Fix the syntax error by correcting the code.</p>
+                    </div>
+                </details>
+
+
+                <details>
+                    <summary>Runtime Errors</summary>
+                    <div>
+                        <p>Runtime errors occur when the script is syntactically correct but fails during
+                            execution due to unexpected behavior.</p>
+                        <h3>Example:</h3>
+                        <code>
+                        a += 10 // Uncaught ReferenceError: a is not defined
+                        let a = 10  
+                    </code>
+                        <p><b>How to Handle:</b> Use a <code>try...catch</code> block to handle runtime errors
+                            gracefully.</p>
+                    </div>
+                </details>
+
+
+                <details>
+                    <summary>Logical Errors</summary>
+                    <div>
+                        <p>Logical errors occur when the code runs without issues but produces incorrect or
+                            unintended results.</p>
+                        <h3>Example:</h3>
+                        <code>
+                        let a = 10;<br>
+                        let b = 20;<br>
+                        let sum = a - b; // Logical error: subtraction instead of addition
+                    </code>
+                        <p><b>How to Handle:</b> Debug the code and use tools like breakpoints or console logs
+                            to identify the logic issue.</p>
+                    </div>
+                </details>
+
+
+                <details>
+                    <summary><code>try...catch</code> Statement</summary>
+                    <div>
+                        <p>The <code>try...catch</code> statement allows you to test a block of code for errors
+                            and handle them without crashing the program.</p>
+                        <h3>Example:</h3>
+                        <code>
+                        try {<br>
+                        &nbsp;&nbsp;let a = 10;<br>
+                        &nbsp;&nbsp;console.log(b); // ReferenceError<br>
+                        } catch (error) {<br>
+                        &nbsp;&nbsp;console.log("An error occurred:", error.message);<br>
+                        }
+                    </code>
+                    </div>
+                </details>
+
+
+                <details>
+                    <summary><code>finally</code> Block</summary>
+                    <div>
+                        <p>The <code>finally</code> block executes after the <code>try</code> and
+                            <code>catch</code> blocks, regardless of whether an error occurred.
+                        </p>
+                        <h3>Example:</h3>
+                        <code>
+                        try {<br>
+                        &nbsp;&nbsp;let a = 10;<br>
+                        &nbsp;&nbsp;console.log(b); // ReferenceError<br>
+                        } catch (error) {<br>
+                        &nbsp;&nbsp;console.log("An error occurred:", error.message);<br>
+                        } finally {<br>
+                        &nbsp;&nbsp;console.log("Execution completed.");<br>
+                        }
+                    </code>
+                    </div>
+                </details>
+
+
+                <details>
+                    <summary>Throwing Custom Errors</summary>
+                    <div>
+                        <p>You can use the <code>throw</code> statement to create and throw custom errors.</p>
+                        <h3>Example:</h3>
+                        <code>
+                        function checkAge(age) {<br>
+                        &nbsp;&nbsp;if (age < 18) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;throw new Error("Age must be 18 or older.");<br>
+                        &nbsp;&nbsp;}<br>
+                        }<br><br>
+                        try {<br>
+                        &nbsp;&nbsp;checkAge(16);<br>
+                        } catch (error) {<br>
+                        &nbsp;&nbsp;console.log(error.message);<br>
+                        }
+                    </code>
+                    </div>
+                </details>
+
+
+                <details>
+                    <summary>Error Objects</summary>
+                    <div>
+                        <p>Error objects provide information about errors and can be used in the
+                            <code>catch</code> block.
+                        </p>
+                        <h3>Example:</h3>
+                        <code>
+                        try {<br>
+                        &nbsp;&nbsp;let a = 10;<br>
+                        &nbsp;&nbsp;console.log(b); // ReferenceError<br>
+                        } catch (error) {<br>
+                        &nbsp;&nbsp;console.log("Name:", error.name); // ReferenceError<br>
+                        &nbsp;&nbsp;console.log("Message:", error.message);<br>
+                        }
+                    </code>
+                    </div>
+                </details>
+
+
+                <details>
+                    <summary>Custom Error Classes</summary>
+                    <div>
+                        <p>Custom error classes allow you to create error types specific to your application.
+                        </p>
+                        <h3>Example:</h3>
+                        <code>
+                        class ValidationError extends Error {<br>
+                        &nbsp;&nbsp;constructor(message) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;super(message);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.name = "ValidationError";<br>
+                        &nbsp;&nbsp;}<br>
+                        }<br><br>
+                        try {<br>
+                        &nbsp;&nbsp;throw new ValidationError("Invalid input!");<br>
+                        } catch (error) {<br>
+                        &nbsp;&nbsp;console.log(error.name);<br>
+                        &nbsp;&nbsp;console.log(error.message);<br>
+                        }
+                    </code>
+                    </div>
+                </details>
+
+
             </div>
         </div>
         <div class="header">
@@ -299,7 +451,7 @@ var b = function() {
 
 
                 <details>
-                    <summary>Assignment 1: Recursion with Function Declaration</summary>
+                    <summary>1. Recursion with Function Declaration</summary>
                     <div>
                         <p>
                             Write a recursive function declared using a **function declaration** to calculate
@@ -312,7 +464,7 @@ var b = function() {
 
 
                 <details>
-                    <summary>Assignment 2: Function Expression for Sorting</summary>
+                    <summary>2. Function Expression for Sorting</summary>
                     <div>
                         <p>
                             Create a **function expression** to sort an array of numbers. The array should be taken as
@@ -324,7 +476,7 @@ var b = function() {
                 </details>
 
                 <details>
-                    <summary>Assignment 3: Arrow Function for Event Handling</summary>
+                    <summary>3. Arrow Function for Event Handling</summary>
                     <div>
                         <p>
                             Implement a button in HTML that uses an **arrow function** to handle its click
@@ -337,7 +489,7 @@ var b = function() {
 
 
                 <details>
-                    <summary>Assignment 4: Immediately Invoked Function Expressions (IIFE)</summary>
+                    <summary>4. Immediately Invoked Function Expressions (IIFE)</summary>
                     <div>
                         <p>
                             Create an **IIFE** (Immediately Invoked Function Expression) to initialize a set of
@@ -347,35 +499,12 @@ var b = function() {
                 </details>
 
 
-
-                <details>
-                    <summary>Assignment 5: Combination of Function Types</summary>
-                    <div>
-                        <p>
-                            Write a program that combines all three types of functions:
-                        </p>
-                        <ul>
-                            Declare a function using a **function declaration** to validate user input.
-                            Use a **function expression** to process the validated data (reversing a
-                            string).
-                            Utilize an **arrow function** to display the processed data back to the HTML
-                            page.
-                        </ul>
-                    </div>
-                </details>
-
-
-
-
-
-
-
                 <h3>2. Parameters, Arguments, and Default Values</h3>
 
 
 
                 <details>
-                    <summary>Assignment 1: Function with Default Parameters</summary>
+                    <summary>1. Function with Default Parameters</summary>
                     <div>
                         <p>
                             Write a function that calculates the area of a rectangle. Use default values for
@@ -388,7 +517,7 @@ var b = function() {
 
 
                 <details>
-                    <summary>Assignment 2: Rest Parameters for Variable Arguments</summary>
+                    <summary>2. Rest Parameters for Variable Arguments</summary>
                     <div>
                         <p>
                             Create a function that takes a dynamic number of arguments using the rest parameter.
@@ -399,23 +528,8 @@ var b = function() {
                 </details>
 
 
-
                 <details>
-                    <summary>Assignment 3: Destructured Parameters with Defaults</summary>
-                    <div>
-                        <p>
-                            Write a function that accepts an object as a parameter. Destructure the object with
-                            default values for missing properties. For example, handle an object like `{ name:
-                            'John', age: 25 }` with default `gender = 'Not specified'`. Take the object input
-                            via a form and display the destructured properties on the page.
-                        </p>
-                    </div>
-                </details>
-
-
-
-                <details>
-                    <summary>Assignment 4: Nested Functions with Default Values</summary>
+                    <summary>2. Nested Functions with Default Values</summary>
                     <div>
                         <p>
                             Create a nested function setup where the outer function calculates the perimeter of
@@ -429,7 +543,7 @@ var b = function() {
 
 
                 <details>
-                    <summary>Assignment 5: Callback Functions with Default Parameters</summary>
+                    <summary>4. Callback Functions with Default Parameters</summary>
                     <div>
                         <p>
                             Write a function that accepts another function as a parameter (a callback). The
@@ -446,7 +560,7 @@ var b = function() {
 
 
                 <details>
-                    <summary>Assignment 1: Private Variables with Closures</summary>
+                    <summary>1. Private Variables with Closures</summary>
                     <div>
                         <p>
                             Write a function that acts as a bank account. The function should have private
@@ -460,7 +574,7 @@ var b = function() {
 
 
                 <details>
-                    <summary>Assignment 2: Lexical Scoping in Nested Functions</summary>
+                    <summary>2. Lexical Scoping in Nested Functions</summary>
                     <div>
                         <p>
                             Write a function that has three levels of nested functions. The innermost function
@@ -471,22 +585,8 @@ var b = function() {
                 </details>
 
 
-
                 <details>
-                    <summary>Assignment 3: Timer with Closures</summary>
-                    <div>
-                        <p>
-                            Create a function that acts as a timer. Use closures to store the state of the
-                            timer. Add methods to start, pause, and reset the timer, and display the timer
-                            output dynamically on the HTML page.
-                        </p>
-                    </div>
-                </details>
-
-
-
-                <details>
-                    <summary>Assignment 4: Caching Results</summary>
+                    <summary>3. Caching Results</summary>
                     <div>
                         <p>
                             Create a function that caches the results of expensive calculations. Use a closure
@@ -498,12 +598,12 @@ var b = function() {
                 </details>
 
 
-                <h1>4. Intermediate Topics</h1>
+                <h3>4. Intermediate Topics</h3>
 
                 <!-- Higher-Order Functions -->
 
                 <details>
-                    <summary>Assignment 1: Higher-Order Functions</summary>
+                    <summary>1. Higher-Order Functions</summary>
                     <div>
                         <p>
                             Write a higher-order function `repeatAction` that takes a function and a number `n`
@@ -514,7 +614,7 @@ var b = function() {
                 </details>
 
                 <details>
-                    <summary>Assignment 2: Higher-Order Function with Arrow Functions</summary>
+                    <summary>2. Higher-Order Function with Arrow Functions</summary>
                     <div>
                         <p>
                             Write a **higher-order function** that takes a callback function as an argument. Use
@@ -522,6 +622,62 @@ var b = function() {
                             all numbers greater than a user-defined limit). The input should come from an HTML
                             form, and the filtered array should be displayed back to the HTML page.
                         </p>
+                    </div>
+                </details>
+
+                <h3>5. Error Handling</h3>
+                <details>
+                    <summary>1. Syntax Errors</summary>
+                    <div>
+                        <p>Create a function <code>parseJSON()</code> that takes a JSON string as input and attempts to
+                            parse it. Handle all invalid parameter cases.</p>
+                        <p><strong>Example JSON:</strong> <code>"{key: 'value'}"</code> (missing quotes around
+                            <code>key</code>).</p>
+                        <p>Extend the function to catch such errors and provide meaningful feedback.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>2. Runtime Errors</summary>
+                    <div>
+                        <p>Write a program to take <code>user_name</code> as input from html page and print the city of
+                            the user back on html page
+                            ex:<code>const users = {"lucky": { "address" : { "city": "Hyderabad"} } }</code>. You will
+                            get results with <code>users[name_input].address.city</code>.
+                            If the input is not part of object you will get error. Catch the error and print back to
+                            html page</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>3. finally Block</summary>
+                    <div>
+                        <p>Improve previous assignment by having default <code>const default_city = "Pune"</code> in
+                            variable and print it in html using <code>finally</code> when the error occurs.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>4. Throwing Custom Errors</summary>
+                    <div>
+                        <p>Create a calculator function <code>calculate()</code> that takes two numbers and an operator
+                            as input. Throw custom errors if:</p>
+                        <ul>
+                            <li>Non-numeric values are provided.</li>
+                            <li>An unsupported operator is used.</li>
+                        </ul>
+                        <p>For example, <code>calculate(10, "five", "+")</code> should throw an error: "Invalid number
+                            input."</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>5. Error Objects</summary>
+                    <div>
+                        <p>Create a program to simulate a banking system. Write a function <code>withdrawAmount()</code>
+                            that accepts an account balance and withdrawal amount. If the withdrawal amount exceeds the
+                            balance, throw an error object with properties like <code>errorCode</code> and
+                            <code>errorMessage</code>. Display these properties to the user.</p>
                     </div>
                 </details>
             </div>
