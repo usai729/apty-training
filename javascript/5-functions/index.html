@@ -295,7 +295,235 @@ var b = function() {
         <div class="header">
             <div class="assignments">
                 <h2>Assignments</h2>
-                
+                <h3>1. Function Declaration, Expression, and Arrow Functions</h3>
+
+
+                <details>
+                    <summary>Assignment 1: Recursion with Function Declaration</summary>
+                    <div>
+                        <p>
+                            Write a recursive function declared using a **function declaration** to calculate
+                            the Fibonacci series up to a given number. The input should be taken from an HTML
+                            form, and the results should be displayed back in HTML.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <details>
+                    <summary>Assignment 2: Function Expression for Sorting</summary>
+                    <div>
+                        <p>
+                            Create a **function expression** to sort an array of numbers. The array should be taken as
+                            inputs
+                            from an HTML form, and the sorted array should be displayed in a table on the HTML
+                            page.
+                        </p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Assignment 3: Arrow Function for Event Handling</summary>
+                    <div>
+                        <p>
+                            Implement a button in HTML that uses an **arrow function** to handle its click
+                            event. The function should update a counter displayed on the HTML page every time
+                            the button is clicked.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <details>
+                    <summary>Assignment 4: Immediately Invoked Function Expressions (IIFE)</summary>
+                    <div>
+                        <p>
+                            Create an **IIFE** (Immediately Invoked Function Expression) to initialize a set of
+                            default values on the page. For example, it should set default text in an input box.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <details>
+                    <summary>Assignment 5: Combination of Function Types</summary>
+                    <div>
+                        <p>
+                            Write a program that combines all three types of functions:
+                        </p>
+                        <ul>
+                            Declare a function using a **function declaration** to validate user input.
+                            Use a **function expression** to process the validated data (reversing a
+                            string).
+                            Utilize an **arrow function** to display the processed data back to the HTML
+                            page.
+                        </ul>
+                    </div>
+                </details>
+
+
+
+
+
+
+
+                <h3>2. Parameters, Arguments, and Default Values</h3>
+
+
+
+                <details>
+                    <summary>Assignment 1: Function with Default Parameters</summary>
+                    <div>
+                        <p>
+                            Write a function that calculates the area of a rectangle. Use default values for
+                            length and width if they are not provided. The user should input values through an
+                            HTML form, and the result should display back on the page.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <details>
+                    <summary>Assignment 2: Rest Parameters for Variable Arguments</summary>
+                    <div>
+                        <p>
+                            Create a function that takes a dynamic number of arguments using the rest parameter.
+                            The function should return the sum of all arguments passed. Take input from an HTML
+                            form as a comma-separated list and display the sum on the page.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <details>
+                    <summary>Assignment 3: Destructured Parameters with Defaults</summary>
+                    <div>
+                        <p>
+                            Write a function that accepts an object as a parameter. Destructure the object with
+                            default values for missing properties. For example, handle an object like `{ name:
+                            'John', age: 25 }` with default `gender = 'Not specified'`. Take the object input
+                            via a form and display the destructured properties on the page.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <details>
+                    <summary>Assignment 4: Nested Functions with Default Values</summary>
+                    <div>
+                        <p>
+                            Create a nested function setup where the outer function calculates the perimeter of
+                            a rectangle using default values for length and width. The inner function calculates
+                            the area of the rectangle using the same parameters. Display both results on the
+                            page based on user input or defaults.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <details>
+                    <summary>Assignment 5: Callback Functions with Default Parameters</summary>
+                    <div>
+                        <p>
+                            Write a function that accepts another function as a parameter (a callback). The
+                            callback function should take a default value if not provided and process user input
+                            (e.g., convert a string to uppercase). Show the final processed string on the page.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <h3>3. Closures and Lexical Scoping</h3>
+
+
+
+                <details>
+                    <summary>Assignment 1: Private Variables with Closures</summary>
+                    <div>
+                        <p>
+                            Write a function that acts as a bank account. The function should have private
+                            variables for balance and methods to deposit, withdraw, and check balance. Ensure
+                            balance manipulation is only possible through these methods. Add HTML inputs for
+                            user actions.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <details>
+                    <summary>Assignment 2: Lexical Scoping in Nested Functions</summary>
+                    <div>
+                        <p>
+                            Write a function that has three levels of nested functions. The innermost function
+                            should access variables defined in the outer functions and return a concatenated
+                            string. Allow the user to set the variables in the HTML form and display the output.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <details>
+                    <summary>Assignment 3: Timer with Closures</summary>
+                    <div>
+                        <p>
+                            Create a function that acts as a timer. Use closures to store the state of the
+                            timer. Add methods to start, pause, and reset the timer, and display the timer
+                            output dynamically on the HTML page.
+                        </p>
+                    </div>
+                </details>
+
+
+
+                <details>
+                    <summary>Assignment 4: Caching Results</summary>
+                    <div>
+                        <p>
+                            Create a function that caches the results of expensive calculations. Use a closure
+                            to store previously computed results. For example, a function that calculates the
+                            factorial of a number should cache the results for faster computation of repeated
+                            inputs. Allow the user to input numbers and display results on the page.
+                        </p>
+                    </div>
+                </details>
+
+
+                <h1>4. Intermediate Topics</h1>
+
+                <!-- Higher-Order Functions -->
+
+                <details>
+                    <summary>Assignment 1: Higher-Order Functions</summary>
+                    <div>
+                        <p>
+                            Write a higher-order function `repeatAction` that takes a function and a number `n`
+                            as arguments and executes the function `n` times. Use this to dynamically create a
+                            list of items on an HTML page with user input.
+                        </p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Assignment 2: Higher-Order Function with Arrow Functions</summary>
+                    <div>
+                        <p>
+                            Write a **higher-order function** that takes a callback function as an argument. Use
+                            an **arrow function** as the callback to filter an array of numbers (e.g., removing
+                            all numbers greater than a user-defined limit). The input should come from an HTML
+                            form, and the filtered array should be displayed back to the HTML page.
+                        </p>
+                    </div>
+                </details>
             </div>
         </div>
         <div>
