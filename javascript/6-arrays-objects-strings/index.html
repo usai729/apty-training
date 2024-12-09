@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Training Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .container .header {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .topics,
+        .assignments {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Arrays, Objects, and Strings</h1>
+    </header>
+    <div class="container">
+        <div class="header">
+            <div class="topics">
+                <h2>Topics</h2>
+                <h3>Arrays</h3>
+                <div>
+                    <details>
+                        <summary><strong>1. What is an Array?</strong></summary>
+                        <div>
+                            Arrays are used to store multiple values in a single variable. They are list-like objects in
+                            JavaScript that allow storing and manipulating collections of data.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>2. Creating Arrays</strong></summary>
+                        <div>
+                            <ul>
+                                <li><strong>Using square brackets:</strong> <code>const arr = [1, 2, 3];</code></li>
+                                <li><strong>Using Array constructor:</strong> <code>const arr = new Array(3);</code>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>3. Accessing and Modifying Elements</strong></summary>
+                        <div>
+                            <ul>
+                                <li><strong>Accessing:</strong> Use the index: <code>arr[0]</code></li>
+                                <li><strong>Modifying:</strong> Assign a new value: <code>arr[1] = 42;</code></li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>4. Common Array Methods</strong></summary>
+                        <div>
+                            <ul>
+                                <li><strong>push:</strong> Adds elements to the end of an array.</li>
+                                <li><strong>pop:</strong> Removes the last element.</li>
+                                <li><strong>shift:</strong> Removes the first element.</li>
+                                <li><strong>unshift:</strong> Adds elements to the beginning.</li>
+                                <li><strong>slice:</strong> Returns a shallow copy of a portion of the array.</li>
+                                <li><strong>splice:</strong> Adds/removes elements in the array.</li>
+                                <li><strong>concat:</strong> Merges two or more arrays.</li>
+                                <li><strong>indexOf:</strong> Finds the first index of a value.</li>
+                                <li><strong>lastIndexOf:</strong> Finds the last index of a value.</li>
+                                <li><strong>join:</strong> Joins array of values and return string.</li>
+                                <li><strong>includes:</strong> Checks if a value exists in the array.</li>
+                                <li><strong>flat:</strong> Flattens nested arrays.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>5. Iterating Over Arrays</strong></summary>
+                        <div>
+                            <ul>
+                                <li><strong>for loop:</strong> Iterates using index.</li>
+                                <li><strong>for...of:</strong> Iterates directly over values.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>6. Higher-Order Array Methods</strong></summary>
+                        <div>
+                            <ul>
+                                <li><strong>forEach:</strong> Executes a callback for each element.</li>
+                                <li><strong>map:</strong> Creates a new array by applying a function to each element.
+                                </li>
+                                <li><strong>filter:</strong> Filters elements based on a condition.</li>
+                                <li><strong>reduce:</strong> Reduces the array to a single value.</li>
+                                <li><strong>find:</strong> Finds the first element matching a condition.</li>
+                                <li><strong>every:</strong> Checks if all elements match a condition.</li>
+                                <li><strong>some:</strong> Checks if any element matches a condition.</li>
+                                <li><strong>sort:</strong> Sorts the array.</li>
+                                <li><strong>reverse:</strong> Reverses the array order.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>7. Multidimensional Arrays</strong></summary>
+                        <div>
+                            Arrays within arrays. Example: <code>const matrix = [[1, 2], [3, 4]];</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>8. Array Destructuring</strong></summary>
+                        <div>
+                            Extract values from arrays into variables: <code>const [a, b] = arr;</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>9. Spread and Rest Operators</strong></summary>
+                        <div>
+                            <ul>
+                                <li><strong>Spread:</strong> Expands an array: <code>[...arr]</code></li>
+                                <li><strong>Rest:</strong> Collects remaining elements:
+                                    <code>const [a, ...rest] = arr;</code>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>10. Checking Array Properties</strong></summary>
+                        <div>
+                            <ul>
+                                <li><strong>isArray:</strong> Checks if a value is an array.</li>
+                                <li><strong>length:</strong> Gets the array length.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>11. Working with Sparse Arrays</strong></summary>
+                        <div>
+                            Sparse arrays have empty slots. Example: <code>const arr = [1, , 3];</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>12. Array-Like Objects</strong></summary>
+                        <div>
+                            Convert array-like objects like <code>arguments</code> to arrays with
+                            <code>Array.from</code>.
+                        </div>
+                    </details>
+                </div>
+                <h3>Objects</h3>
+                <div>
+                    <p>In JavaScript, <strong>objects</strong> are a collection of key-value pairs, where each key (also
+                        called a property) is a string, and its value can be any valid data type such as numbers,
+                        strings,
+                        arrays, functions, or even other objects. Objects are fundamental to JavaScript and are used to
+                        store and organize data in a structured way.</p>
+
+                    <details>
+                        <summary><strong>1. Creating an Object</strong></summary>
+                        <p>You can create an object in two primary ways:</p>
+                        <ul>
+                            <li><strong>Object Literal Notation:</strong> This is the most common and easiest way to
+                                create
+                                an object.</li>
+                            <pre>
+const person = {
+    name: 'John',
+    age: 30,
+    greet: function() {
+        console.log('Hello ' + this.name);
+    }
+};
+            </pre>
+                            <li><strong>Using the <code>new Object()</code> Syntax:</strong> This is an alternative way
+                                of
+                                creating an object but is less common.</li>
+                            <pre>
+const person = new Object();
+person.name = 'John';
+person.age = 30;
+person.greet = function() {
+    console.log('Hello ' + this.name);
+};
+            </pre>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>2. Accessing Object Properties</strong></summary>
+                        <p>You can access object properties in two ways:</p>
+                        <ul>
+                            <li><strong>Dot Notation:</strong> This is the most common and easiest way to access
+                                properties.
+                            </li>
+                            <pre>
+console.log(person.name); // 'John'
+            </pre>
+                            <li><strong>Bracket Notation:</strong> This is used when property names contain spaces,
+                                special
+                                characters, or when the property name is dynamically determined.</li>
+                            <pre>
+console.log(person['age']); // 30
+            </pre>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>3. Modifying Object Properties</strong></summary>
+                        <p>You can modify properties of an object using dot notation or bracket notation.</p>
+                        <ul>
+                            <li><strong>Using Dot Notation:</strong></li>
+                            <pre>
+person.name = 'Jane';
+console.log(person.name); // 'Jane'
+            </pre>
+                            <li><strong>Using Bracket Notation:</strong></li>
+                            <pre>
+person['age'] = 35;
+console.log(person['age']); // 35
+            </pre>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>4. Object Methods</strong></summary>
+                        <p>Objects can contain methods (functions) as their properties. You can call these methods just
+                            like
+                            any other function, but they are called on the object itself.</p>
+                        <ul>
+                            <li><strong>Adding a Method:</strong></li>
+                            <pre>
+const person = {
+    name: 'John',
+    age: 30,
+    greet: function() {
+        console.log('Hello ' + this.name);
+    }
+};
+            </pre>
+                            <li><strong>Calling a Method:</strong></li>
+                            <pre>
+person.greet(); // 'Hello John'
+            </pre>
+                            <p>Note: The <code>this</code> keyword inside the method refers to the object itself.</p>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>5. Object Destructuring</strong></summary>
+                        <p>Object destructuring is a shorthand syntax to extract values from an object into variables.
+                        </p>
+                        <pre>
+const person = {
+    name: 'John',
+    age: 30,
+    job: 'Developer'
+};
+
+const { name, age } = person;
+console.log(name); // 'John'
+console.log(age);  // 30
+        </pre>
+                        <p>You can also rename variables during destructuring:</p>
+                        <pre>
+const { name: fullName, age: yearsOld } = person;
+console.log(fullName); // 'John'
+console.log(yearsOld); // 30
+        </pre>
+                    </details>
+
+                    <details>
+                        <summary><strong>6. Object Constructor</strong></summary>
+                        <p>JavaScript provides a built-in <code>Object()</code> constructor to create objects.</p>
+                        <pre>
+const person = new Object();
+person.name = 'John';
+person.age = 30;
+        </pre>
+                        <p>Alternatively, you can create a custom constructor function to instantiate objects.</p>
+                        <pre>
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+const john = new Person('John', 30);
+console.log(john.name); // 'John'
+console.log(john.age);  // 30
+        </pre>
+                    </details>
+
+                    <details>
+                        <summary><strong>7. <code>Object.keys()</code>, <code>Object.values()</code>,
+                                <code>Object.entries()</code></strong></summary>
+                        <p>JavaScript provides three methods to interact with the keys and values of an object:</p>
+                        <ul>
+                            <li><strong><code>Object.keys()</code>:</strong> Returns an array of the object's keys.</li>
+                            <pre>
+const person = { name: 'John', age: 30 };
+console.log(Object.keys(person)); // ['name', 'age']
+            </pre>
+                            <li><strong><code>Object.values()</code>:</strong> Returns an array of the object's values.
+                            </li>
+                            <pre>
+console.log(Object.values(person)); // ['John', 30]
+            </pre>
+                            <li><strong><code>Object.entries()</code>:</strong> Returns an array of key-value pairs.
+                            </li>
+                            <pre>
+console.log(Object.entries(person)); // [['name', 'John'], ['age', 30]]
+            </pre>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>8. <code>Object.freeze()</code> and <code>Object.seal()</code></strong>
+                        </summary>
+                        <ul>
+                            <li><strong><code>Object.freeze()</code>:</strong> Makes an object immutable, meaning its
+                                properties cannot be added, deleted, or modified.</li>
+                            <pre>
+const person = { name: 'John', age: 30 };
+Object.freeze(person);
+person.age = 35; // This won't work
+console.log(person.age); // 30
+            </pre>
+                            <li><strong><code>Object.seal()</code>:</strong> Prevents new properties from being added,
+                                but
+                                existing properties can still be modified.</li>
+                            <pre>
+const person = { name: 'John', age: 30 };
+Object.seal(person);
+person.name = 'Jane'; // Works fine
+delete person.age;    // Doesn't work
+console.log(person);  // { name: 'Jane', age: 30 }
+            </pre>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>9. <code>this</code> Keyword in Objects</strong></summary>
+                        <p>The <code>this</code> keyword refers to the current object in which a method is called. It
+                            can be
+                            used to access or modify the properties of the object.</p>
+                        <pre>
+const person = {
+    name: 'John',
+    greet: function() {
+        console.log('Hello, ' + this.name); // `this` refers to the person object
+    }
+};
+
+person.greet(); // 'Hello, John'
+        </pre>
+                    </details>
+
+                    <details>
+                        <summary><strong>10. Prototypes and Inheritance</strong></summary>
+                        <p>JavaScript objects can inherit properties and methods from other objects using prototypes.
+                            Every
+                            JavaScript object has a prototype, which is an object itself, from which the current object
+                            can
+                            inherit properties.</p>
+                        <pre>
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Person.prototype.greet = function() {
+  console.log('Hello ' + this.name);
+};
+
+const john = new Person('John', 30);
+john.greet(); // 'Hello John'
+        </pre>
+                    </details>
+
+                </div>
+                <h3>Strings</h3>
+                <div>
+                    <p>A string in JavaScript is a sequence of characters used for storing and manipulating text.
+                        Strings are one of the most commonly used data types in JavaScript, and they are immutable,
+                        meaning once a string is created, it cannot be changed directly.</p>
+
+                    <details>
+                        <summary>1. String Creation</summary>
+                        <div>
+                            <p>Strings can be created using three different methods in JavaScript:</p>
+                            <ul>
+                                <li><strong>Using Double Quotes</strong> (<code>"</code>):
+                                    <pre><code>let name = "John Doe";</code></pre>
+                                </li>
+                                <li><strong>Using Single Quotes</strong> (<code>'</code>):
+                                    <pre><code>let name = 'John Doe';</code></pre>
+                                </li>
+                                <li><strong>Using Template Literals</strong> (backticks <code>`</code>):
+                                    <pre><code>let name = `John Doe`;</code></pre>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>2. String Length</summary>
+                        <div>
+                            <p>You can determine the length of a string using the <code>.length</code> property:</p>
+                            <pre><code>let str = "Hello";
+console.log(str.length); // 5</code></pre>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>3. String Indexing</summary>
+                        <div>
+                            <p>Each character in a string can be accessed by its index using the bracket notation. The
+                                index starts from <code>0</code>:</p>
+                            <pre><code>let str = "Hello";
+console.log(str[0]); // "H"
+console.log(str[1]); // "e"</code></pre>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>4. Escape Sequences</summary>
+                        <div>
+                            <p>Special characters can be included in a string using escape sequences:</p>
+                            <ul>
+                                <li><code>\n</code> — Newline</li>
+                                <li><code>\t</code> — Tab</li>
+                                <li><code>\\</code> — Backslash</li>
+                                <li><code>\'</code> — Single quote</li>
+                                <li><code>\"</code> — Double quote</li>
+                            </ul>
+                            <pre><code>let text = "He said, \"Hello!\"";
+console.log(text); // He said, "Hello!"</code></pre>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>5. String Methods</summary>
+                        <div>
+                            <p>JavaScript provides a variety of built-in methods to manipulate strings:</p>
+                            <ul>
+                                <li><strong>charAt(index)</strong>: Returns the character at a specified index.</li>
+                                <pre><code>let str = "Hello";
+console.log(str.charAt(1)); // "e"</code></pre>
+
+                                <li><strong>indexOf(substring)</strong>: Returns the index of the first occurrence of a
+                                    specified substring. If not found, it returns <code>-1</code>.</li>
+                                <pre><code>let str = "Hello";
+console.log(str.indexOf("e")); // 1
+console.log(str.indexOf("z")); // -1</code></pre>
+
+                                <li><strong>substring(start, end)</strong>: Returns a new string from the specified
+                                    start index to the end index (not inclusive).</li>
+                                <pre><code>let str = "Hello";
+console.log(str.substring(1, 4)); // "ell"</code></pre>
+
+                                <li><strong>slice(start, end)</strong>: Similar to <code>substring</code>, but allows
+                                    negative indices (which count from the end of the string).</li>
+                                <pre><code>let str = "Hello";
+console.log(str.slice(1, 4)); // "ell"
+console.log(str.slice(-3));  // "llo"</code></pre>
+
+                                <li><strong>toUpperCase()</strong>: Converts the entire string to uppercase.</li>
+                                <pre><code>let str = "hello";
+console.log(str.toUpperCase()); // "HELLO"</code></pre>
+
+                                <li><strong>toLowerCase()</strong>: Converts the entire string to lowercase.</li>
+                                <pre><code>let str = "HELLO";
+console.log(str.toLowerCase()); // "hello"</code></pre>
+
+                                <li><strong>trim()</strong>: Removes whitespace from both ends of the string.</li>
+                                <pre><code>let str = "  Hello  ";
+console.log(str.trim()); // "Hello"</code></pre>
+
+                                <li><strong>replace(searchValue, newValue)</strong>: Replaces a substring with a new
+                                    string.</li>
+                                <pre><code>let str = "Hello World";
+console.log(str.replace("World", "JavaScript")); // "Hello JavaScript"</code></pre>
+
+                                <li><strong>split(separator)</strong>: Splits the string into an array of substrings
+                                    based on a separator.</li>
+                                <pre><code>let str = "apple,banana,orange";
+console.log(str.split(",")); // ["apple", "banana", "orange"]</code></pre>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>6. Template Literals</summary>
+                        <div>
+                            <p>Template literals, introduced in ES6, provide an easier and more powerful way to work
+                                with strings. They allow you to include variables inside strings using <code>${}</code>
+                                for interpolation and support multiline strings.</p>
+                            <ul>
+                                <li><strong>String Interpolation</strong>:
+                                    <pre><code>let name = "John";
+let greeting = `Hello, ${name}!`; 
+console.log(greeting); // "Hello, John!"</code></pre>
+                                </li>
+
+                                <li><strong>Multiline Strings</strong>:
+                                    <pre><code>let multiLineStr = `This is
+  a multiline
+  string.`;
+console.log(multiLineStr);</code></pre>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>7. String Immutability</summary>
+                        <div>
+                            <p>Strings in JavaScript are immutable. This means that once a string is created, it cannot
+                                be changed directly. Any method that modifies a string will return a new string.</p>
+                            <pre><code>let str = "Hello";
+str[0] = "J"; // This will not work because strings are immutable.
+console.log(str); // "Hello"</code></pre>
+                            <p>To modify a string, you would have to reassign it:</p>
+                            <pre><code>let str = "Hello";
+str = "J" + str.slice(1);
+console.log(str); // "Jello"</code></pre>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>8. String Comparison</summary>
+                        <div>
+                            <p>Strings can be compared using comparison operators (<code>==</code>, <code>===</code>,
+                                <code>!=</code>, etc.) just like numbers. JavaScript compares strings lexicographically
+                                (character by character).</p>
+                            <pre><code>let str1 = "apple";
+let str2 = "banana";
+console.log(str1 < str2); // true because "apple" comes before "banana"</code></pre>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>9. Unicode and Encoding</summary>
+                        <div>
+                            <p>JavaScript strings are internally stored as UTF-16 encoded values. This means each
+                                character is represented by a 16-bit code unit. The <code>charCodeAt()</code> method
+                                returns the Unicode value of the character at the given index.</p>
+                            <pre><code>let str = "A";
+console.log(str.charCodeAt(0)); // 65 (Unicode value for "A")</code></pre>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>10. String Padding</summary>
+                        <div>
+                            <p>JavaScript provides methods to pad a string:</p>
+                            <ul>
+                                <li><strong>padStart(targetLength, padString)</strong>: Pads the current string from the
+                                    start to a given length.</li>
+                                <pre><code>let str = "5";
+console.log(str.padStart(3, "0")); // "005"</code></pre>
+
+                                <li><strong>padEnd(targetLength, padString)</strong>: Pads the current string from the
+                                    end to a given length.</li>
+                                <pre><code>let str = "5";
+console.log(str.padEnd(3, "0")); // "500"</code></pre>
+                            </ul>
+                        </div>
+                    </details>
+                    </section>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        <div class="header">
+            <div class="assignments">
+                <h2>Assignments</h2>
+                <h5 style="color: red">Note: Must take inputs for all assignments from HTML and print results back to
+                    HTML</h5>
+                <h3>Arrays</h3>
+
+                <div>
+                    <details>
+                        <summary><strong>1. Create a Custom Array Flattening Function</strong></summary>
+                        <div>
+                            Implement a function <code>customFlatten(arr)</code> that takes a deeply nested array and
+                            flattens it into a single-level array. Do not use the built-in <code>flat()</code> method.
+                            <br>
+                            Input: <code>[1, 2, [3, 5], [5, [6,7]]]</code><br>
+                            Output: <code>[1, 2, 3, 4, 5, 6, 7]</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>2. Stack Data Structure</strong></summary>
+                        <div>
+                            Implement a dynamic stack data structure using an array with <code>push</code> to add
+                            elements and <code>pop</code> to remove elements.
+                            Add functionality to check if the stack is empty and retrieve the top element.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>3. Queue Data Structure</strong></summary>
+                        <div>
+                            Create a queue implementation using an array where <code>unshift</code> adds elements to the
+                            queue and <code>shift</code> removes elements.
+                            Add functionality to check if the queue is empty and retrieve the next element.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>4. Join array of strings</strong></summary>
+                        <div>
+                            Write a function to convert an array of words into a sentence, then: Capitalize the first
+                            letter of the sentence.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>5. slice an array</strong></summary>
+                        <div>
+                            Given an array of names <code>["Alice", "Bob", "Charlie", "Daisy", "Eve"]</code>, write a
+                            function to:<br>
+                            Extract the first three names without modifying the original array.<br>
+                            Extract the last two names using negative indices.<br>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>6. Splice an array</strong></summary>
+                        <div>
+                            Given an array of colors ["Red", "Blue", "Green", "Yellow"], write a function to:<br>
+
+                            Replace "Blue" with "Purple".<br>
+                            Add "Orange" after "Yellow".<br>
+                            Remove "Green" without leaving an empty spot in the array.<br>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>7. forEach on Array</strong></summary>
+                        <div>
+                            Given an array of objects representing users (e.g., [{name: 'John', age: 30}, {name: 'Jane',
+                            age: 25}]), use forEach to log a message introducing each user, such as: "John is 30 years
+                            old."
+                    </details>
+
+                    <details>
+                        <summary><strong>8. Map and Filter</strong></summary>
+                        <div>
+                            Write a function that takes an array of objects representing tasks (e.g.,
+                            <code>{task: 'A', completed: true}</code>) and filters only the completed tasks, then maps
+                            them
+                            to their task names.
+                            <br>
+                            Input:
+                            <code>[{task: 'A', completed: true}, {task: 'B', completed: false}, {task: 'C', completed: true}]</code><br>
+                            Output: <code>['A', 'C']</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>9. every and some on array</strong></summary>
+                        <div>
+                            Given an array student scores.<br>
+                            Print "All Students Passed" if all students score is above 35 using <code>every</code>
+                            function. <br>
+                            Print "Some Students Failed" if any one student score is less than 35 using
+                            <code>some</code> function. <br>
+                            <br>
+                            Input: <code>[{ name: 'Bob', score: 80 }, { name: 'Alice', score: 90 }]</code><br>
+                            Output: <code>[{ name: 'Alice', score: 90 }, { name: 'Bob', score: 80 }]</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>10. Custom Array Sorting</strong></summary>
+                        <div>
+                            Write a custom function to sort an array of objects by a specific property. For example,
+                            sort an
+                            array of student objects by their scores:
+                            <br>
+                            Input: <code>[{ name: 'Bob', score: 80 }, { name: 'Alice', score: 90 }]</code><br>
+                            Output: <code>[{ name: 'Alice', score: 90 }, { name: 'Bob', score: 80 }]</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>11. Array Chunking</strong></summary>
+                        <div>
+                            Create a function <code>chunkArray(arr, size)</code> that splits an array into smaller
+                            chunks of
+                            the specified size.
+                            <br>
+                            Input: <code>array = [1, 2, 3, 4, 5] and chunk=2</code><br>
+                            Output: <code>[[1, 2], [3, 4], [5]]</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>12. Remove Duplicates from an Array</strong></summary>
+                        <div>
+                            Write a function that removes duplicate values from an array without using <code>Set</code>.
+                            Example:
+                            <br>
+                            Input: <code>[1, 3, 2, 2, 3, 4, 4, 3]</code><br>
+                            Output: <code>[1, 2, 3, 4]</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>13. Find the Most Frequent Element</strong></summary>
+                        <div>
+                            Write a function <code>mostFrequent(arr)</code> that returns the most frequently occurring
+                            element in an array using <code>reduce</code> to create map and find result.
+                            <br>
+                            Input: <code>[1, 3, 2, 2, 3, 3, 3, 2]</code><br>
+                            Output: <code>3</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>14. Array Destructuring and Swapping</strong></summary>
+                        <div>
+                            Use array destructuring to swap two variables without using a temporary variable. Example:
+                            <br>
+                            Input: <code>a = 10, b = 20</code><br>
+                            Output: <code>a = 20, b = 10</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>15. Multi-Dimensional Array Operations</strong></summary>
+                        <div>
+                            Create a function <code>transposeMatrix(matrix)</code> that takes a 2D array (matrix) and
+                            returns its transpose.
+                            <br>
+                            Input: <code>[<br>
+                            [1, 2, 3],<br>
+                            [4, 5, 6],<br>
+                            [7, 8, 9]<br>
+                        ];</code><br>
+                            Output: <code>[<br>
+                            [1, 4, 7],<br>
+                            [2, 5, 8],<br>
+                            [3, 6, 9]<br>
+                        ]</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>16. Performance Optimization</strong></summary>
+                        <div>
+                            Compare the performance of iterating over a large array using <code>for</code>,
+                            <code>for...of</code>, and <code>forEach</code>. Write a report on the results and when to
+                            use
+                            each method.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>17. Array Manipulation with Rest and Spread</strong></summary>
+                        <div>
+                            Write a function that takes two arrays and combines them without duplicates using the spread
+                            operator. Example:
+                            <br>
+                            Input: <code>[1, 2, 3], [3, 4, 5]</code><br>
+                            Output: <code>[1, 2, 3, 4, 5]</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><strong>18. Combining Array Methods</strong></summary>
+                        <div>
+                            Write a single chain of array methods to perform the following on an array of numbers:
+                            <ul>
+                                <li>Filter even numbers</li>
+                                <li>Double the filtered numbers</li>
+                                <li>Find the sum of the resulting numbers</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <h3>Objects</h3>
+                <div>
+                    <details>
+                        <summary>1. Object Manipulation with Dynamic Keys</summary>
+                        <div>
+                            <p>Problem: Create an object that contains dynamic keys based on user input. Write a
+                                function that accepts a key and value and adds them to an object. Handle cases where the
+                                key already exists and overwrite its value.</p>
+                            <label for="key">Enter Key: </label><input type="text" id="key"><br>
+                            <label for="value">Enter Value: </label><input type="text" id="value"><br>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>2. Deep Clone an Object</summary>
+                        <div>
+                            <p>Problem: Write a function that performs a deep clone of a nested object. Ensure that
+                                nested objects or arrays are not referenced but copied by value.</p>
+                            <pre>
+      Input: 
+      let obj = {a: 1, b: {c: 2}};
+      Output:
+      let clone = deepClone(obj);
+      clone.b.c = 3; // Modify nested object
+      Result:
+      obj.b.c will not be affected.
+    </pre>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>3. Object Inheritance Using Prototypes</summary>
+                        <div>
+                            <p>Problem: Create two objects, Person and Employee, where Employee inherits from Person
+                                using prototypes. Add methods to both objects, and demonstrate how inheritance works.
+                            </p>
+                            <pre>
+      Input: 
+      let person = {name: 'John'};
+      let employee = Object.create(person);
+      employee.job = 'Developer';
+      Output:
+      employee.greet() should print "Hello, John the Developer!"
+    </pre>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>4. Object Merging</summary>
+                        <div>
+                            <p>Problem: Create a function that merges two objects into one, overwriting any properties
+                                in the first object with properties from the second object. Ensure it works even if the
+                                properties are objects themselves (deep merge).</p>
+                            <pre>
+      Input:
+      let obj1 = {a: 1, b: {x: 10}};
+      let obj2 = {b: {y: 20}, c: 3};
+      Output:
+      merge(obj1, obj2) should return:
+      {a: 1, b: {x: 10, y: 20}, c: 3}
+    </pre>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>5. Method Chaining in Objects</summary>
+                        <div>
+                            <p>Problem: Write a class-based object that implements method chaining. Create methods like
+                                setName(), setAge(), greet(), etc., and ensure that the methods can be chained together.
+                            </p>
+                            <pre>
+      Input: 
+      let person = new Person().setName('John').setAge(25).greet();
+      Output:
+      "Hello, I am John, 25 years old."
+    </pre>
+                        </div>
+                    </details>
+                </div>
+
+                <h3>Strings</h3>
+                <div>
+                    <section>
+                        <details>
+                            <summary>1. String Length</summary>
+                            <div>
+                                <p>Write a function that takes a string and returns a new string containing the length
+                                    of each word in the string.</p>
+                                <p><strong>Input:</strong> "I love JavaScript"</p>
+                                <p><strong>Output:</strong> "1 4 10"</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>2. String Indexing</summary>
+                            <div>
+                                <p>Write a function that accepts a string and returns the first and last characters of
+                                    the string. If the string is empty, return <code>null</code>.</p>
+                                <p><strong>Input:</strong> "JavaScript"</p>
+                                <p><strong>Output:</strong> "J t"</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>3. Escape Sequences</summary>
+                            <div>
+                                <p>Create a function that takes a string and returns a new string where every instance
+                                    of <code>'\n'</code> and <code>'\t'</code> are replaced with their respective escape
+                                    sequences.</p>
+                                <p><strong>Input:</strong> "Hello\nWorld\t!"</p>
+                                <p><strong>Output:</strong> "Hello\\nWorld\\t!"</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>4. String Methods</summary>
+                            <div>
+                                <p>Write a function that takes a string and returns a new string with the characters
+                                    sorted in alphabetical order.</p>
+                                <p><strong>Input:</strong> "javascript"</p>
+                                <p><strong>Output:</strong> "aajprsvit"</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>5. Template Literals</summary>
+                            <div>
+                                <p>Write a function that accepts a name and age, and returns a greeting message using
+                                    template literals that includes the name and age dynamically.</p>
+                                <p><strong>Input:</strong> "John", 25</p>
+                                <p><strong>Output:</strong> "Hello, my name is John and I am 25 years old."</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>6. Unicode and Encoding</summary>
+                            <div>
+                                <p>Write a function that takes a string and returns an array of Unicode values for each
+                                    character in the string.</p>
+                                <p><strong>Input:</strong> "ABC"</p>
+                                <p><strong>Output:</strong> [65, 66, 67]</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>7. String Padding</summary>
+                            <div>
+                                <p>Write a function that takes a string and returns the string padded with zeros to
+                                    ensure that it has a length of 10.</p>
+                                <p><strong>Input:</strong> "123"</p>
+                                <p><strong>Output:</strong> "00000123"</p>
+                            </div>
+                        </details>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Assignment Submissions</h2>
+            <details>
+                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+                <iframe data-src="./likhith-reddy-gade/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">U Sainath Rao</summary>
+                <iframe data-src="./u-sainath-rao/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Prem Rajput</summary>
+                <iframe data-src="./prem-rajput/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Tarun Sharma</summary>
+                <iframe data-src="./tarun-sharma/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+                <iframe data-src="./rohith-kotipalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Poornima Ranguri</summary>
+                <iframe data-src="./poornima-ranguri/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+                <iframe data-src="./anusree-vutlapalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Madhuri Udathu</summary>
+                <iframe data-src="./madhuri-udathu/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Pranathi Akula</summary>
+                <iframe data-src="./pranathi-akula/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Preeti Patil SN</summary>
+                <iframe data-src="./preeti-patil-sn/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rakshita R</summary>
+                <iframe data-src="./rakshita-r/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Vinod Mudavath</summary>
+                <iframe data-src="./vinod-mudavath/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Ram Karthik</summary>
+                <iframe data-src="./ram-karthik/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Nishma Medagoni</summary>
+                <iframe data-src="./nishma-medagoni/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+                <iframe data-src="./mohammed-abdul-awaiz/index.html"></iframe>
+            </details>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Javascript Training Program</p>
+    </footer>
+    <script type="text/javascript">
+        // Function to display the selected content
+        function showContent(event) {
+            const iframes = document.getElementsByTagName('iframe');
+            Array.from(iframes).forEach(iframe => {
+                iframe.src = '';
+            });
+            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
+        }
+    </script>
+</body>
+
+</html>
