@@ -1,39 +1,7 @@
-
-5 Arrays
-Creating and manipulating arrays
-Common methods: push, pop, shift, unshift, slice, splice
-Higher-order methods: map, filter, reduce, find, some, every
-
-Objects
-Creating objects
-Accessing properties: dot vs. bracket notation
-Methods: Object.keys, Object.values, Object.entries
-
-Strings
-Common string methods: substring, replace, trim, split, join
-Template literals
-
-
-
-3. DOM Manipulation
-Accessing elements: getElementById, querySelector, querySelectorAll
-Modifying elements: text, attributes, styles
-Creating, appending, and removing elements dynamically
-
-4. Events
-Event listeners: addEventListener, removeEventListener
-Event delegation and bubbling
-Common events: click, keyup, scroll
-Browser-Specific Topics
-
 5. Window Object
 window.onload and DOMContentLoaded
 Methods: alert, confirm, prompt, setTimeout, setInterval
 Properties: innerWidth, innerHeight, navigator
-
-Location and Navigation
-window.location methods: href, reload, assign, replace
-Navigating history: history.back, history.forward
 
 Local Storage and Session Storage
 Storing, retrieving, and removing data
@@ -43,17 +11,13 @@ Cookies
 Setting, reading, and deleting cookies
 Cookie attributes: path, domain, secure, HttpOnly
 
-6. Working with iframes
-Accessing iframe content using contentWindow and contentDocument
-Cross-origin limitations and handling
-
-7. Shadow DOM
-Understanding Shadow DOM and Web Components
-Accessing Shadow DOM elements using shadowRoot
-
 Browser Storage APIs
 Cache API for Progressive Web Apps (PWAs)
 IndexedDB for complex data storage
+
+Location and Navigation
+window.location methods: href, reload, assign, replace
+Navigating history: history.back, history.forward
 
 Performance Optimization
 Lazy loading for images, videos, and iframes

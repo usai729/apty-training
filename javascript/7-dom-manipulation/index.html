@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Training Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .container .header {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .topics,
+        .assignments {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>DOM Manipulation</h1>
+    </header>
+    <div class="container">
+        <div class="header">
+            <div class="topics">
+                <h2>Topics</h2>
+                <div>
+                    <details>
+                        <summary>What is DOM?</summary>
+                        <div>
+                            The Document Object Model (DOM) is a programming interface for web documents. It represents
+                            the structure of a document as a tree, where each node is an object representing a part of
+                            the document. JavaScript interacts with the DOM to manipulate HTML and CSS dynamically.
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Accessing DOM Elements</summary>
+                        <div>
+                            JavaScript provides various methods to access DOM elements:
+                            <ul>
+                                <li><code>document.getElementById()</code>: Selects an element by its ID.</li>
+                                <li><code>document.getElementsByClassName()</code>: Selects elements by their class
+                                    name.</li>
+                                <li><code>document.getElementsByTagName()</code>: Selects elements by their tag name.
+                                </li>
+                                <li><code>document.getElementsByName()</code>: Selects elements by their name attribute.
+                                </li>
+                                <li><code>document.querySelector()</code>: Selects the first element matching a CSS
+                                    selector.
+                                </li>
+                                <li><code>document.querySelectorAll()</code>: Selects all elements matching a CSS
+                                    selector.</li>
+                                <li><code>window.document</code>: to access the root of the document and start
+                                    traversal.</li>
+                                <li><code>iframe.contentWindow</code>: Refers to the window object of the iframe.</li>
+                                <li><code>iframe.contentDocument</code>: Refers to the document object inside the iframe.</li>
+                                <li><code>element.shadowRoot</code>: If the Shadow DOM is created with { mode: 'open' }, you can access it using the shadowRoot property</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>DOM Traversal</summary>
+                        <div>
+                            DOM traversal methods allow navigating between nodes:
+                            <ul>
+                                <li><code>element.parentNode</code>: Access the parent of a node.</li>
+                                <li><code>element.childNodes</code>: Access all child nodes of a node.</li>
+                                <li><code>element.firstChild</code> and <code>element.lastChild</code>: Access the first
+                                    and last child
+                                    nodes.</li>
+                                <li><code>element.nextSibling</code> and <code>element.previousSibling</code>: Access
+                                    the next and
+                                    previous sibling nodes.</li>
+                                <li><code>element.children</code>: Access all child elements (ignoring text and comment
+                                    nodes).
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Manipulating DOM Elements</summary>
+                        <div>
+                            You can manipulate DOM elements using JavaScript:
+                            <ul>
+                                <li><code>element.innerHTML = "&lt;p&gt;New Content&lt;/p&gt;";</code>: Get or set the
+                                    HTML content of an element.</li>
+                                <li><code>element.textContent = "New Text Content";</code>: Get or set the text content
+                                    of an element.</li>
+                                <li><code>element.setAttribute("class", "new-class");</code>: Set an attribute on an
+                                    element.</li>
+                                <li><code>element.getAttribute("id");</code>: Get an attribute on an element.</li>
+                                <li><code>element.removeAttribute("disabled");</code>: Remove an attribute on an
+                                    element.</li>
+                                <li><code>element.cloneNode(true);</code>: Clone an element (with or without its
+                                    children)</li>
+                                <li><code>element.getBoundingClientRect()</code>: Get position and dimensions of an
+                                    element</li>
+                                <li><code>element.dataset["data-key-name"]; element.dataset["data-key-name"] = 'value'</code>:
+                                    Accessing and Updating Custom Data Attributes</li>
+                                <li><code>element.scrollIntoView({ behavior: "smooth" });</code>: Scroll to an element
+                                </li>
+                                <li><code>element.remove();</code>: Directly remove an element</li>
+                                <li><code>element.replaceWith(newElement);</code>: Replace an element with another</li>
+                                <li><code>element.classList.add("active");<br/> element.classList.remove("hidden"); <br/> element.classList.toggle("expanded");</code>:
+                                    Add, remove, or toggle classes on an element.</li>
+                                <li><code>element.style.color = "red"; <br/> element.style.backgroundColor = "blue";</code>:
+                                    Apply inline CSS styles dynamically.</li>
+                                <li><code>inputElement.value = "New Value";</code>: Change the value of an input field
+                                </li>
+                                <li><code>checkboxElement.checked = true;</code>: Check or uncheck a checkbox</li>
+                                <li><code>window.scrollTo(0, 500);</code>: Set or get the scroll position</li>
+
+                            </ul>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Creating and Removing Elements</summary>
+                        <div>
+                            JavaScript allows you to create and remove DOM elements:
+                            <ul>
+                                <li><code>document.createElement('tagName');</code>: Create a new element</li>
+                                <li><code>parentElement.appendChild(newElement);</code>: Add a new child element to a
+                                    parent</li>
+                                <li><code>parentElement.removeChild(childElement);</code>: Remove a child element</li>
+                                <li><code>parentElement.insertBefore(newElement, referenceElement);</code>: Add a new
+                                    child element before a specific element</li>
+                                <li><code>parentElement.replaceChild(newElement, oldElement);</code>: Replace one
+                                    element with another element</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="assignments">
+                <h2>Assignments</h2>
+                <h5 style="color: red">Note: Must take inputs for all assignments from HTML and print results back to
+                    HTML</h5>
+
+                <details>
+                    <summary>1. Accessing and Manipulating Elements</summary>
+                    <p>
+                        Create a table with 5 columns id, className, tag, name, attribute. <br/>
+                        a. In column id add <code>&lt;p&gt;</code> elements with different id attributes, and add one <code>&lt;button&gt;</code> to getElementById and  change the text color randomly when clicked on it.<br/>
+                        b. In column className add <code>&lt;p&gt;</code> elements with same class names, and add one <code>&lt;button&gt;</code> to getElementsByClassName and toggle the className to toggle the background color of all same class elements.<br/>
+                        c. In column tag add <code>&lt;span&gt;</code> elements, and add one <code>&lt;button&gt;</code> to getElementsByTagName and change innerHTML of all span tag elements.<br/>
+                        d. In column name add <code>&lt;input&gt;</code> elements with different values in name attribute, and add one <code>&lt;button&gt;</code> to getElementsByName and toggle <code>disabled</code> attribute when clicked on it.<br/>
+                        e. In column attribute add <code>&lt;p&gt;</code> elements with different custom attributes , and add one <code>&lt;button&gt;</code> to get element by querySelector (use attributes selector) and add new customer attribute when clicked on it.<br/>
+                    </p>
+                </details>
+
+                <details>
+                    <summary>2. Accessing and Manipulating <code>iFrame</code> Elements</summary>
+                    <p>
+                        Copy only HTML and CSS code from assignment1 and append it inside an <code>iframe</code> using javascript code. Add listeners to all the buttons outside of iframe and achieve same functionality as assignment1
+                    </p>
+                </details>
+
+                <details>
+                    <summary>3. Accessing and Manipulating <code>shadowDOM</code> Elements</summary>
+                    <p>
+                        Copy only HTML and CSS code from assignment1 and append it inside <code>shadowDOM</code> using javascript code. Add listeners to all the buttons outside of shadowDOM and achieve same functionality as assignment1
+                    </p>
+                </details>
+
+                <details>
+                    <summary>4. Display Element Count</summary>
+                    <p>
+                        Create a webpage with multiple types of elements (e.g.,
+                        <code>&lt;div&gt;, &lt;p&gt;, &lt;span&gt;, &lt;iframe&gt;</code>). Write a script that counts and displays the
+                        number of elements of each type when a button is clicked.
+                    </p>
+                    <p>
+                        Input: A button labeled "Count Elements". <br>
+                        Output: A list showing the count of each type of element on the page.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>5. Display Nested Element Count</summary>
+                    <p>
+                        Create a webpage with multiple levels of nested elements (e.g.,
+                        <code>&lt;div&gt;, &lt;p&gt;, &lt;span&gt;, &lt;iframe&gt;</code>). Write a script that counts and displays the
+                        number of nested elements of each first level parent element when a button is clicked.
+                    </p>
+                    <p>
+                        Input: A button labeled "Count Elements". <br>
+                        Output: A list showing the count of nested elements of first level parent element on the page.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>6. Update List Items</summary>
+                    <p>
+                        Create a webpage with an unordered list of items. Write a script to update the text of the
+                        second and fourth items in the list to "Updated Item".
+                    </p>
+                    <p>
+                        Input: Click a button labeled "Update List". <br>
+                        Output: Only the second and fourth list items are updated.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>7. Toggle Visibility of Divs</summary>
+                    <p>
+                        Create a webpage with three <code>&lt;div&gt;</code> elements. Write a script that toggles the
+                        visibility of these elements when a button is clicked.
+                    </p>
+                    <p>
+                        Input: A button labeled "Toggle Divs". <br>
+                        Output: The <code>&lt;div&gt;</code> elements are shown/hidden alternately (1 -> 2 -> 3) when the button is
+                        clicked.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>8. Moving Elements</summary>
+                    <p>
+                        Create a table with 10 rows, create 4 buttons (Up, Down, Top, Bottom) in each row.<br/>
+                        a. On click of Up button, the entire row should moved to Up (Above the previous row)<br/>
+                        b. On click of Down button, the entire row should moved to Down (Below the next row)<br/>
+                        d. On click of Top button, the entire row should moved to Top (1st row of table)<br/>
+                        e. On click of Bottom button, the entire row should moved to Bottom (last row of the table)<br/>
+                    </p>
+                </details>
+
+                <details>
+                    <summary>9. Moving <code>iFrame</code> Elements</summary>
+                    <p>
+                        Copy only HTML and CSS code from assignment8 and append it inside an <code>iframe</code> using javascript code. Add listeners to all the buttons outside of iframe and achieve same functionality as assignment8
+                    </p>
+                </details>
+
+                <details>
+                    <summary>10. Moving <code>shadowDOM</code> Elements</summary>
+                    <p>
+                        Copy only HTML and CSS code from assignment8 and append it inside <code>shadowDOM</code> using javascript code. Add listeners to all the buttons outside of shadowDOM and achieve same functionality as assignment8
+                    </p>
+                </details>
+            </div>
+        </div>
+        <div>
+            <h2>Assignment Submissions</h2>
+            <details>
+                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+                <iframe data-src="./likhith-reddy-gade/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">U Sainath Rao</summary>
+                <iframe data-src="./u-sainath-rao/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Prem Rajput</summary>
+                <iframe data-src="./prem-rajput/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Tarun Sharma</summary>
+                <iframe data-src="./tarun-sharma/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+                <iframe data-src="./rohith-kotipalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Poornima Ranguri</summary>
+                <iframe data-src="./poornima-ranguri/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+                <iframe data-src="./anusree-vutlapalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Madhuri Udathu</summary>
+                <iframe data-src="./madhuri-udathu/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Pranathi Akula</summary>
+                <iframe data-src="./pranathi-akula/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Preeti Patil SN</summary>
+                <iframe data-src="./preeti-patil-sn/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rakshita R</summary>
+                <iframe data-src="./rakshita-r/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Vinod Mudavath</summary>
+                <iframe data-src="./vinod-mudavath/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Ram Karthik</summary>
+                <iframe data-src="./ram-karthik/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Nishma Medagoni</summary>
+                <iframe data-src="./nishma-medagoni/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+                <iframe data-src="./mohammed-abdul-awaiz/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Harsh Sharma</summary>
+                <iframe data-src="./harsh-sharma/index.html"></iframe>
+            </details>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Javascript Training Program</p>
+    </footer>
+    <script type="text/javascript">
+        // Function to display the selected content
+        function showContent(event) {
+            const iframes = document.getElementsByTagName('iframe');
+            Array.from(iframes).forEach(iframe => {
+                iframe.src = '';
+            });
+            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
+        }
+    </script>
+</body>
+
+</html>

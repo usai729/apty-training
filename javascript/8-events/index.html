@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Training Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .container .header {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .topics,
+        .assignments {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Events</h1>
+    </header>
+    <div class="container">
+        <div class="header">
+            <div class="topics">
+                <h2>Topics</h2>
+                <h3>Events</h3>
+                <div>
+                    <details>
+                        <summary><strong>1. What is an Event in JavaScript?</strong></summary>
+                        <p>
+                            An <strong>event</strong> is an action or occurrence that happens in the system you are
+                            working with, which JavaScript can respond to. These events are often triggered by user
+                            actions like clicking a button, pressing a key, or hovering over an element. However, events
+                            can also be triggered programmatically, such as when the page finishes loading.
+                        </p>
+                        <p><strong>Common Event Types:</strong></p>
+                        <ul>
+                            <li><strong>Mouse Events:</strong> click, dblclick, mousedown, mouseup, mouseenter,
+                                mouseleave, mousemove, mouseout, mouseover.</li>
+                            <li><strong>Keyboard Events:</strong> keydown, keypress, keyup.</li>
+                            <li><strong>Focus Events:</strong> focus, blur.</li>
+                            <li><strong>Form Events:</strong> submit, change, input, reset.</li>
+                            <li><strong>Window Events:</strong> load, resize, scroll, beforeunload, unload.</li>
+                            <li><strong>Touch Events:</strong> touchstart, touchmove, touchend, touchcancel.</li>
+                            <li><strong>Other Events:</strong> drag, dragstart, dragend, drop, animation, transition.
+                            </li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>2. Event Listeners</strong></summary>
+                        <p>
+                            An <strong>event listener</strong> is a JavaScript function that waits for an event to occur
+                            and then responds to that event by executing a specified function. Event listeners can be
+                            added to elements to monitor specific events like clicks, keystrokes, etc.
+                        </p>
+                        <h3>Types of Event Listeners</h3>
+                        <h4>a. Using addEventListener</h4>
+                        <p>
+                            The <code>addEventListener()</code> method attaches an event listener to an element. It
+                            allows you to specify the event type (like <code>click</code> or <code>keypress</code>) and
+                            the callback function to be executed when the event occurs.
+                        </p>
+                        <p><strong>Syntax:</strong></p>
+                        <pre><code>element.addEventListener(event, function, useCapture);</code></pre>
+                        <ul>
+                            <li><code>event</code>: The type of event to listen for (e.g., <code>click</code>,
+                                <code>keypress</code>).
+                            </li>
+                            <li><code>function</code>: The function that will be called when the event is triggered.
+                            </li>
+                            <li><code>useCapture</code>: (optional) If <code>true</code>, the event will be captured
+                                during the capturing phase (default is <code>false</code>, which means it will be
+                                handled during the bubbling phase).</li>
+                        </ul>
+                        <h5>Example:</h5>
+                        <pre><code>
+        // Adding a click event listener to a button
+        document.getElementById('myButton').addEventListener('click', function() {
+          alert('Button was clicked!');
+        });
+      </code></pre>
+
+                        <h4>b. Event Handler Property</h4>
+                        <p>
+                            Before the advent of <code>addEventListener</code>, JavaScript used to handle events via
+                            <strong>event handler properties</strong>. These are HTML attributes like
+                            <code>onclick</code>, <code>onmouseover</code>, etc., which are directly added to the
+                            element.
+                        </p>
+                        <h5>Example:</h5>
+                        <pre><code>
+        &lt;button onclick="myFunction()"&gt;Click me&lt;/button&gt;
+      </code></pre>
+                        <p><code>myFunction()</code> is called when the button is clicked. However, this method only
+                            allows one event handler for each event.</p>
+
+
+                        <h3>Removing Event Listeners</h3>
+                        <p>
+                            Sometimes, it’s necessary to remove event listeners after they’ve been triggered or after
+                            some conditions are met. This can be done using <code>removeEventListener()</code>.
+                        </p>
+                        <h4>Syntax:</h4>
+                        <pre><code>
+        element.removeEventListener(event, function, useCapture);
+      </code></pre>
+                        <h5>Example:</h5>
+                        <pre><code>
+        function myClickFunction() {
+          alert('Button clicked!');
+        }
+
+        // Add event listener
+        document.getElementById('myButton').addEventListener('click', myClickFunction);
+
+        // Remove event listener
+        document.getElementById('myButton').removeEventListener('click', myClickFunction);
+      </code></pre>
+                    </details>
+
+                    <details>
+                        <summary><strong>3. Event Propagation</strong></summary>
+                        <p>
+                            Event propagation defines the order in which events are received on the page. There are
+                            three phases of event propagation:
+                        </p>
+                        <ul>
+                            <li><strong>Capturing Phase</strong>: The event is captured from the root of the DOM to the
+                                target element.</li>
+                            <li><strong>Target Phase</strong>: The event reaches the target element where it is actually
+                                triggered.</li>
+                            <li><strong>Bubbling Phase</strong>: The event bubbles back up to the root from the target
+                                element.</li>
+                        </ul>
+                        <p>
+                            By default, events bubble from the target element to the root, but you can modify this
+                            behavior using the <code>useCapture</code> parameter in <code>addEventListener</code>.
+                        </p>
+                        <h4>Example: Event Bubbling and Capturing</h4>
+                        <pre><code>
+        &lt;div id="parent"&gt;
+          &lt;button id="child"&gt;Click me&lt;/button&gt;
+        &lt;/div&gt;
+
+        <strong>script</strong>
+        document.getElementById('parent').addEventListener('click', function() {
+          alert('Parent clicked!');
+        }, false); // Bubbling
+
+        document.getElementById('child').addEventListener('click', function() {
+          alert('Button clicked!');
+        });
+      </code></pre>
+                    </details>
+
+                    <details>
+                        <summary><strong>4. Event Object</strong></summary>
+                        <p>
+                            When an event is triggered, it generates an <strong>event object</strong>. This object
+                            contains all the relevant information about the event, such as the target element, type of
+                            event, and more.
+                        </p>
+                        <h4>Common Event Object Properties:</h4>
+                        <ul>
+                            <li><code>target</code>: The element that triggered the event.</li>
+                            <li><code>type</code>: The type of the event (e.g., <code>'click'</code>,
+                                <code>'keypress'</code>).
+                            </li>
+                            <li><code>currentTarget</code>: The element to which the event listener is attached.</li>
+                            <li><code>preventDefault()</code>: Cancels the default behavior of the event.</li>
+                            <li><code>stopPropagation()</code>: Prevents the event from bubbling or capturing.</li>
+                        </ul>
+                        <h4>Example:</h4>
+                        <pre><code>
+        document.getElementById('myButton').addEventListener('click', function(event) {
+          console.log(event.type); // Outputs: 'click'
+          console.log(event.target); // Outputs: The button element
+        });
+      </code></pre>
+                    </details>
+
+                    <details>
+                        <summary><strong>5. Event Delegation</strong></summary>
+                        <p>
+                            Event delegation is a technique where you attach a single event listener to a parent element
+                            and take advantage of event bubbling to manage events for multiple child elements. This is
+                            useful for handling dynamic elements (e.g., elements added to the page after load).
+                        </p>
+                        <h4>Example:</h4>
+                        <pre><code>
+        &lt;ul id="myList"&gt;
+          &lt;li&gt;Item 1&lt;/li&gt;
+          &lt;li&gt;Item 2&lt;/li&gt;
+          &lt;li&gt;Item 3&lt;/li&gt;
+        &lt;/ul&gt;
+
+        <strong>script</strong>
+        document.getElementById('myList').addEventListener('click', function(event) {
+          if (event.target.tagName === 'LI') {
+            alert('Item clicked: ' + event.target.textContent);
+          }
+        });
+      </code></pre>
+                    </details>
+
+                    <details>
+                        <summary><strong>6. Throttling and Debouncing Events</strong></summary>
+                        <p>
+                            In some cases, you may want to limit how often an event is triggered (e.g., resizing the
+                            window or typing in a search input field). Throttling and debouncing are two techniques to
+                            improve performance by controlling the frequency of function calls.
+                        </p>
+                        <ul>
+                            <li><strong>Throttling</strong>: Ensures that the event handler is invoked only once in a
+                                specified time interval.</li>
+                            <li><strong>Debouncing</strong>: Ensures that the event handler is invoked only after a
+                                specified amount of idle time, often used for scenarios like search input.</li>
+                        </ul>
+                    </details>
+                </div>
+                <h3>Mutation Observer</h3>
+                <div>
+                    <p>The <code>MutationObserver</code> is a built-in JavaScript object that allows you to listen to
+                        changes (mutations) in the DOM (Document Object Model). It provides a way to monitor changes to
+                        the DOM tree, such as when nodes are added or removed, when attributes are modified, or when the
+                        text content of an element is updated. This can be helpful for detecting and reacting to changes
+                        made by other scripts or user actions.</p>
+
+                    <details>
+                        <summary><strong>1. What is MutationObserver?</strong></summary>
+                        <p><code>MutationObserver</code> is an interface that provides a mechanism to detect changes in
+                            the DOM. It works asynchronously and provides a way to react to specific changes in the DOM
+                            tree such as element attributes, text content, or the structure of the DOM itself.</p>
+                    </details>
+
+                    <details>
+                        <summary><strong>2. How MutationObserver Works</strong></summary>
+                        <p>A <code>MutationObserver</code> listens for changes to a specified DOM element and is
+                            triggered when the defined mutations occur. The observer will execute a callback function
+                            that you define when one of the mutations is observed.</p>
+                    </details>
+
+                    <details>
+                        <summary><strong>3. Creating a MutationObserver</strong></summary>
+                        <p>To create a <code>MutationObserver</code>, you need to instantiate a new observer object and
+                            pass a callback function that will be called when the DOM changes.</p>
+                        <pre><code>
+const observer = new MutationObserver(callbackFunction);
+      </code></pre>
+                        <p>The callback function will receive two arguments:</p>
+                        <ul>
+                            <li><code>mutationsList</code>: An array of mutation records that contain information about
+                                the changes made.</li>
+                            <li><code>observer</code>: The observer object itself.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>4. Observing DOM Mutations</strong></summary>
+                        <p>After creating the observer, you must specify which DOM mutations to observe using the
+                            <code>observe()</code> method. You pass in the target element and an options object to
+                            configure the types of mutations you want to track.</p>
+                        <pre><code>
+const targetElement = document.getElementById('myElement');
+const config = { attributes: true, childList: true, subtree: true };
+
+observer.observe(targetElement, config);
+      </code></pre>
+                        <p>In the example above, we are observing changes to the target element's attributes, its
+                            children (nodes), and its subtree (descendants).</p>
+                    </details>
+
+                    <details>
+                        <summary><strong>5. MutationObserver Callback</strong></summary>
+                        <p>The callback function is triggered when one or more mutations are observed. The mutationsList
+                            parameter will contain the mutations that occurred, allowing you to process the changes.</p>
+                        <pre><code>
+function callback(mutationsList, observer) {
+  mutationsList.forEach(mutation => {
+    if (mutation.type === 'childList') {
+      console.log('A child node has been added or removed.');
+    } else if (mutation.type === 'attributes') {
+      console.log('An attribute was modified.');
+    }
+  });
+}
+      </code></pre>
+                        <p>The callback function can be customized to react to different types of mutations based on
+                            your needs.</p>
+                    </details>
+
+                    <details>
+                        <summary><strong>6. Mutation Types</strong></summary>
+                        <p>There are several mutation types that a <code>MutationObserver</code> can track:</p>
+                        <ul>
+                            <li><strong>childList</strong>: Monitors the addition or removal of child nodes (elements)
+                                in the target node.</li>
+                            <li><strong>attributes</strong>: Watches for changes to attributes of the target element.
+                            </li>
+                            <li><strong>characterData</strong>: Observes changes to the textual content of a node (for
+                                text nodes).</li>
+                            <li><strong>subtree</strong>: Watches for mutations within the entire subtree of the target
+                                node.</li>
+                            <li><strong>attributeOldValue</strong>: If <code>attributes</code> is enabled, you can track
+                                the old value of the changed attribute.</li>
+                            <li><strong>characterDataOldValue</strong>: If <code>characterData</code> is enabled, you
+                                can track the old text content.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>7. Stopping the Observer</strong></summary>
+                        <p>Once you no longer need to observe mutations, you can stop the observer by calling
+                            <code>disconnect()</code> on the observer object. This prevents any further changes from
+                            being detected.</p>
+                        <pre><code>
+observer.disconnect();
+      </code></pre>
+                    </details>
+
+                    <details>
+                        <summary><strong>8. Use Case Examples</strong></summary>
+                        <p>Some common use cases for <code>MutationObserver</code> include:</p>
+                        <ul>
+                            <li>Tracking changes to dynamic content (e.g., user-generated content, or content loaded via
+                                AJAX).</li>
+                            <li>Reacting to DOM manipulations made by third-party libraries or scripts.</li>
+                            <li>Updating the UI based on changes to specific elements in the DOM.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>9. Browser Compatibility</strong></summary>
+                        <p>The <code>MutationObserver</code> is supported by all modern browsers, including Chrome,
+                            Firefox, Edge, and Safari. However, it is not supported in Internet Explorer. If you need to
+                            support IE, you may need to use a fallback or polyfill.</p>
+                    </details>
+
+                    <details>
+                        <summary><strong>10. Best Practices</strong></summary>
+                        <ul>
+                            <li>Limit the number of mutations being observed to improve performance.</li>
+                            <li>Disconnect the observer when no longer needed to prevent memory leaks.</li>
+                            <li>Use <code>subtree</code> and <code>childList</code> options with caution as they may
+                                affect performance if the DOM is large.</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="assignments">
+                <h2>Assignments</h2>
+                <h5 style="color: red">Note: Must take inputs for all assignments from HTML and print results back to
+                    HTML</h5>
+
+                <div>
+                    <details>
+                        <summary>1. Event Delegation and Bubbling</summary>
+                        <div>
+                            <p>Create a table with 10 rows and 10 columns, add mouseover and mouseout listeners on the
+                                entire table. Highlight entire row and entire column on mouseover and remove highlight
+                                on mouseout</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>2. Keyboard Events: Keydown, Keyup</summary>
+                        <div>
+                            <p>Add Keydown and Keyup events on window. Create two divs one for Keydown and one for
+                                Keyup. Print every keypress event to Keydown and Keyup Divs. Handle multiple keypress
+                                also like ctrl+a, shift+a and alt+a etc., </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>3. Event Propagation: Capture, Target, and Bubble</summary>
+                        <div>
+                            <p>Set up an HTML structure with a nested div hierarchy. Add event listeners to the level1
+                                div (capture phase), level2 div (bubble phase), and a level3 div (target phase). alert
+                                the event at each phase and see in which order events are getting triggered.</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>4. Prevent Default Action with Events</summary>
+                        <div>
+                            <p>Create a form with a submit button. Prevent the default form submission behavior using
+                                the `preventDefault()` method on the submit event when form fields are not valid</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>5. Stop Event Propagation</summary>
+                        <div>
+                            <p>Create a parent div and a child div. Add event listeners to both divs, where the child
+                                div stops the event propagation using `stopPropagation()`. alert the event in both the
+                                child and parent div listeners to see how the event flow is stopped.</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>6. Form Events</summary>
+                        <div>
+                            <p>Create a registration form and add listeners to validate the form while user typing the
+                                input value. Show error if the input is not valid and remove error on success</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>7. Inline Editing with Mutation Observer</summary>
+                        <div>
+                            <p>Make a div as an inline editing component. Have some default text in Div with pencil
+                                icon, onclick of Div it should be editable with Textarea tag, and onblur the edited
+                                content should be visible in div. Use Mutation observer to check if div/input element is added to screen and add click/blur listeners</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>8. Build snake game </summary>
+                        <div>
+                            <p><video src="./snake-game.mov" controls></video></p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Assignment Submissions</h2>
+            <details>
+                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+                <iframe data-src="./likhith-reddy-gade/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">U Sainath Rao</summary>
+                <iframe data-src="./u-sainath-rao/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Prem Rajput</summary>
+                <iframe data-src="./prem-rajput/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Tarun Sharma</summary>
+                <iframe data-src="./tarun-sharma/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+                <iframe data-src="./rohith-kotipalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Poornima Ranguri</summary>
+                <iframe data-src="./poornima-ranguri/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+                <iframe data-src="./anusree-vutlapalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Madhuri Udathu</summary>
+                <iframe data-src="./madhuri-udathu/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Pranathi Akula</summary>
+                <iframe data-src="./pranathi-akula/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Preeti Patil SN</summary>
+                <iframe data-src="./preeti-patil-sn/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rakshita R</summary>
+                <iframe data-src="./rakshita-r/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Vinod Mudavath</summary>
+                <iframe data-src="./vinod-mudavath/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Ram Karthik</summary>
+                <iframe data-src="./ram-karthik/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Nishma Medagoni</summary>
+                <iframe data-src="./nishma-medagoni/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+                <iframe data-src="./mohammed-abdul-awaiz/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Harsh Sharma</summary>
+                <iframe data-src="./harsh-sharma/index.html"></iframe>
+            </details>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Javascript Training Program</p>
+    </footer>
+    <script type="text/javascript">
+        // Function to display the selected content
+        function showContent(event) {
+            const iframes = document.getElementsByTagName('iframe');
+            Array.from(iframes).forEach(iframe => {
+                iframe.src = '';
+            });
+            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
+        }
+    </script>
+</body>
+
+</html>

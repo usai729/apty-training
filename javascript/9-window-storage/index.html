@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Training Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .container .header {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .topics,
+        .assignments {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Window and Storage</h1>
+    </header>
+    <div class="container">
+        <div class="header">
+            <div class="topics">
+                <h2>Topics</h2>
+                <h3>Window Object</h3>
+                <div>
+                    <p>The <code>window</code> object in JavaScript is the global object that represents the browser's
+                        window or tab. It provides access to the browser’s features, including the DOM, the console, and
+                        other properties and methods for interacting with the browser's environment. It is the root
+                        object in the browser, and almost everything in JavaScript is a property of the
+                        <code>window</code> object.</p>
+
+                    <details>
+                        <summary><strong>1. Global Object</strong></summary>
+                        <p>In the browser environment, the <code>window</code> object serves as the global object. This
+                            means that all global variables, functions, and objects are properties of the
+                            <code>window</code> object.</p>
+                        <pre><code>var a = 10; // window.a = 10;</code></pre>
+                        <p>Similarly, functions like <code>alert()</code> and <code>setTimeout()</code> are methods of
+                            the <code>window</code> object.</p>
+                    </details>
+
+                    <details>
+                        <summary><strong>2. Properties of window</strong></summary>
+                        <p>The <code>window</code> object has several important properties, including:</p>
+                        <ul>
+                            <li><code>window.document</code>: Represents the DOM (Document Object Model) of the webpage.
+                            </li>
+                            <li><code>window.location</code>: Represents the current URL of the page. It provides
+                                methods to get and set the URL.</li>
+                            <li><code>window.navigator</code>: Contains information about the browser and operating
+                                system.</li>
+                            <li><code>window.history</code>: Allows you to manipulate the browser history.</li>
+                            <li><code>window.screen</code>: Provides information about the screen (width, height, etc.).
+                            </li>
+                            <li><code>window.localStorage</code> and <code>window.sessionStorage</code>: Store data in
+                                the browser’s storage system.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>3. Methods of window</strong></summary>
+                        <p>The <code>window</code> object has several useful methods:</p>
+                        <ul>
+                            <li><code>window.alert()</code>: Displays an alert dialog box with a specified message.</li>
+                            <li><code>window.confirm()</code>: Displays a confirmation dialog box.</li>
+                            <li><code>window.prompt()</code>: Displays a dialog box with a text input.</li>
+                            <li><code>window.setTimeout()</code>: Executes a function after a specified delay.</li>
+                            <li><code>window.setInterval()</code>: Executes a function repeatedly with a specified time
+                                interval.</li>
+                            <li><code>window.clearTimeout()</code>: Cancels a timeout set by <code>setTimeout()</code>.
+                            </li>
+                            <li><code>window.clearInterval()</code>: Cancels an interval set by
+                                <code>setInterval()</code>.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>4. Event Handlers</strong></summary>
+                        <p>The <code>window</code> object can be used to handle global events such as:</p>
+                        <ul>
+                            <li><code>window.onload</code>: Fired when the page and all of its resources have finished
+                                loading.</li>
+                            <li><code>window.onresize</code>: Fired when the window is resized.</li>
+                            <li><code>window.onscroll</code>: Fired when the user scrolls the window.</li>
+                            <li><code>window.onbeforeunload</code>: Fired before the user leaves the page.</li>
+                            <li><code>window.onfocus</code> and <code>window.onblur</code>: Fired when the window gains
+                                or loses focus.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>5. Window Methods for Browser Control</strong></summary>
+                        <p>The <code>window</code> object provides several methods for controlling the browser window,
+                            including:</p>
+                        <ul>
+                            <li><code>window.open()</code>: Opens a new browser window or tab.</li>
+                            <li><code>window.close()</code>: Closes the current browser window.</li>
+                            <li><code>window.resizeTo()</code>: Resizes the browser window to a specified width and
+                                height.</li>
+                            <li><code>window.scrollTo()</code>: Scrolls the window to a specific position on the page.
+                            </li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>6. Global Variables</strong></summary>
+                        <p>Since <code>window</code> is the global object, all global variables declared with
+                            <code>var</code>, as well as functions, are properties of the <code>window</code> object.
+                        </p>
+                        <pre><code>var x = 10; console.log(window.x); // 10</code></pre>
+                        <pre><code>function greet() { console.log("Hello!"); } window.greet(); // "Hello!"</code></pre>
+                    </details>
+
+                    <details>
+                        <summary><strong>7. Window vs Global Object</strong></summary>
+                        <p>In the browser, <code>window</code> is the global object, while in Node.js, the global object
+                            is named <code>global</code>.</p>
+                    </details>
+
+                    <details>
+                        <summary><strong>8. Accessing Other Windows</strong></summary>
+                        <p>The <code>window</code> object provides access to other windows or frames:</p>
+                        <ul>
+                            <li><code>window.frames</code>: Returns a collection of all iframes in the current window.
+                            </li>
+                            <li><code>window.parent</code>: Refers to the parent window if the current window is an
+                                iframe.</li>
+                            <li><code>window.top</code>: Refers to the topmost window in the hierarchy.</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary><strong>9. Browser Compatibility</strong></summary>
+                        <p>The <code>window</code> object is supported in all modern browsers, but some methods and
+                            properties may vary in behavior across different browsers. Testing across platforms is
+                            essential to ensure consistent behavior.</p>
+                    </details>
+
+                    <details>
+                        <summary><strong>10. Security Considerations</strong></summary>
+                        <p>Cross-Origin Restrictions: The <code>window</code> object is subject to security
+                            restrictions, particularly in the context of cross-origin (CORS) requests. JavaScript in one
+                            window may not be able to access the properties of another window if they come from
+                            different origins.</p>
+                        <p><code>postMessage()</code>: A method to safely send messages between windows (or iframes) in
+                            a cross-origin environment.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="assignments">
+                <h2>Assignments</h2>
+                <h5 style="color: red">Note: Must take inputs for all assignments from HTML and print results back to
+                    HTML</h5>
+
+                <div></div>
+
+            </div>
+        </div>
+        <div>
+            <h2>Assignment Submissions</h2>
+            <details>
+                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+                <iframe data-src="./likhith-reddy-gade/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">U Sainath Rao</summary>
+                <iframe data-src="./u-sainath-rao/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Prem Rajput</summary>
+                <iframe data-src="./prem-rajput/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Tarun Sharma</summary>
+                <iframe data-src="./tarun-sharma/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+                <iframe data-src="./rohith-kotipalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Poornima Ranguri</summary>
+                <iframe data-src="./poornima-ranguri/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+                <iframe data-src="./anusree-vutlapalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Madhuri Udathu</summary>
+                <iframe data-src="./madhuri-udathu/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Pranathi Akula</summary>
+                <iframe data-src="./pranathi-akula/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Preeti Patil SN</summary>
+                <iframe data-src="./preeti-patil-sn/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rakshita R</summary>
+                <iframe data-src="./rakshita-r/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Vinod Mudavath</summary>
+                <iframe data-src="./vinod-mudavath/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Ram Karthik</summary>
+                <iframe data-src="./ram-karthik/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Nishma Medagoni</summary>
+                <iframe data-src="./nishma-medagoni/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+                <iframe data-src="./mohammed-abdul-awaiz/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Harsh Sharma</summary>
+                <iframe data-src="./harsh-sharma/index.html"></iframe>
+            </details>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Javascript Training Program</p>
+    </footer>
+    <script type="text/javascript">
+        // Function to display the selected content
+        function showContent(event) {
+            const iframes = document.getElementsByTagName('iframe');
+            Array.from(iframes).forEach(iframe => {
+                iframe.src = '';
+            });
+            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
+        }
+    </script>
+</body>
+
+</html>
