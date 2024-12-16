@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Array Of Strings</title>
+</head>
+<body>
+    <h1>Filter Completed Tasks</h1>
+
+  <div>
+    <label for="inputTasks">Enter tasks (JSON format):</label>
+    <textarea id="inputTasks" rows="5" cols="40">[{"task": "A", "completed": true}, {"task": "B", "completed": false}, {"task": "C", "completed": true}]</textarea>
+    <button onclick="filterCompletedTasks()">Get Completed Tasks</button>
+  </div>
+
+  <h2>Output</h2>
+  <p id="output"></p>
+    <script src="./script.js" ></script>
+</body>
+</html>

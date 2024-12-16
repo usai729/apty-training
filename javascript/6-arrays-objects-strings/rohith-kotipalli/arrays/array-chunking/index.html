@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Chunking</title>
+</head>
+<body>
+    <h1>Chunk Array into Smaller Chunks</h1>
+
+  <form id="chunkForm">
+    <label for="arrayInput">Enter Array (comma-separated):</label><br>
+    <textarea id="arrayInput" required></textarea><br>
+
+    <label for="chunkSize">Enter Chunk Size:</label><br/>
+    <input type="number" id="chunkSize" min="1" required><br><br>
+
+    <button type="submit">Chunk Array</button>
+  </form>
+
+  <h2>Chunked Array Result:</h2>
+  <div id="result"></div>
+    <script src="./script.js" ></script>
+</body>
+</html>
