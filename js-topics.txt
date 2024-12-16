@@ -1,3 +1,4 @@
+
 5. Window Object
 window.onload and DOMContentLoaded
 Methods: alert, confirm, prompt, setTimeout, setInterval
@@ -69,3 +70,107 @@ Event streams and reactive patterns
 TypeScript (Optional)
 Adding types to JavaScript
 Interfaces and type checking
+
+
+
+HTML
+
+
+
+
+
+
+2. Basic HTML Elements
+Headings: <h1> to <h6>.
+Paragraphs: <p>.
+Formatting text: <strong>, <em>, <u>, <sub>, <sup>.
+Line breaks: <br>.
+Horizontal rules: <hr>.
+3. Lists
+Ordered lists: <ol> and <li>.
+Unordered lists: <ul> and <li>.
+Nested lists and description lists: <dl>, <dt>, <dd>.
+4. Links and Navigation
+Hyperlinks: <a href="url">.
+Opening links in new tabs using target="_blank".
+Internal vs external links.
+Anchor links for navigation within a page.
+5. Images and Media
+Adding images with <img>: src, alt, width, height.
+Embedding videos and audio: <video> and <audio>.
+6. Tables
+Basic structure: <table>, <tr>, <td>, <th>.
+Adding captions with <caption>.
+Merging cells with rowspan and colspan.
+Styling tables with <thead>, <tbody>, <tfoot>.
+7. HTML Forms
+Basic form elements: <input>, <textarea>, <button>.
+Form attributes: action, method, name.
+Labels and grouping: <label>, <fieldset>, <legend>.
+Input types: text, password, email, number, radio, checkbox, file.
+Dropdowns: <select> and <option>.
+Form validation: required, pattern, min, max.
+8. Semantic HTML
+Importance of semantic elements.
+Tags: <header>, <footer>, <article>, <section>, <aside>, <nav>, <main>.
+9. Multimedia
+Embedding videos: <video> with controls, autoplay, loop.
+Adding audio: <audio> with controls, autoplay, loop.
+Subtitles: <track> element.
+10. Attributes and Global Attributes
+Adding attributes to elements.
+Global attributes: id, class, style, title, data-*.
+11. HTML Metadata
+<meta> tags for SEO, viewport settings, and social sharing.
+<title> tag for the browser tab.
+Adding favicons with <link rel="icon">.
+12. HTML5 Features
+New form elements: <datalist>, <output>, <progress>, <meter>.
+Input attributes: placeholder, autocomplete, novalidate.
+13. CSS Integration with HTML
+Adding inline styles: style attribute.
+Linking external CSS with <link>.
+Embedding CSS using <style>.
+14. JavaScript Integration
+Adding JavaScript with <script> tags.
+Inline vs internal vs external scripts.
+Event handling in HTML.
+15. Responsive Design
+Understanding responsive design principles.
+Using the <meta name="viewport"> tag.
+Introduction to media queries.
+16. Advanced Forms
+File upload inputs: <input type="file">.
+Custom validation with JavaScript.
+Advanced attributes: multiple, step.
+17. Web Storage and HTML APIs
+Local and session storage: localStorage, sessionStorage.
+Introduction to Geolocation API and Drag-and-Drop API.
+18. Canvas and Graphics
+Introduction to the <canvas> element.
+Drawing shapes and adding text.
+Basics of SVG and its use in HTML.
+19. iFrames and Embedding
+Embedding content with <iframe>.
+Attributes like sandbox, allow, and srcdoc.
+Handling communication between parent and iframe.
+20. Accessibility and ARIA
+Writing accessible HTML with semantic elements.
+Using ARIA roles and attributes.
+Keyboard navigation and screen reader considerations.
+21. Shadow DOM and Web Components
+Introduction to Web Components.
+Encapsulation with Shadow DOM.
+Using <template> and <slot> elements.
+22. Performance Optimization
+Lazy loading images with loading="lazy".
+Optimizing scripts with async and defer.
+Preloading resources using <link>.
+23. Security Best Practices
+Preventing XSS with proper sanitization.
+Using sandbox and rel="noopener noreferrer".
+Content Security Policy (CSP).
+24. Debugging and Validation
+Using browser dev tools for debugging.
+Validating HTML with W3C Validator.
+Testing accessibility with Lighthouse.

@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Training Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .container .header {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .topics,
+        .assignments {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 10px 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        details {
+
+            details,
+            h4 {
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Window and Storage</h1>
+    </header>
+    <div class="container">
+        <div class="header">
+            <div class="topics">
+                <h2>Topics</h2>
+                <section>
+                    <h3>Introduction</h3>
+
+                    <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It
+                        defines the structure of web content using a system of tags and attributes.</p>
+
+                    <details>
+                        <summary><strong>Purpose of HTML</strong></summary>
+                        <p>
+                            a. Structuring Content: HTML allows developers to organize and structure content into
+                            meaningful components like headings, paragraphs, lists, and tables.<br />
+                            b. Cross-Browser Support: HTML is universally supported across web browsers.<br />
+                            c. SEO & Accessibility: HTML tags help search engines and assistive technologies understand
+                            the content.<br />
+                        </p>
+                    </details>
+                </section>
+
+                <section>
+                    <h3>&lt;!DOCTYPE html&gt;</h3>
+
+                    <div>
+                        <p>The &lt;!DOCTYPE html&gt; declaration is an instruction to the web browser about the
+                            version of HTML that the page is written in. It ensures that the browser renders the
+                            page correctly according to the specified standards.</p>
+                        <p>It is not a tag but a declaration, and it must appear at the very top of an HTML
+                            document, before the &lt;html&gt; tag.</p>
+                        <details>
+                            <summary>Purpose of &lt;!DOCTYPE html&gt;</summary>
+                            <div>
+                                <ul>
+                                    <li>Ensures the browser renders the HTML document in <strong>standards
+                                            mode</strong>
+                                        instead of quirks mode.</li>
+                                    <li>Specifies the version of HTML being used, such as HTML5.</li>
+                                    <li>Improves cross-browser compatibility and ensures consistent rendering of the
+                                        page.
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>HTML5 &lt;!DOCTYPE&gt; Declaration</summary>
+                            <div>
+                                <p>The modern &lt;!DOCTYPE&gt; declaration for HTML5 is:</p>
+                                <code>&lt;!DOCTYPE html&gt;</code>
+                                <p>This is a simplified declaration compared to older versions of HTML and applies
+                                    to all
+                                    HTML5 documents.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Older &lt;!DOCTYPE&gt; Declarations</summary>
+                            <div>
+                                <p>Before HTML5, &lt;!DOCTYPE&gt; declarations were more complex and looked like
+                                    this:</p>
+                                <ul>
+                                    <li><strong>HTML 4.01 Strict:</strong>
+                                        <br>
+                                        <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</code>
+                                    </li>
+                                    <li><strong>HTML 4.01 Transitional:</strong>
+                                        <br>
+                                        <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code>
+                                    </li>
+                                    <li><strong>XHTML 1.0 Strict:</strong>
+                                        <br>
+                                        <code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</code>
+                                    </li>
+                                </ul>
+                                <p>These older declarations were used to specify different Document Type Definitions
+                                    (DTDs)
+                                    for validation.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>What Happens Without &lt;!DOCTYPE&gt;?</summary>
+                            <div>
+                                <p>If you omit the &lt;!DOCTYPE&gt; declaration:</p>
+                                <ul>
+                                    <li>The browser switches to <strong>quirks mode</strong>, where it uses outdated
+                                        rendering methods to display the page.</li>
+                                    <li>This can lead to inconsistent behavior across different browsers.</li>
+                                    <li>Modern HTML5 features may not work as expected.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Best Practices</summary>
+                            <div>
+                                <ul>
+                                    <li>Always include the &lt;!DOCTYPE html&gt; declaration at the top of your HTML
+                                        document.</li>
+                                    <li>Use the simplified HTML5 declaration for modern web development.</li>
+                                    <li>Ensure your HTML is valid and follows the latest web standards.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                </section>
+
+                <section>
+                    <h3>&lt;html&gt; Tag</h3>
+
+                    <div>
+                        <details>
+                            <summary>What is the &lt;html&gt; Tag?</summary>
+                            <div>
+                                <p>The &lt;html&gt; tag is the root element of an HTML document. It represents the
+                                    entire HTML document and serves as the container for all other elements,
+                                    including metadata and content.</p>
+                                <p>All HTML documents must start with the &lt;html&gt; tag and include a closing
+                                    &lt;/html&gt; tag at the end.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Structure of an HTML Document</summary>
+                            <div>
+                                <p>A basic HTML document structure:</p>
+                                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Sample Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Attributes of &lt;html&gt; Tag</summary>
+                            <div>
+                                <p>The &lt;html&gt; tag supports the following attributes:</p>
+                                <ul>
+                                    <li><strong>lang:</strong> Specifies the language of the document. It is
+                                        essential for accessibility and SEO.
+                                        <br><code>&lt;html lang="en"&gt;</code>
+                                    </li>
+                                    <li><strong>dir:</strong> Specifies the direction of text within the document.
+                                        <ul>
+                                            <li><code>ltr:</code> Left-to-right (default).</li>
+                                            <li><code>rtl:</code> Right-to-left (e.g., Arabic, Hebrew).</li>
+                                            <li><code>auto:</code> Automatically determines the direction based on
+                                                the content.</li>
+                                        </ul>
+                                        <br><code>&lt;html dir="rtl"&gt;</code>
+                                    </li>
+                                    <li><strong>xmlns:</strong> Specifies the XML namespace for the document. It is
+                                        used when working with XHTML.
+                                        <br><code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</code>
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Using the &lt;html&gt; Tag with Attributes</summary>
+                            <div>
+                                <p>Examples of the &lt;html&gt; tag with various attributes:</p>
+                                <ul>
+                                    <li><strong>Default Usage:</strong>
+                                        <pre>
+&lt;html lang="en"&gt;
+    ...
+&lt;/html&gt;
+                    </pre>
+                                    </li>
+                                    <li><strong>Right-to-Left Language (Arabic):</strong>
+                                        <pre>
+&lt;html lang="ar" dir="rtl"&gt;
+    ...
+&lt;/html&gt;
+                    </pre>
+                                    </li>
+                                    <li><strong>With XML Namespace:</strong>
+                                        <pre>
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+    ...
+&lt;/html&gt;
+                    </pre>
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Common Use Cases</summary>
+                            <div>
+                                <ul>
+                                    <li>Specifying the language of the document for accessibility and SEO.</li>
+                                    <li>Defining the text direction for languages like Arabic or Hebrew.</li>
+                                    <li>Providing XML namespaces for compatibility with XHTML or other XML-based
+                                        formats.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Best Practices</summary>
+                            <div>
+                                <ul>
+                                    <li>Always specify the <code>lang</code> attribute for better accessibility and
+                                        search engine optimization.</li>
+                                    <li>Set the <code>dir</code> attribute appropriately for right-to-left or
+                                        left-to-right languages.</li>
+                                    <li>Ensure that the <code>xmlns</code> attribute is used only when necessary for
+                                        XML-based standards.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                </section>
+
+                <section>
+                    <h3>&lt;head&gt; Tag</h3>
+
+                    <details>
+                        <summary>What is the &lt;head&gt; Tag?</summary>
+                        <div>
+                            <p>The &lt;head&gt; tag is a container for metadata (data about data) and links to
+                                external resources in an HTML document.</p>
+                            <p>It is placed between the &lt;html&gt; tag and the &lt;body&gt; tag and is not visible
+                                on the webpage but plays a critical role in setting up the document.</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Structure of the &lt;head&gt; Tag</summary>
+                        <div>
+                            <p>An example of how the &lt;head&gt; tag fits into the HTML document structure:</p>
+                            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Document&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        ...
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Tags Inside the &lt;head&gt; Tag</summary>
+                        <div>
+                            <h4>&lt;title&gt; Tag:</h4>
+                            <div>
+                                <details>
+                                    <summary>What is the &lt;title&gt; Tag?</summary>
+                                    <div>
+                                        <p>The &lt;title&gt; tag defines the title of the document, which is
+                                            displayed in the browser's title bar or tab. It is placed inside the
+                                            &lt;head&gt; section of an HTML document.</p>
+                                        <p>The title is an essential part of a webpage as it provides the page's
+                                            identity and is used by search engines to display page results. It also
+                                            appears when the user bookmarks a page.</p>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Structure of the &lt;title&gt; Tag</summary>
+                                    <div>
+                                        <p>The &lt;title&gt; tag is placed inside the &lt;head&gt; section of the
+                                            HTML document:</p>
+                                        <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Webpage&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        ...
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Attributes of the &lt;title&gt; Tag</summary>
+                                    <div>
+                                        <p>The &lt;title&gt; tag does not have any specific attributes. Its content
+                                            defines the title text that will be displayed in the browser's title bar
+                                            or tab.</p>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Common Uses of the &lt;title&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Webpage Identity:</strong> The title of a webpage is
+                                                displayed in the browser tab. It helps users identify the page they
+                                                are on and is visible when they bookmark the page.
+                                                <br><code>&lt;title&gt;Welcome to My Website&lt;/title&gt;</code>
+                                            </li>
+                                            <li><strong>SEO (Search Engine Optimization):</strong> Search engines
+                                                use the title tag to rank the page and understand its content, so
+                                                including relevant keywords is important for SEO.
+                                                <br><code>&lt;title&gt;Best Pizza in New York - Delicious Pizza &amp; Pasta&lt;/title&gt;</code>
+                                            </li>
+                                            <li><strong>Bookmarks:</strong> When users add a webpage to their
+                                                bookmarks or favorites, the title is used to display in the list.
+                                                <br><code>&lt;title&gt;JavaScript Tutorial - Learn JavaScript Easily&lt;/title&gt;</code>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Examples of Usage</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Simple Title:</strong>
+                                                <pre>&lt;title&gt;My Website&lt;/title&gt;</pre>
+                                            </li>
+                                            <li><strong>SEO-Optimized Title with Keywords:</strong>
+                                                <pre>&lt;title&gt;Buy Affordable Laptops Online - Best Deals&lt;/title&gt;</pre>
+                                            </li>
+                                            <li><strong>Title with Dynamic Content:</strong>
+                                                <br>In JavaScript, you can dynamically change the title of the page:
+                                                <pre>document.title = 'New Page Title';</pre>
+                                            </li>
+                                            <li><strong>Title for Social Sharing:</strong> When sharing a link on
+                                                social media, a well-crafted title can encourage clicks. Titles
+                                                should be compelling and relevant:
+                                                <pre>&lt;title&gt;Get the Best Travel Deals – Exclusive Offers!&lt;/title&gt;</pre>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Best Practices for Using the &lt;title&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li>Keep titles concise but descriptive (50-60 characters is ideal for
+                                                SEO).</li>
+                                            <li>Use relevant keywords that describe the content of the page but
+                                                avoid keyword stuffing.</li>
+                                            <li>Include the brand name or website name in the title, especially for
+                                                homepage and landing pages.</li>
+                                            <li>Ensure that each page on your website has a unique title to
+                                                differentiate content.</li>
+                                            <li>Consider user intent and make the title engaging and informative.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+
+                            <h4>&lt;meta&gt; Tag:</h4>
+                            <div>
+                                <details>
+                                    <summary>What is the &lt;meta&gt; Tag?</summary>
+                                    <div>
+                                        <p>The <code>&lt;meta&gt;</code> tag is used to provide metadata about the HTML
+                                            document. Metadata is information about the document that is not directly
+                                            visible to the user but is used by browsers, search engines, and other web
+                                            services. The <code>&lt;meta&gt;</code> tag is placed within the
+                                            <code>&lt;head&gt;</code> section of the document.
+                                        </p>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Structure of the &lt;meta&gt; Tag</summary>
+                                    <div>
+                                        <p>The <code>&lt;meta&gt;</code> tag does not have a closing tag and is
+                                            typically self-closing:</p>
+                                        <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta name="description" content="Learn HTML and CSS"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        ...
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Attributes of the &lt;meta&gt; Tag</summary>
+                                    <div>
+                                        <p>The <code>&lt;meta&gt;</code> tag has several attributes, each serving
+                                            different purposes. Below are some common attributes:</p>
+                                        <ul>
+                                            <li><strong>name:</strong> Specifies the name of the metadata.</li>
+                                            <li><strong>content:</strong> Defines the value of the metadata.</li>
+                                            <li><strong>http-equiv:</strong> Provides HTTP headers information (used for
+                                                setting document refresh or character encoding).</li>
+                                            <li><strong>charset:</strong> Specifies the character encoding for the
+                                                document.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Common Uses of the &lt;meta&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Document Metadata:</strong> Providing general information about
+                                                the document, such as description, author, and keywords:
+                                                <pre>&lt;meta name="description" content="Learn HTML, CSS, and JavaScript"&gt;</pre>
+                                            </li>
+                                            <li><strong>SEO (Search Engine Optimization):</strong> Search engines use
+                                                the <code>&lt;meta&gt;</code> tag to understand the content of the page
+                                                and index it accordingly:
+                                                <pre>&lt;meta name="keywords" content="HTML, CSS, JavaScript, Web Development"&gt;</pre>
+                                            </li>
+                                            <li><strong>Viewport Settings:</strong> Adjusts the viewport settings on
+                                                mobile devices for better responsiveness:
+                                                <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</pre>
+                                            </li>
+                                            <li><strong>Character Encoding:</strong> Specifies the character encoding
+                                                for the document:
+                                                <pre>&lt;meta charset="UTF-8"&gt;</pre>
+                                            </li>
+                                            <li><strong>Author Information:</strong> Specifies the author of the
+                                                document:
+                                                <pre>&lt;meta name="author" content="John Doe"&gt;</pre>
+                                            </li>
+                                            <li><strong>Document Refresh:</strong> Automatically refreshes the document
+                                                after a specific time interval:
+                                                <pre>&lt;meta http-equiv="refresh" content="30"&gt;</pre>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Examples of Using &lt;meta&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Character Set Declaration:</strong>
+                                                <pre>&lt;meta charset="UTF-8"&gt;</pre>
+                                            </li>
+                                            <li><strong>Document Description for SEO:</strong>
+                                                <pre>&lt;meta name="description" content="Learn how to build a website using HTML and CSS"&gt;</pre>
+                                            </li>
+                                            <li><strong>Viewport Settings for Mobile Responsiveness:</strong>
+                                                <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</pre>
+                                            </li>
+                                            <li><strong>Automatic Page Refresh:</strong>
+                                                <pre>&lt;meta http-equiv="refresh" content="5"&gt;</pre>
+                                            </li>
+                                            <li><strong>Content-Type Header:</strong>
+                                                <pre>&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;</pre>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Best Practices for Using &lt;meta&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li>Use <code>&lt;meta charset="UTF-8"&gt;</code> to ensure your page
+                                                supports all characters, including special characters.</li>
+                                            <li>Always include a <code>&lt;meta name="viewport"</code> tag for better
+                                                mobile responsiveness.</li>
+                                            <li>Keep the <code>&lt;meta name="description"</code> tag concise (about 150
+                                                characters) to improve SEO.</li>
+                                            <li>Use <code>&lt;meta name="keywords"</code> for better search engine
+                                                indexing.</li>
+                                            <li>Avoid overusing <code>&lt;meta http-equiv="refresh"</code> as it may
+                                                confuse search engines or users.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+
+                            <h4>&lt;link&gt; Tag:</h4>
+                            <div>
+                                <details>
+                                    <summary>What is the &lt;link&gt; Tag?</summary>
+                                    <div>
+                                        <p>The <code>&lt;link&gt;</code> tag is used to link external resources like
+                                            stylesheets, icons, and more to an HTML document. It is typically placed
+                                            within the <code>&lt;head&gt;</code> section and helps associate external
+                                            files with the webpage.</p>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Structure of the &lt;link&gt; Tag</summary>
+                                    <div>
+                                        <p>The <code>&lt;link&gt;</code> tag does not have a closing tag and is usually
+                                            self-closing:</p>
+                                        <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        ...
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Attributes of the &lt;link&gt; Tag</summary>
+                                    <div>
+                                        <p>The <code>&lt;link&gt;</code> tag has several attributes that help specify
+                                            the relationship between the document and the linked resource. Some of the
+                                            most common attributes are:</p>
+                                        <ul>
+                                            <li><strong>rel:</strong> Specifies the relationship between the current
+                                                document and the linked resource. It is commonly used to indicate a
+                                                "stylesheet" or "icon".</li>
+                                            <li><strong>href:</strong> Specifies the URL of the external resource.</li>
+                                            <li><strong>type:</strong> Specifies the media type of the linked resource.
+                                                This is often used for stylesheets to define the MIME type.</li>
+                                            <li><strong>media:</strong> Specifies the media type for which the linked
+                                                resource is optimized (e.g., print, screen).</li>
+                                            <li><strong>sizes:</strong> Defines the size of the linked resource,
+                                                commonly used for icon images.</li>
+                                            <li><strong>hreflang:</strong> Specifies the language of the linked
+                                                resource.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Common Uses of the &lt;link&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Linking External Stylesheets:</strong> The
+                                                <code>&lt;link&gt;</code> tag is most commonly used to link external CSS
+                                                files to an HTML document:
+                                                <pre>&lt;link rel="stylesheet" href="styles.css"&gt;</pre>
+                                            </li>
+                                            <li><strong>Adding Icons (Favicon):</strong> The <code>&lt;link&gt;</code>
+                                                tag is used to specify the favicon (the icon shown in the browser tab):
+                                                <pre>&lt;link rel="icon" href="favicon.ico"&gt;</pre>
+                                            </li>
+                                            <li><strong>Linking to Web Fonts:</strong> The <code>&lt;link&gt;</code> tag
+                                                is used to link to external web fonts, such as Google Fonts:
+                                                <pre>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"&gt;</pre>
+                                            </li>
+                                            <li><strong>Adding Alternate Stylesheets:</strong> You can define
+                                                alternative stylesheets with different media types (e.g., for printing):
+                                                <pre>&lt;link rel="stylesheet" media="print" href="print.css"&gt;</pre>
+                                            </li>
+                                            <li><strong>Specifying Icons for Various Devices:</strong> For responsive
+                                                web design, the <code>&lt;link&gt;</code> tag can be used to link to
+                                                different icons for various device sizes:
+                                                <pre>&lt;link rel="icon" sizes="16x16" href="icon-16x16.png"&gt;</pre>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Examples of Using &lt;link&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Linking an External CSS File:</strong>
+                                                <pre>&lt;link rel="stylesheet" href="styles.css"&gt;</pre>
+                                            </li>
+                                            <li><strong>Adding a Favicon Icon:</strong>
+                                                <pre>&lt;link rel="icon" href="favicon.ico"&gt;</pre>
+                                            </li>
+                                            <li><strong>Linking to Google Fonts:</strong>
+                                                <pre>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"&gt;</pre>
+                                            </li>
+                                            <li><strong>Specifying a Print Stylesheet:</strong>
+                                                <pre>&lt;link rel="stylesheet" media="print" href="print.css"&gt;</pre>
+                                            </li>
+                                            <li><strong>Adding a Larger Icon for Devices:</strong>
+                                                <pre>&lt;link rel="icon" sizes="32x32" href="icon-32x32.png"&gt;</pre>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Best Practices for Using &lt;link&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li>Always use <code>rel="stylesheet"</code> when linking CSS files for
+                                                improved clarity.</li>
+                                            <li>Use <code>rel="icon"</code> to specify the website's favicon.</li>
+                                            <li>For responsive designs, use <code>media="screen"</code> to define
+                                                stylesheets specifically for different devices (mobile, tablet, etc.).
+                                            </li>
+                                            <li>Place the <code>&lt;link&gt;</code> tag inside the
+                                                <code>&lt;head&gt;</code> section for proper document structure.</li>
+                                            <li>If using an external resource (like a font), make sure to include
+                                                <code>rel="stylesheet"</code> and ensure the link is accessible.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+
+                            <h4>&lt;script&gt; Tag:</h4>
+                            <div>
+                                <details>
+                                    <summary>What is the &lt;script&gt; Tag?</summary>
+                                    <div>
+                                        <p>The <code>&lt;script&gt;</code> tag is used to embed or reference executable
+                                            JavaScript code within an HTML document. It can be placed in both the
+                                            <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> sections. This tag
+                                            is essential for adding interactivity and dynamic behavior to web pages.</p>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Structure of the &lt;script&gt; Tag</summary>
+                                    <div>
+                                        <p>The <code>&lt;script&gt;</code> tag can be written in two main ways:</p>
+                                        <ul>
+                                            <li><strong>Inline JavaScript:</strong> The script is written directly
+                                                between the opening and closing <code>&lt;script&gt;</code> tags.</li>
+                                            <pre>
+&lt;script&gt;
+    console.log('Hello, World!');
+&lt;/script&gt;
+                </pre>
+                                            <li><strong>External JavaScript:</strong> The script is linked from an
+                                                external file using the <code>src</code> attribute.</li>
+                                            <pre>
+&lt;script src="path/to/your-script.js"&gt;&lt;/script&gt;
+                </pre>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Attributes of the &lt;script&gt; Tag</summary>
+                                    <div>
+                                        <p>The <code>&lt;script&gt;</code> tag has several attributes that control how
+                                            the script is loaded and executed. The most common attributes are:</p>
+                                        <ul>
+                                            <li><strong>src:</strong> Specifies the URL of an external script file.</li>
+                                            <li><strong>type:</strong> Specifies the scripting language used. The
+                                                default value is <code>text/javascript</code>, but for modern browsers,
+                                                it is optional as JavaScript is the default scripting language.</li>
+                                            <li><strong>async:</strong> If present, the script will be executed
+                                                asynchronously, meaning it will not block the rendering of the page.
+                                            </li>
+                                            <li><strong>defer:</strong> If present, the script will be executed after
+                                                the document has finished parsing, but before the
+                                                <code>DOMContentLoaded</code> event.</li>
+                                            <li><strong>integrity:</strong> Used to provide a hash value for the script,
+                                                ensuring that it has not been tampered with.</li>
+                                            <li><strong>crossorigin:</strong> Specifies how to handle cross-origin
+                                                requests for the script.</li>
+                                            <li><strong>nomodule:</strong> Specifies that the script should only be
+                                                executed if the browser does not support modules.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Common Uses of the &lt;script&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Embedding JavaScript Code:</strong> The
+                                                <code>&lt;script&gt;</code> tag is used to directly embed JavaScript
+                                                code in an HTML document.</li>
+                                            <li><strong>Linking External JavaScript Files:</strong> The
+                                                <code>&lt;script src="path/to/file.js"&gt;</code> tag is used to link to
+                                                external JavaScript files.</li>
+                                            <li><strong>Asynchronous Loading:</strong> Use <code>async</code> to load
+                                                scripts asynchronously so that they do not block page rendering.</li>
+                                            <li><strong>Deferred Execution:</strong> Use <code>defer</code> to ensure
+                                                that the script is executed after the HTML document has been parsed.
+                                            </li>
+                                            <li><strong>Module-based Scripts:</strong> The <code>type="module"</code>
+                                                attribute is used for JavaScript modules, which allow for the import and
+                                                export of code between different JavaScript files.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Examples of Using &lt;script&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Inline JavaScript Example:</strong>
+                                                <pre>
+&lt;script&gt;
+    console.log('Inline JavaScript is running!');
+&lt;/script&gt;
+                    </pre>
+                                            </li>
+                                            <li><strong>Linking an External JavaScript File:</strong>
+                                                <pre>
+&lt;script src="app.js"&gt;&lt;/script&gt;
+                    </pre>
+                                            </li>
+                                            <li><strong>Asynchronous Script Example:</strong>
+                                                <pre>
+&lt;script src="app.js" async&gt;&lt;/script&gt;
+                    </pre>
+                                            </li>
+                                            <li><strong>Deferred Script Example:</strong>
+                                                <pre>
+&lt;script src="app.js" defer&gt;&lt;/script&gt;
+                    </pre>
+                                            </li>
+                                            <li><strong>Using Modules:</strong>
+                                                <pre>
+&lt;script type="module" src="app.js"&gt;&lt;/script&gt;
+                    </pre>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Best Practices for Using &lt;script&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li>Place <code>&lt;script&gt;</code> tags just before the closing
+                                                <code>&lt;/body&gt;</code> tag to allow the page to load first,
+                                                enhancing page load performance.</li>
+                                            <li>If using external scripts, always specify the <code>src</code>
+                                                attribute.</li>
+                                            <li>Use <code>async</code> or <code>defer</code> for external scripts to
+                                                improve page loading and prevent blocking.</li>
+                                            <li>For modern web applications, consider using JavaScript modules
+                                                (<code>type="module"</code>) to improve code organization and reuse.
+                                            </li>
+                                            <li>Use <code>integrity</code> and <code>crossorigin</code> to enhance
+                                                security when loading third-party scripts.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                            <h4>&lt;style&gt; Tag:</h4>
+                            <div>
+                                <details>
+                                    <summary>What is the &lt;style&gt; Tag?</summary>
+                                    <div>
+                                        <p>The <code>&lt;style&gt;</code> tag is used to define CSS rules within an HTML
+                                            document. It is typically placed within the <code>&lt;head&gt;</code>
+                                            section, where it can apply styles globally to the HTML elements in the
+                                            document. Using the <code>&lt;style&gt;</code> tag, developers can write CSS
+                                            code directly inside the HTML page.</p>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Structure of the &lt;style&gt; Tag</summary>
+                                    <div>
+                                        <p>The <code>&lt;style&gt;</code> tag is used to write CSS code directly within
+                                            an HTML document. Here is how it is typically written:</p>
+                                        <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        body {
+            background-color: lightblue;
+        }
+        h1 {
+            color: green;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+            </pre>
+                                        <p>CSS rules within the <code>&lt;style&gt;</code> tag are written just like
+                                            regular CSS code, with selectors and properties.</p>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Attributes of the &lt;style&gt; Tag</summary>
+                                    <div>
+                                        <p>The <code>&lt;style&gt;</code> tag does not have many attributes, but the
+                                            most commonly used are:</p>
+                                        <ul>
+                                            <li><strong>type:</strong> Specifies the MIME type of the content, typically
+                                                set to <code>text/css</code> to indicate the CSS language. This is
+                                                optional, as browsers default to this value.</li>
+                                            <li><strong>media:</strong> Defines the media for which the style sheet is
+                                                intended (e.g., <code>screen</code>, <code>print</code>, etc.). This is
+                                                useful for responsive design and when different styles are needed for
+                                                various devices.</li>
+                                            <li><strong>scoped:</strong> An optional attribute that, when added, limits
+                                                the scope of the style rules to the element that contains the
+                                                <code>&lt;style&gt;</code> tag. However, this attribute is no longer
+                                                widely supported and is considered deprecated in modern HTML standards.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Common Uses of the &lt;style&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Internal CSS:</strong> The <code>&lt;style&gt;</code> tag is
+                                                used to define styles inside an HTML document without linking to an
+                                                external CSS file.</li>
+                                            <li><strong>Responsive Design:</strong> The <code>&lt;style&gt;</code> tag
+                                                can include media queries that allow for adaptive layouts depending on
+                                                the screen size.</li>
+                                            <li><strong>Quick Styling:</strong> When you need to apply quick, temporary
+                                                styles to an HTML document, you can use the <code>&lt;style&gt;</code>
+                                                tag directly in the document.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Examples of Using the &lt;style&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Basic Internal CSS Example:</strong>
+                                                <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+                    </pre>
+                                            </li>
+                                            <li><strong>Responsive CSS with Media Queries:</strong>
+                                                <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        body {
+            background-color: lightblue;
+        }
+        @media (max-width: 600px) {
+            body {
+                background-color: pink;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+                    </pre>
+                                            </li>
+                                            <li><strong>Scoped Style (Deprecated):</strong>
+                                                <pre>
+&lt;div scoped&gt;
+    &lt;style&gt;
+        p {
+            color: red;
+        }
+    &lt;/style&gt;
+    &lt;p&gt;This text will be red&lt;/p&gt;
+&lt;/div&gt;
+                    </pre>
+                                                <p>Note: The <code>scoped</code> attribute is deprecated and should not
+                                                    be used in modern HTML.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Best Practices for Using the &lt;style&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li>Keep CSS separate from HTML by using external stylesheets for larger
+                                                projects to improve maintainability and code separation.</li>
+                                            <li>Use the <code>&lt;style&gt;</code> tag for quick, small changes or when
+                                                testing out CSS directly in an HTML document.</li>
+                                            <li>Make use of media queries inside the <code>&lt;style&gt;</code> tag to
+                                                ensure the page looks good on all devices.</li>
+                                            <li>Be cautious when using inline styles directly in HTML elements, as this
+                                                can make your code harder to manage.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                            <h4>&lt;base&gt; Tag:</h4>
+                            <div>
+                                <details>
+                                    <summary>What is the &lt;base&gt; Tag?</summary>
+                                    <div>
+                                        <p>The <code>&lt;base&gt;</code> tag specifies a base URL for relative links
+                                            within a document. It is placed inside the <code>&lt;head&gt;</code> section
+                                            and provides a way to set a base URL for all relative URLs in the document,
+                                            making it easier to manage and link resources.</p>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Structure of the &lt;base&gt; Tag</summary>
+                                    <div>
+                                        <p>The <code>&lt;base&gt;</code> tag does not have any closing tag and typically
+                                            looks like this:</p>
+                                        <pre>
+&lt;head&gt;
+    &lt;base href="https://www.example.com/"&gt;
+&lt;/head&gt;
+            </pre>
+                                        <p>All relative URLs in the document will now resolve relative to
+                                            <code>https://www.example.com/</code>.</p>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Attributes of the &lt;base&gt; Tag</summary>
+                                    <div>
+                                        <p>The <code>&lt;base&gt;</code> tag has the following main attributes:</p>
+                                        <ul>
+                                            <li><strong>href:</strong> Specifies the base URL for all relative URLs in
+                                                the document. It is a required attribute when using the
+                                                <code>&lt;base&gt;</code> tag.</li>
+                                            <li><strong>target:</strong> Specifies the default target for all links in
+                                                the document. This determines where linked documents will open. Possible
+                                                values are:
+                                                <ul>
+                                                    <li><code>_self</code>: Opens the link in the same frame (default).
+                                                    </li>
+                                                    <li><code>_blank</code>: Opens the link in a new window or tab.</li>
+                                                    <li><code>_parent</code>: Opens the link in the parent frame.</li>
+                                                    <li><code>_top</code>: Opens the link in the full body of the
+                                                        window.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Common Uses of the &lt;base&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Setting a Global Base URL:</strong> You can set the
+                                                <code>&lt;base&gt;</code> tag to define a global base URL for all
+                                                relative links on the page, making it easier to manage and maintain
+                                                links.</li>
+                                            <li><strong>Managing Links in Single-Page Applications (SPA):</strong> In
+                                                modern web applications, <code>&lt;base&gt;</code> can be used to manage
+                                                relative links in SPA frameworks, ensuring consistency across the
+                                                application.</li>
+                                            <li><strong>Improving Portability of Relative Links:</strong> If you move a
+                                                document to a different directory or location, using the
+                                                <code>&lt;base&gt;</code> tag ensures that all links still work
+                                                correctly without needing to update individual URLs.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Examples of Using the &lt;base&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li><strong>Setting a Base URL:</strong>
+                                                <pre>
+&lt;head&gt;
+    &lt;base href="https://www.example.com/"&gt;
+&lt;/head&gt;
+
+&lt;a href="page.html"&gt;Go to Page&lt;/a&gt;
+                    </pre>
+                                                <p>In this case, the link <code>page.html</code> will be resolved
+                                                    relative to <code>https://www.example.com/</code>.</p>
+                                            </li>
+                                            <li><strong>Setting a Base URL and Target:</strong>
+                                                <pre>
+&lt;head&gt;
+    &lt;base href="https://www.example.com/" target="_blank"&gt;
+&lt;/head&gt;
+
+&lt;a href="page.html"&gt;Go to Page&lt;/a&gt;
+                    </pre>
+                                                <p>Now, the link will open in a new window or tab because of the
+                                                    <code>target="_blank"</code> attribute.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>Best Practices for Using the &lt;base&gt; Tag</summary>
+                                    <div>
+                                        <ul>
+                                            <li>Use the <code>&lt;base&gt;</code> tag when your site relies heavily on
+                                                relative URLs, especially when migrating a document to different
+                                                directories.</li>
+                                            <li>Be cautious when using the <code>&lt;base&gt;</code> tag in large
+                                                websites. It can affect the behavior of all relative links, which might
+                                                result in unexpected behavior if used incorrectly.</li>
+                                            <li>For single-page applications (SPAs), the <code>&lt;base&gt;</code> tag
+                                                can help with routing and maintaining a consistent URL structure for the
+                                                app.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Examples of Usage</summary>
+                        <div>
+                            <ul>
+                                <li><strong>Default Document Setup:</strong>
+                                    <pre>
+&lt;head&gt;
+    &lt;title&gt;My Webpage&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+                    </pre>
+                                </li>
+                                <li><strong>Viewport for Responsive Design:</strong>
+                                    <br><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+                                </li>
+                                <li><strong>Adding Favicon:</strong>
+                                    <br><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>
+                                </li>
+                                <li><strong>SEO Metadata:</strong>
+                                    <br><code>&lt;meta name="description" content="This is a sample website."&gt;</code>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Best Practices</summary>
+                        <div>
+                            <ul>
+                                <li>Always include a &lt;title&gt; tag with a descriptive title.</li>
+                                <li>Use &lt;meta charset="UTF-8"&gt; for proper character encoding.</li>
+                                <li>Leverage the &lt;meta&gt; viewport tag for responsive design on mobile devices.
+                                </li>
+                                <li>Link external stylesheets and scripts using &lt;link&gt; and &lt;script&gt; for
+                                    better modularity.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </section>
+
+
+
+
+            </div>
+        </div>
+        <div class="header">
+            <div class="assignments">
+                <h2>Assignments</h2>
+                <h5 style="color: red">Note: Must take inputs for all assignments from HTML and print results back to
+                    HTML</h5>
+
+                <div>
+
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <h2>Assignment Submissions</h2>
+            <details>
+                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+                <iframe data-src="./likhith-reddy-gade/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">U Sainath Rao</summary>
+                <iframe data-src="./u-sainath-rao/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Prem Rajput</summary>
+                <iframe data-src="./prem-rajput/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Tarun Sharma</summary>
+                <iframe data-src="./tarun-sharma/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+                <iframe data-src="./rohith-kotipalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Poornima Ranguri</summary>
+                <iframe data-src="./poornima-ranguri/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+                <iframe data-src="./anusree-vutlapalli/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Madhuri Udathu</summary>
+                <iframe data-src="./madhuri-udathu/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Pranathi Akula</summary>
+                <iframe data-src="./pranathi-akula/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Preeti Patil SN</summary>
+                <iframe data-src="./preeti-patil-sn/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Rakshita R</summary>
+                <iframe data-src="./rakshita-r/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Vinod Mudavath</summary>
+                <iframe data-src="./vinod-mudavath/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Ram Karthik</summary>
+                <iframe data-src="./ram-karthik/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Nishma Medagoni</summary>
+                <iframe data-src="./nishma-medagoni/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+                <iframe data-src="./mohammed-abdul-awaiz/index.html"></iframe>
+            </details>
+            <details>
+                <summary onclick="showContent(event)">Harsh Sharma</summary>
+                <iframe data-src="./harsh-sharma/index.html"></iframe>
+            </details>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 HTML Training Program</p>
+    </footer>
+    <script type="text/javascript">
+        // Function to display the selected content
+        function showContent(event) {
+            const iframes = document.getElementsByTagName('iframe');
+            Array.from(iframes).forEach(iframe => {
+                iframe.src = '';
+            });
+            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
+        }
+    </script>
+</body>
+
+</html>
