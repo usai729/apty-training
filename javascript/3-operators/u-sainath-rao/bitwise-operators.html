@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bitwise Operators | Sai</title>
+	</head>
+	<body>
+		<div>
+			<label for="value1">Value 1:</label>
+			<input type="number" id="value1" value="0" />
+		</div>
+		<div>
+			<label for="value2">Value 2:</label>
+			<input type="number" id="value2" value="0" />
+		</div>
+
+		<div>
+			<button onclick="bitwiseAnd()">& - AND</button>
+			<button onclick="bitwiseOr()">| - OR</button>
+			<button onclick="bitwiseXor()">^ - XOR</button>
+			<button onclick="bitwiseNot()">~ - NOT (Value 1)</button>
+			<button onclick="bitwiseLeftShift()"><< - Left Shift (Value 1)</button>
+			<button onclick="bitwiseRightShift()">>> - Right Shift (Value 1)</button>
+		</div>
+
+		<h3>Result: <span id="output"></span></h3>
+
+		<script src="./scripts/7-bitwise-operators.js"></script>
+	</body>
+</html>
