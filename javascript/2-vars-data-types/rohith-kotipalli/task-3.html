@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <script>
+        function dataTypes(){
+            let a = 4
+            let b = "fkfjkfj"
+            let c = true
+            let d = undefined
+            let e = null
+            let f = {}
+            let g = Symbol()
+            document.getElementsByTagName("p")[0].textContent = typeof(a)
+            document.getElementsByTagName("p")[1].textContent = typeof(b)
+            document.getElementsByTagName("p")[2].textContent = typeof(c)
+            document.getElementsByTagName("p")[3].textContent = typeof(d)
+            document.getElementsByTagName("p")[4].textContent = typeof(e)
+            document.getElementsByTagName("p")[5].textContent = typeof(f)
+            document.getElementsByTagName("p")[6].textContent = typeof(g)
+        }
+    </script>
+</head>
+<body>
+    <div>
+       <p></p>
+       <p></p>
+       <p></p>
+       <p></p>
+       <p></p>
+       <p></p>
+       <p></p>
+       <button onclick="dataTypes()" >Data Types</button>
+    </div>
+</body>
+</html>

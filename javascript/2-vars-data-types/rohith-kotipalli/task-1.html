@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Internal, External Javascript</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",() => {
+            let internalContainer = document.getElementById("internal")
+            internalContainer.textContent = "Rendering by internal script"
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <div id="inline" onload="(()=>{
+            document.getElementById('inline').textContent = 'Rendering by inline script'
+        })()">waiting for Inline Script...</div>
+        <div id="internal">Waiting for Internal Script...</div>
+        <div id="external">Waiting for External Script...</div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
