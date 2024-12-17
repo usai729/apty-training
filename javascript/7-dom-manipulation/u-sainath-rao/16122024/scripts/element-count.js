@@ -5,11 +5,7 @@ function countNodes(element) {
 	for (let i = 0; i < element.length; i++) {
 		let tagname = element[i].tagName.toLowerCase();
 
-		if (element_count[tagname]) {
-			element_count[tagname] += 1;
-		} else {
-			element_count[tagname] = 1;
-		}
+		element_count[tagname] = (element_count[tagname] || 0) + 1;
 
 		if (element[i].children.length > 0) {
 			countNodes(element[i].children);
