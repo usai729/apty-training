@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Complex DOM Manipulation Challenges</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.6;
+				margin: 20px;
+			}
+			h1 {
+				color: #333;
+			}
+			.section {
+				margin-bottom: 20px;
+				padding: 15px;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				background-color: #f9f9f9;
+			}
+			ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			li {
+				padding: 5px 10px;
+				background-color: #eee;
+				margin-bottom: 5px;
+				display: flex;
+				justify-content: space-between;
+			}
+			button {
+				padding: 5px 10px;
+				background-color: #007bff;
+				color: white;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+			button:hover {
+				background-color: #0056b3;
+			}
+			.btn {
+				background-color: green;
+				color: white;
+				padding: 10px;
+				margin: 10px 0;
+				border-radius: 4px;
+			}
+			.container {
+				margin: 10px 0;
+				padding: 10px;
+				border: 1px solid #ccc;
+			}
+			.table-container {
+				margin-top: 20px;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			table,
+			th,
+			td {
+				border: 1px solid black;
+			}
+			th,
+			td {
+				padding: 10px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>DOM Manipulation Challenges</h1>
+
+		<!-- Main Document Section -->
+		<div class="section">
+			<h2>Main Document</h2>
+			<ul id="main-list">
+				<li onclick="rem_ele(this)">
+					Item 1 <button class="delete-item">Delete</button>
+				</li>
+				<li onclick="rem_ele(this)">
+					Item 2 <button class="delete-item">Delete</button>
+				</li>
+			</ul>
+			<div class="button-container"></div>
+			<div class="container" id="clone-container">
+				<div class="card">Card Content</div>
+			</div>
+			<p id="existing-paragraph">Existing Paragraph</p>
+			<div class="table-container"></div>
+		</div>
+
+		<script>
+			// Event-Based Element Creation
+			function event() {
+				const event_div = document.createElement("div");
+				event_div.innerText = "Div opened on event!";
+
+				document.body.appendChild(event_div);
+			}
+
+			//Add New List Item
+			const mainList = document.getElementById("main-list");
+			const newItem = document.createElement("li");
+			newItem.textContent = "New Item";
+
+			mainList.appendChild(newItem);
+
+			// Remove Child Element
+			const container = document.querySelector(".container");
+			container.removeChild(container.lastChild);
+
+			// Create and Style Button
+			const buttonContainer = document.querySelector(".button-container");
+			const newButton = document.createElement("button");
+			newButton.textContent = "Click me!";
+			newButton.style.background = "green";
+			newButton.addEventListener("click", () => {
+				event();
+			});
+			document.body.appendChild(newButton);
+
+			// Insert Before
+			const paragraph = document.getElementById("existing-paragraph");
+			const newSpan = document.createElement("span");
+			newSpan.textContent = "Helo";
+			paragraph.parentNode.insertBefore(newSpan, paragraph.nextSibling);
+
+			// Dynamic Table
+			const tableContainer = document.querySelector(".table-container");
+
+			const table = document.createElement("table");
+
+			let number = 1;
+
+			for (let i = 0; i < 3; i++) {
+				const row = document.createElement("tr");
+
+				for (let j = 0; j < 3; j++) {
+					const cell = document.createElement("td");
+					cell.textContent = number;
+					number++;
+
+					row.appendChild(cell);
+				}
+
+				table.appendChild(row);
+			}
+
+			tableContainer.appendChild(table);
+			document.body.appendChild(tableContainer);
+
+			// Delete Specific List Item
+			function rem_ele(ele) {
+				ele.remove();
+			}
+
+			// Dynamic Attribute Setter
+			const form = document.createElement("form");
+			const input = document.createElement("input");
+			input.type = "text";
+			input.placeholder = "Enter your name";
+
+			form.appendChild(input);
+			document.body.appendChild(form);
+
+			// Event-Based Element Creation
+			let randomButton = document.createElement("button");
+			randomButton.textContent = "Add Random Div";
+			randomButton.className = "btn";
+			randomButton.addEventListener("click", () => {
+				let randomDiv = document.createElement("div");
+				randomDiv.style.width = "500px";
+				randomDiv.style.height = "500px";
+				randomDiv.style.backgroundColor =
+					"#" + Math.floor(Math.random() * 16777215).toString(16);
+				document.body.appendChild(randomDiv);
+			});
+			document.body.appendChild(randomButton);
+
+			// Generate Nested Elements
+		</script>
+	</body>
+</html>

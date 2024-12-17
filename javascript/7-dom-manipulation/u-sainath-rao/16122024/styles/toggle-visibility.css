@@ -1,0 +1,17 @@
+.square {
+	width: 100px;
+	height: 100px;
+	visibility: hidden;
+}
+
+.square:nth-child(odd) {
+	background-color: #f00;
+}
+
+.square:nth-child(even) {
+	background-color: black;
+}
+
+.active {
+	visibility: visible;
+}

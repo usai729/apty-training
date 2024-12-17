@@ -1,0 +1,169 @@
+:root {
+	--primary: #edf7f6;
+	--secondary: #212738;
+	--ternary: #5c946e;
+	--white: #ffffff;
+	--highlight: #3498db; /* Added a highlight color */
+	--border-radius: 8px; /* Unified border radius for elements */
+}
+
+button {
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	background-color: var(--primary);
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	background-color: var(--secondary);
+	border-radius: var(--border-radius);
+	width: 100%;
+	max-width: 400px; /* Set max width to make it responsive */
+	padding: 2rem;
+	color: var(--primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1.5rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+form {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+form button {
+	width: 50%;
+	background-color: var(--ternary);
+	color: var(--white);
+	padding: 0.8rem;
+	border-radius: var(--border-radius);
+	border: none;
+	font-size: 1.1rem;
+	transition: background-color 0.3s ease;
+}
+
+form button:hover {
+	background-color: #4a7c58; /* Darker shade of ternary color on hover */
+}
+
+input {
+	width: 100%;
+	padding: 1rem;
+	border-radius: var(--border-radius);
+	outline: none;
+	border: 3px solid var(--primary);
+	color: var(--secondary);
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+input:focus {
+	color: var(--primary);
+	background-color: transparent;
+	border-left: 3px solid var(--highlight); /* Changed to highlight color on focus */
+	box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Subtle glow effect */
+}
+
+input[type="checkbox"] {
+	width: auto;
+	margin-right: 0.5rem;
+}
+
+input[type="radio"] {
+	width: auto;
+	margin-right: 0.5rem;
+}
+
+label {
+	font-size: 1rem;
+	color: var(--secondary);
+}
+
+.vertical-group {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.5rem;
+}
+
+.vertical-group input {
+	width: 100%;
+}
+
+.selector-group {
+	border-radius: var(--border-radius);
+	padding: 1rem;
+	background-color: var(--primary);
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.selector-group button {
+	border-radius: var(--border-radius);
+	padding: 0.6rem 1rem;
+	border: none;
+	background-color: transparent;
+	color: var(--secondary);
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.selector-group button.active {
+	background-color: var(
+		--highlight
+	); /* Background color change on active button */
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	color: var(--white);
+}
+
+.selector-group button:hover {
+	background-color: #2980b9; /* Hover effect */
+}
+
+form .select-wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+select {
+	width: 100%;
+	padding: 1rem;
+	border-radius: var(--border-radius);
+	font-size: 1rem;
+	border: 3px solid var(--primary);
+	color: var(--secondary);
+	transition: all 0.3s ease;
+}
+
+select:focus {
+	color: var(--primary);
+	background-color: transparent;
+	border-left: 3px solid var(--highlight); /* Same focus effect for select */
+	box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+@media (max-width: 600px) {
+	.container {
+		width: 80%;
+		max-width: none; /* Adjust width on smaller screens */
+		padding: 1.5rem;
+	}
+}

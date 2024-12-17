@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Accessing and Manipulating Elements</title>
+
+		<link rel="stylesheet" href="./styles/accessing-manipulating.css" />
+	</head>
+	<body>
+		<table border="1px">
+			<tr>
+				<th>ID</th>
+				<th>className</th>
+				<th>Tag</th>
+				<th>name</th>
+				<th>Attribute</th>
+			</tr>
+			<tr>
+				<td>
+					<p id="para1">Paragraph 1 with id="para1"</p>
+					<p id="para2">Paragraph 2 with id="para2"</p>
+					<p id="para3">Paragraph 3 with id="para3"</p>
+					<button onclick="changeTextColor()">Change Text Color</button>
+				</td>
+				<td>
+					<p class="sameClass">Paragraph 1 with class="sameClass"</p>
+					<p class="sameClass">Paragraph 2 with class="sameClass"</p>
+					<p class="sameClass">Paragraph 3 with class="sameClass"</p>
+					<button onclick="toggleClass()">Toggle Class</button>
+				</td>
+				<td>
+					<span>Span 1</span>
+					<span>Span 2</span>
+					<span>Span 3</span>
+					<button onclick="changeInnerHTML()">Change InnerHTML</button>
+				</td>
+				<td>
+					<input type="text" name="user1" value="User 1" />
+					<input type="text" name="user2" value="User 2" />
+					<input type="text" name="user1" value="User 1" />
+					<button onclick="toggleDisabled()">Toggle Disabled</button>
+				</td>
+				<td>
+					<p data-custom="value1">Paragraph with data-custom="value1"</p>
+					<p data-custom="value2">Paragraph with data-custom="value2"</p>
+					<p data-custom="value3">Paragraph with data-custom="value3"</p>
+					<button onclick="addCustomAttribute()">Add Custom Attribute</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p id="para4">Paragraph 4 with id="para4"</p>
+					<button onclick="changeTextColor()">Change Text Color</button>
+				</td>
+				<td>
+					<p class="sameClass">Paragraph 4 with class="sameClass"</p>
+					<button onclick="toggleClass()">Toggle Class</button>
+				</td>
+				<td>
+					<span>Span 4</span>
+					<button onclick="changeInnerHTML()">Change InnerHTML</button>
+				</td>
+				<td>
+					<input type="text" name="user4" value="User 4" />
+					<button onclick="toggleDisabled()">Toggle Disabled</button>
+				</td>
+				<td>
+					<p data-custom="value4">Paragraph with data-custom="value4"</p>
+					<button onclick="addCustomAttribute()">Add Custom Attribute</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p id="para5">Paragraph 5 with id="para5"</p>
+					<button onclick="changeTextColor()">Change Text Color</button>
+				</td>
+				<td>
+					<p class="sameClass">Paragraph 5 with class="sameClass"</p>
+					<button onclick="toggleClass()">Toggle Class</button>
+				</td>
+				<td>
+					<span>Span 5</span>
+					<button onclick="changeInnerHTML()">Change InnerHTML</button>
+				</td>
+				<td>
+					<input type="text" name="user1" value="User 1" />
+					<button onclick="toggleDisabled()">Toggle Disabled</button>
+				</td>
+				<td>
+					<p data-custom="value5">Paragraph with data-custom="value5"</p>
+					<button onclick="addCustomAttribute()">Add Custom Attribute</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p id="para6">Paragraph 6 with id="para6"</p>
+					<button onclick="changeTextColor()">Change Text Color</button>
+				</td>
+				<td>
+					<p class="sameClass">Paragraph 6 with class="sameClass"</p>
+					<button onclick="toggleClass()">Toggle Class</button>
+				</td>
+				<td>
+					<span>Span 6</span>
+					<button onclick="changeInnerHTML()">Change InnerHTML</button>
+				</td>
+				<td>
+					<input type="text" name="user6" value="User 6" />
+					<button onclick="toggleDisabled()">Toggle Disabled</button>
+				</td>
+				<td>
+					<p data-custom="value6">Paragraph with data-custom="value6"</p>
+					<button onclick="addCustomAttribute()">Add Custom Attribute</button>
+				</td>
+			</tr>
+		</table>
+
+		<script src="./scripts/accessing-manipulating.js"></script>
+	</body>
+</html>

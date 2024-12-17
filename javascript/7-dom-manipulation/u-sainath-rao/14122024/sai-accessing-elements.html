@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Accessing Elements</title>
+		<style>
+			.highlighted {
+				background-color: yellow;
+			}
+			.container {
+				border: 1px solid #ccc;
+				padding: 10px;
+				margin: 10px 0;
+			}
+			.nested {
+				margin-left: 20px;
+			}
+			span {
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Question: Implement all functionalities with challenging selectors -->
+		<h1>Accessing Elements</h1>
+
+		<!-- Paragraphs Section -->
+		<section id="paragraph-section">
+			<p id="highlight">Find and Highlight Me!</p>
+			<div>
+				<p>Paragraph in a div</p>
+				<p class="nested">Another nested paragraph</p>
+			</div>
+		</section>
+
+		<!-- List Section -->
+		<section>
+			<ul id="unordered-list">
+				<li>Item A</li>
+				<li>Item B</li>
+				<li class="special">Special Item</li>
+			</ul>
+			<ol>
+				<li>Ordered Item 1</li>
+				<li>Ordered Item 2</li>
+			</ol>
+		</section>
+		<section>
+			<div class="container">
+				<div class="nested-container">
+					<span>Find this nested span</span>
+					<p>This is a nested paragraph inside a container.</p>
+				</div>
+			</div>
+			<div class="container">
+				<p>This is another container paragraph.</p>
+			</div>
+		</section>
+
+		<div>
+			<div>Outer Div 1</div>
+			<div>Outer Div 2</div>
+		</div>
+
+		<script>
+			// 1. Find and Highlight
+			const highlight = document.querySelector("#highlight");
+			highlight.style.background = "yellow";
+
+			// 2. Select All Paragraphs
+			const p_tags = document.querySelectorAll("p");
+
+			p_tags.forEach((element) => {
+				console.log(element.textContent);
+			});
+
+			// 3. Change First List Item
+			const list_items = document.querySelector("li");
+			list_items.textContent = "Hello, I have changed!";
+
+			// 4. Count Elements
+			const divs = document.querySelectorAll("div");
+			console.log(divs.length);
+
+			// 5. Nested Element Selection
+			const container = document.querySelector(".container");
+			container.children[0].childNodes[1].style.fontSize = "50px";
+		</script>
+	</body>
+</html>

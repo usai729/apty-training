@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM Practice with Iframes and Shadow Roots</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 20px;
+				line-height: 1.6;
+			}
+			h1 {
+				color: #333;
+			}
+			.section {
+				border: 1px solid #ddd;
+				margin-bottom: 20px;
+				padding: 15px;
+				border-radius: 8px;
+				background-color: #f9f9f9;
+			}
+			iframe {
+				width: 100%;
+				height: 300px;
+				border: 1px solid #ccc;
+				margin-top: 15px;
+			}
+			.box {
+				width: 200px;
+				height: 100px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #ddd;
+				border-radius: 8px;
+				text-align: center;
+			}
+			.box.active {
+				background-color: lightgreen;
+				color: white;
+				font-weight: bold;
+			}
+			.external-link {
+				color: #007bff;
+				text-decoration: none;
+			}
+			.external-link:hover {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="main-heading">Original Heading</h1>
+
+		<!-- Section: Image -->
+		<div class="section">
+			<h2>Parent Page - Update Image Source</h2>
+			<img
+				id="main-image"
+				src="https://via.placeholder.com/150"
+				alt="Placeholder Image"
+			/>
+		</div>
+
+		<!-- Section: Paragraph -->
+		<div class="section">
+			<h2>Parent Page - Style Modification</h2>
+			<p id="main-paragraph">This is a paragraph to be styled dynamically.</p>
+		</div>
+
+		<!-- Section: Toggle Classes -->
+		<div class="section">
+			<h2>Parent Page - Toggle Classes</h2>
+			<div class="box" id="main-box">Parent Box</div>
+			<button id="toggle-parent-box-btn">Toggle Parent Box</button>
+		</div>
+
+		<!-- Section: External Link -->
+		<div class="section">
+			<h2>Parent Page - Dynamic Link Update</h2>
+			<a class="external-link" href="#" id="main-link">Original Parent Link</a>
+		</div>
+
+		<!-- Iframe Section -->
+		<div class="section">
+			<h2>Iframe Content</h2>
+			<iframe
+				id="iframe1"
+				srcdoc="
+      <!DOCTYPE html>
+      <html lang='en'>
+      <head>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+          }
+          .box {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ddd;
+            border-radius: 8px;
+            text-align: center;
+          }
+          .box.active {
+            background-color: lightcoral;
+            color: white;
+            font-weight: bold;
+          }
+          .external-link {
+            color: #007BFF;
+            text-decoration: none;
+          }
+          .external-link:hover {
+            text-decoration: underline;
+          }
+        </style>
+      </head>
+      <body>
+        <h1 id='iframe-heading'>Iframe Heading</h1>
+        <img id='iframe-image' src='https://via.placeholder.com/100' alt='Iframe Placeholder Image'>
+        <p id='iframe-paragraph'>This is a paragraph inside the iframe.</p>
+        <div class='box' id='iframe-box'>Iframe Box</div>
+        <a class='external-link' href='#' id='iframe-link'>Original Iframe Link</a>
+      </body>
+      </html>
+    "
+			></iframe>
+		</div>
+
+		<!-- Shadow Root Section -->
+		<div class="section">
+			<h2>Shadow DOM Content</h2>
+			<div id="shadow-host"></div>
+		</div>
+
+		<script>
+			// 1. Main - Change Heading Text
+			document.querySelector("h1").innerHTML = "Welcome to the DOM Practice!";
+
+			// 2. Main - Update Image Source
+			document
+				.querySelector("img")
+				.setAttribute("src", "https://picsum.photos/200/300");
+
+			// 3. Main - Style Modification
+			const p = document.querySelector("p");
+			p.style.color = "blue";
+			p.style.fontSize = "18px";
+			p.style.backgroundColor = "lightgray";
+
+			// 4. Main - Toggle Classes
+			document
+				.getElementsByClassName("box")[0]
+				.addEventListener("click", (e) => {
+					e.target.classList.toggle("active");
+				});
+
+			// 5. Main - Dynamic Link Update
+			const a = document.getElementsByClassName("external-link")[0];
+			a.setAttribute("href", "https://example.com");
+			a.innerHTML = "Visit Example";
+
+			// Access Iframe Content for above above functionality
+			const iframe = document.getElementById("iframe1");
+			iframe.addEventListener("load", () => {
+				const iframeDoc =
+					iframe.contentDocument || iframe.contentWindow.document;
+
+				const iframe_heading = (iframeDoc.querySelector(
+					"#iframe-heading"
+				).innerHTML = "Welcome to the DOM Practice!");
+
+				iframeDoc
+					.querySelector("img")
+					.setAttribute("src", "https://picsum.photos/200/300");
+
+				const p = iframeDoc.querySelector("p");
+				p.style.color = "blue";
+				p.style.fontSize = "18px";
+				p.style.backgroundColor = "lightgray";
+
+				iframeDoc
+					.getElementsByClassName("box")[0]
+					.addEventListener("click", (e) => {
+						e.target.classList.toggle("active");
+					});
+
+				const a = iframeDoc.getElementsByClassName("external-link")[0];
+				a.setAttribute("href", "https://example.com");
+				a.innerHTML = "Visit Example";
+			});
+			// Shadow Root Content
+			// Get the shadow host element
+			const shadowHost = document.querySelector("#shadow-host");
+
+			// Create a shadow root
+			const shadowRoot = shadowHost.attachShadow({ mode: "open" });
+
+			// Create and append a heading to the shadow DOM
+			const heading = document.createElement("h1");
+			heading.textContent = "Shadow DOM Heading";
+			shadowRoot.appendChild(heading);
+
+			// Create and append a paragraph to the shadow DOM
+			const paragraph = document.createElement("p");
+			paragraph.textContent = "This is a paragraph inside the Shadow DOM";
+			paragraph.style.color = "purple";
+			shadowRoot.appendChild(paragraph);
+
+			// Create and append an anchor tag to the shadow DOM
+			const anchor = document.createElement("a");
+			anchor.href = "https://example.com";
+			anchor.textContent = "Visit Example";
+			anchor.className = "external-link";
+			shadowRoot.appendChild(anchor);
+		</script>
+	</body>
+</html>
