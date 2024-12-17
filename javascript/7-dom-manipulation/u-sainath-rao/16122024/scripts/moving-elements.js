@@ -1,55 +1,42 @@
-const table = document.querySelector("table");
-let row;
-
+const tableBody = document.querySelector("#myTable tbody");
 for (let i = 1; i <= 10; i++) {
-	row = document.createElement("tr");
-	let tdata = document.createElement("td");
-	let p = document.createElement("p");
-
-	p.innerHTML = i;
-
-	["Up", "Down", "Top", "Bottom"].map((element) => {
-		let btn = document.createElement("button");
-
-		btn.className = `btn-${element}-${i}`;
-		btn.innerHTML = element;
-		btn.addEventListener("click", () => {
-			move(btn, row);
-		});
-
-		tdata.appendChild(btn);
-	});
-
-	tdata.appendChild(p);
-	row.appendChild(tdata);
-	table.appendChild(row);
+	const row = document.createElement("tr");
+	row.innerHTML = `
+                <td>Row ${i}</td>
+                <td>
+                    <button onclick="moveUp(this)">Up</button>
+                    <button onclick="moveDown(this)">Down</button>
+                    <button onclick="moveTop(this)">Top</button>
+                    <button onclick="moveBottom(this)">Bottom</button>
+                </td>
+            `;
+	tableBody.appendChild(row);
 }
 
-function move(btn, row) {
-	const rows = Array.from(table.querySelectorAll("tr"));
-	const currentRowIndex = rows.indexOf(row);
-	const mode = btn.className.split("-")[1].toLowerCase();
-
-	switch (mode) {
-		case "up":
-			if (currentRowIndex > 0) {
-				table.insertBefore(row, rows[currentRowIndex - 1]);
-			}
-			break;
-		case "down":
-			if (currentRowIndex < rows.length - 1) {
-				table.insertBefore(rows[currentRowIndex + 1], row);
-			}
-			break;
-		case "top":
-			if (currentRowIndex > 0) {
-				table.insertBefore(row, rows[0]);
-			}
-			break;
-		case "bottom":
-			if (currentRowIndex < rows.length - 1) {
-				table.appendChild(row);
-			}
-			break;
+function moveUp(button) {
+	const row = button.closest("tr");
+	const prevRow = row.previousElementSibling;
+	if (prevRow) {
+		row.parentNode.insertBefore(row, prevRow);
 	}
+}
+
+function moveDown(button) {
+	const row = button.closest("tr");
+	const nextRow = row.nextElementSibling;
+	if (nextRow) {
+		row.parentNode.insertBefore(nextRow, row);
+	}
+}
+
+function moveTop(button) {
+	const row = button.closest("tr");
+	const tableBody = row.parentNode;
+	tableBody.insertBefore(row, tableBody.firstElementChild);
+}
+
+function moveBottom(button) {
+	const row = button.closest("tr");
+	const tableBody = row.parentNode;
+	tableBody.appendChild(row);
 }
