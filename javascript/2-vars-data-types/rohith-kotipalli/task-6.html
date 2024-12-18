@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals</title>
+    <script>
+        function templateStrings(){
+            let a = 4
+            let b = "Rohith"
+            let c = true
+            let d = undefined
+            let e = null
+            let f = {}
+            let g = Symbol("what if")
+            document.getElementsByTagName("p")[0].textContent = `the number is ${a}`
+            document.getElementsByTagName("p")[1].textContent = `the string is ${b}`
+            document.getElementsByTagName("p")[2].textContent = `the boolean is ${c}`
+            document.getElementsByTagName("p")[3].textContent = `the undefined is ${d}`
+            document.getElementsByTagName("p")[4].textContent = `the null is ${e}`
+            document.getElementsByTagName("p")[5].textContent = `the obj is ${f}`
+            document.getElementsByTagName("p")[6].textContent = `the symbol is ${g}`
+        }
+    </script>
+</head>
+<body>
+    <div>
+      <button onclick="templateStrings()">Template Strings</button>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p> 
+      <p></p>
+      <p></p>
+    </div>
+</body>
+</html>

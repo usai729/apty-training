@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declare Variables</title>
+    <script>
+        function redeclaring(){ 
+            try {
+                eval('const a = 10; const a = 20;');
+            } catch (e) {
+                document.write("Error from catch block:,", e.message);
+            }
+            try {
+                eval('let b = 10; let b = 20;');
+            } catch (e) {
+                document.write("<br/> Error from catch block:", e.message);
+            }
+            try {
+                eval('var a = 10; var a = 20;');
+                document.write(`<br/>we redeclare using var`);
+            } catch (e) {
+                document.write("<br/> Error from catch block:", e.message);
+            }
+            try {
+                eval('const a = 10;  a = 20;');
+            } catch (e) {
+                document.write("<br/> Error from catch block:,", e.message);
+            }
+            try {
+                eval('let b = 10; b = 20;');
+                document.write(`<br/>we can reassign using let`);
+            } catch (e) {
+                document.write("<br/> Error from catch block:", e.message);
+            }
+            try {
+                eval('var b = 10; b = 20;');
+                document.write(`<br/>we can reassign using var`);
+            } catch (e) {
+                document.write("<br/> Error from catch block:", e.message);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="redeclaring()">click</button>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>
+			Inline, Internal, External JS | Sai
+		</title>
+
+		<script>
+			window.onload = () => {
+				document.getElementById("demo-internal").innerHTML =
+					"Hello, I am from the internal javascript";
+			};
+		</script>
+	</head>
+
+	<body>
+		<div id="demo"></div>
+		<div id="demo-internal"></div>
+		<button
+			id="demo-inline"
+			onclick="window.alert('Hello, I am from the inline javascript')"
+		>
+			Click
+		</button>
+	</body>
+
+	<script src="./scripts/assignment-1.js"></script>
+</html>

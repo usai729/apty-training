@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type Conversion</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 10px; text-align: left; border: 1px solid #ddd; }
+    th { background-color: #f4f4f4; }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Data Type Conversions</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Input Type</th>
+        <th>Input Value</th>
+        <th>Converted To</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody id="results"></tbody>
+  </table>
+
+  <script>
+    const conversions = [
+      { type: "String", value: "123", conversions: ["Number", "Boolean", "Object"] },
+      { type: "Number", value: 123, conversions: ["String", "Boolean", "Object"] },
+      { type: "Boolean", value: true, conversions: ["Number", "String", "Object"] },
+      { type: "Undefined", value: undefined, conversions: ["Number", "String", "Boolean"] },
+      { type: "Null", value: null, conversions: ["Number", "String", "Boolean"] },
+      { type: "Symbol", value: Symbol("sym"), conversions: ["String"] }, 
+      { type: "Object", value: { key: "value" }, conversions: ["String", "Number", "Boolean"] },
+    ];
+
+    const resultsTable = document.getElementById("results");
+
+    conversions.forEach(({ type, value, conversions }) => {
+      conversions.forEach(conversionType => {
+        const row = document.createElement("tr");
+        const inputTypeCell = document.createElement("td");
+        const inputValueCell = document.createElement("td");
+        const conversionCell = document.createElement("td");
+        const resultCell = document.createElement("td");
+
+        inputTypeCell.textContent = type;
+        inputValueCell.textContent = typeof value === "symbol" ? value.toString() : JSON.stringify(value);
+        conversionCell.textContent = conversionType;
+
+        try {
+          let result;
+          if (conversionType === "Number") result = Number(value);
+          if (conversionType === "String") result = String(value);
+          if (conversionType === "Boolean") result = Boolean(value);
+          if (conversionType === "Object") result = Object(value);
+
+          resultCell.textContent = result;
+        } catch (error) {
+          resultCell.textContent = `Error: ${error.message}`;
+        }
+
+        row.appendChild(inputTypeCell);
+        row.appendChild(inputValueCell);
+        row.appendChild(conversionCell);
+        row.appendChild(resultCell);
+
+        resultsTable.appendChild(row);
+      });
+    });
+  </script>
+</body>
+</html>

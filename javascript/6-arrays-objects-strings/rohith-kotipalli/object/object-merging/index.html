@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Merging</title>
+</head>
+<body>
+    <h1>Deep Merge Objects</h1>
+
+  <form id="mergeForm">
+    <label for="object1Input">Enter First Object (in JSON format):</label>
+    <textarea id="object1Input" name="object1Input" rows="5" cols="30" required></textarea>
+    <br><br>
+    <label for="object2Input">Enter Second Object (in JSON format):</label>
+    <textarea id="object2Input" name="object2Input" rows="5" cols="30" required></textarea>
+    <br><br>
+    <button type="button" onclick="mergeObjects()">Merge Objects</button>
+  </form>
+
+  <h2>Merged Object:</h2>
+  <pre id="mergeResult">{}</pre>
+    <script src="./script.js" ></script>
+</body>
+</html>

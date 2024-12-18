@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Arithmetic Operators | Sai</title>
+		<link rel="stylesheet" href="./styles/1-arithmetic-operator.css" />
+	</head>
+	<body>
+		<div>
+			<label for="mode">Dual Input Mode</label>
+			<input type="checkbox" id="mode" onchange="toggleMode()" />
+		</div>
+
+		<div id="advanced-calculator" class="calculator">
+			<div class="screen">
+				<input type="text" id="display" class="display" disabled />
+			</div>
+			<div class="buttons">
+				<button
+					class="num-keys"
+					id="key-7"
+					value="7"
+					onclick="append(this.value)"
+				>
+					7
+				</button>
+				<button
+					class="num-keys"
+					id="key-8"
+					value="8"
+					onclick="append(this.value)"
+				>
+					8
+				</button>
+				<button
+					class="num-keys"
+					id="key-9"
+					value="9"
+					onclick="append(this.value)"
+				>
+					9
+				</button>
+				<button
+					class="operator-keys"
+					id="key-+"
+					value="+"
+					onclick="append(this.value)"
+				>
+					+
+				</button>
+
+				<button
+					class="num-keys"
+					id="key-4"
+					value="4"
+					onclick="append(this.value)"
+				>
+					4
+				</button>
+				<button
+					class="num-keys"
+					id="key-5"
+					value="5"
+					onclick="append(this.value)"
+				>
+					5
+				</button>
+				<button
+					class="num-keys"
+					id="key-6"
+					value="6"
+					onclick="append(this.value)"
+				>
+					6
+				</button>
+				<button
+					class="operator-keys"
+					id="key--"
+					value="-"
+					onclick="append(this.value)"
+				>
+					-
+				</button>
+
+				<button
+					class="num-keys"
+					id="key-1"
+					value="1"
+					onclick="append(this.value)"
+				>
+					1
+				</button>
+				<button
+					class="num-keys"
+					id="key-2"
+					value="2"
+					onclick="append(this.value)"
+				>
+					2
+				</button>
+				<button
+					class="num-keys"
+					id="key-3"
+					value="3"
+					onclick="append(this.value)"
+				>
+					3
+				</button>
+				<button
+					class="operator-keys"
+					id="key-*"
+					value="*"
+					onclick="append(this.value)"
+				>
+					*
+				</button>
+
+				<button
+					class="num-keys"
+					id="key-0"
+					value="0"
+					onclick="append(this.value)"
+				>
+					0
+				</button>
+				<button class="num-keys" id="key-C" onclick="clr()">C</button>
+				<button class="operator-keys" id="key-=" onclick="calcResult()">
+					=
+				</button>
+				<button
+					class="operator-keys"
+					id="key-/"
+					value="/"
+					onclick="append(this.value)"
+				>
+					/
+				</button>
+
+				<button
+					class="operator-keys"
+					id="key-++"
+					value="++"
+					onclick="append(this.value)"
+				>
+					++
+				</button>
+				<button
+					class="operator-keys"
+					id="key--"
+					value="--"
+					onclick="append(this.value)"
+				>
+					--
+				</button>
+				<button
+					class="operator-keys"
+					id="key-%"
+					value="%"
+					onclick="append(this.value)"
+				>
+					%
+				</button>
+				<button
+					class="operator-keys"
+					id="key-."
+					value="."
+					onclick="append(this.value)"
+				>
+					.
+				</button>
+			</div>
+		</div>
+
+		<div id="simple-calculator">
+			<h2>Simple Calculator</h2>
+
+			<label for="num1">Enter first number:</label>
+			<input type="number" id="num1" required />
+
+			<label for="num2">Enter second number:</label>
+			<input type="number" id="num2" required />
+
+			<br />
+
+			<button onclick="calculate('+')" class="dual-input-btn">Add</button>
+			<button onclick="calculate('-')" class="dual-input-btn">Subtract</button>
+			<button onclick="calculate('*')" class="dual-input-btn">Multiply</button>
+			<button onclick="calculate('/')" class="dual-input-btn">Divide</button>
+
+			<h3 id="result"></h3>
+		</div>
+
+		<script src="./scripts/1-arithmetic-operators.js"></script>
+	</body>
+</html>

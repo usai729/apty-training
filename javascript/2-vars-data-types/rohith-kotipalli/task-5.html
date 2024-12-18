@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type coercion</title>
+    <script>
+        function additionOfDifferentDataTypes(){
+            let array_1 = [{value:"rohith"},{value: 1},{value: true},{value: undefined},{value:null},{value: {name:"jb"}}]
+            array_1.forEach((item) => {
+                array_1.forEach((item2) => {
+                    let b = document.createElement("div")
+                    b.textContent = `${item.value + item2.value}`
+                    document.body.appendChild(b)
+                })
+            })
+        }
+    </script>
+</head>
+<body>
+    <button onclick="additionOfDifferentDataTypes()">click</button>
+</body>
+</html>
