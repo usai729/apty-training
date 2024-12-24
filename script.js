@@ -75,3 +75,7 @@ function toggleSidebar(event) {
 		sidebar.style.display = "none";
 	}
 }
+
+function close_menu() {
+	document.querySelector("aside").style.display = "none";
+}
