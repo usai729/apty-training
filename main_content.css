@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+ 
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+ 
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+}
+ 
+.container .header {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ 
+.container iframe {
+    width: 100%;
+    height: 100vh;
+}
+ 
+.topics,
+.assignments {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+ 
+h2 {
+    color: #333;
+    border-bottom: 2px solid #f4f4f9;
+    padding-bottom: 5px;
+}
+ 
+ul {
+    padding: 0;
+    margin: 10px 0;
+    list-style: none;
+}
+ 
+ul li {
+    padding: 5px 0;
+}
+ 
+ul li::before {
+    content: "•";
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+}
+ 
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+} */
+
+body {
+	margin: 0px;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	font-family: "Poppins", serif;
+	font-weight: 300;
+	font-style: normal;
+	background-color: #030712;
+	color: white;
+}
+
+header {
+	text-align: center;
+	color: white;
+	padding: 1px;
+	border-radius: 100px;
+	/* text-decoration: underline 4px; */
+}
+
+code {
+	margin-top: 10px;
+	width: max-content;
+	padding: 8px 20px;
+	background-color: rgb(27, 27, 27);
+	font-size: 0.9rem;
+	border-radius: 8px;
+	margin-top: 4px;
+	margin-bottom: 10px;
+}
+
+details p {
+	margin-top: 50px;
+}
+
+details:hover {
+	cursor: pointer;
+	text-decoration-color: rgb(70, 70, 70);
+	border-bottom: 8px solid rgb(118, 118, 118);
+}
+
+details {
+	padding: 12px;
+	background-color: #272727;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	border-bottom: 4px solid rgb(87, 87, 87);
+	font-weight: 400;
+}
+
+button {
+	border: 0px;
+	background-color: rgb(29, 123, 238);
+	color: white;
+	font-size: 0.8rem;
+	padding: 12px;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: rgb(11, 103, 216);
+}
+
+details div {
+	margin-top: 10px;
+	background-color: #393939;
+	padding: 20px 50px;
+	border-radius: 10px;
+}
+
+.topics,
+.assignments {
+	background-color: #2e2e2e;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 50px;
+}
+
+.header h2 {
+	margin-left: 10px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* General Styles */
+body {
+	margin: 0px;
+	padding: 30px;
+	box-sizing: border-box;
+	font-family: "Poppins", serif;
+	font-weight: 300;
+	background-color: #121212; /* Elegant dark background */
+	color: #d1d1d1; /* Light gray text for readability */
+}
+
+/* Header */
+header {
+	text-align: center;
+	color: #ffffff;
+	padding: 15px;
+	border-radius: 50px;
+	background-color: #1f1f1f;
+	/* text-decoration: underline 4px solid #cba800; Elegant gold underline */
+}
+
+/* Code Styling */
+code {
+	margin-top: 10px;
+	padding: 8px 20px;
+	background-color: #1e1e1e;
+	color: #cba800; /* Gold color for code for elegance */
+	font-size: 0.9rem;
+	border-radius: 8px;
+}
+
+/* Details Section */
+details {
+	padding: 20px;
+	background-color: #1d1d1d;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	border: 1px solid #444;
+	font-weight: 400;
+	transition: background-color 0.3s ease;
+}
+
+details:hover {
+	background-color: #2c2c2c; /* Subtle hover effect for details */
+}
+
+details div {
+	margin-top: 15px;
+	background-color: #393939;
+	padding: 20px 40px;
+	border-radius: 10px;
+}
+
+/* Button Styling */
+button {
+	border: 0px;
+	background-color: #cba800; /* Rich gold for primary actions */
+	color: white;
+	font-size: 0.9rem;
+	padding: 12px 20px;
+	border-radius: 7px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+}
+
+button:hover {
+	background-color: #b58c00; /* Darker gold for hover effect */
+}
+
+/* Sections and Lists */
+.topics,
+.assignments {
+	background-color: #2a2a2a;
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 30px;
+	color: #d1d1d1;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box-shadow for sections */
+}
+
+h2 {
+	/* text-decoration: underline 4px solid #cba800; */
+	color: #ffffff;
+	font-weight: 600;
+}
+
+/* Links and Lists */
+ul li {
+	padding: 10px 0;
+	margin-left: 20px;
+}
+
+ul li::before {
+	content: "•";
+	color: #cba800; /* Gold bullet points */
+	font-weight: bold;
+}
+
+ul li a {
+	color: #d1d1d1;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+	background-color: #444;
+	color: #cba800; /* Hover effect with gold color */
+}
+
+/* Footer */
+footer {
+	text-align: center;
+	padding: 15px;
+	background: #1f1f1f;
+	color: #ffffff;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	font-size: 0.9rem;
+	border-top: 1px solid #444; /* Subtle border on the top of the footer */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	body {
+		padding: 10px;
+	}
+
+	header {
+		font-size: 1.2rem;
+	}
+
+	.topics,
+	.assignments {
+		padding: 15px;
+	}
+
+	button {
+		width: 100%; /* Make buttons full width on smaller screens */
+	}
+}

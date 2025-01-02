@@ -79,3 +79,11 @@ function toggleSidebar(event) {
 function close_menu() {
 	document.querySelector("aside").style.display = "none";
 }
+
+// window.addEventListener("click", (event) => {
+// 	event.stopPropagation();
+
+// 	if (document.querySelector("#menu").checked) {
+// 		document.querySelector("aside").style.display = "none";
+// 	}
+// });
